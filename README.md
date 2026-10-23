@@ -143,3 +143,7 @@ This project is free software licensed under the **[GNU General Public License v
 Copyright (C) 2026 Archimades (archimades27) and IngeTrazo contributors.
 ```
 You are free to use, inspect, modify, and redistribute this software under the terms of the GNU GPLv3 license.
+
+## Experimental Rebar Inspection
+
+See [assisted Rebar Inspection and coordinate changes](docs/REBAR_INSPECTION.md) for dependencies, safe development, workflow, evidence, and limits. LAS/LAZ import now requires explicit source units and `laspy[lazrs]`.

@@ -14,11 +14,15 @@ class PointCloudDataset:
     """Represents a point cloud dataset in IngeTrazo."""
     name: str
     filepath: Optional[str]
-    coords: np.ndarray          # shape (N, 3), float32 (in metres)
+    coords: np.ndarray          # shape (N, 3), local metres; LAS analysis retains float64
     colors: np.ndarray          # shape (N, 4), uint8 RGBA
     normals: Optional[np.ndarray] = None      # shape (N, 3), float32 or None
     intensities: Optional[np.ndarray] = None  # shape (N,), float32 or None
     
+    coordinate_frame: Optional[dict] = None  # source origin/units, JSON-safe
+
+    source_point_indices: Optional[np.ndarray] = None  # populated for import ROI
+
     # Display settings
     visible: bool = True
     point_size: int = 2                       # 1 to 12 px
@@ -87,48 +91,38 @@ class PointCloudDataset:
 
     def apply_transform(self, points: np.ndarray, viewport=None) -> np.ndarray:
         """Applies scale, 3D Euler rotations (Z, Y, X) around pivot, and offset to points."""
-        pts = points
-        piv = self.pivot if self.pivot is not None else np.zeros(3, dtype=np.float32)
-        if np.any(piv != 0):
-            pts = pts - piv
-        if self.scale != 1.0:
-            pts = pts * self.scale
-
+        pts = np.asarray(points, dtype=np.float64)
         if self.proxy_group is not None:
-            try:
-                from .scene_proxy import compute_dataset_transform
-                R, T = compute_dataset_transform(self, viewport)
-                self.offset = T
-                self.rotation_z_deg = float(math.degrees(math.atan2(R[1, 0], R[0, 0])))
-                self.rotation_x_deg = float(math.degrees(math.atan2(R[2, 1], R[2, 2])))
-                self.rotation_y_deg = float(math.degrees(math.atan2(-R[2, 0], math.hypot(R[2, 1], R[2, 2]))))
-                pts = pts @ R.T
-                if np.any(piv != 0):
-                    pts = pts + piv
-                if np.any(T != 0):
-                    pts = pts + T
-                return pts
-            except Exception:
-                pass
+            from .scene_proxy import proxy_affine
+            matrix, translation = proxy_affine(self, viewport)
+            return pts @ matrix.T + translation
+        return self.manual_transform(pts)
 
-        rx = math.radians(self.rotation_x_deg)
-        ry = math.radians(self.rotation_y_deg)
-        rz = math.radians(self.rotation_z_deg)
-        if abs(rx) > 1e-4 or abs(ry) > 1e-4 or abs(rz) > 1e-4:
-            cx, sx = math.cos(rx), math.sin(rx)
-            cy, sy = math.cos(ry), math.sin(ry)
-            cz, sz = math.cos(rz), math.sin(rz)
-            R = np.array([
-                [cz * cy, cz * sy * sx - sz * cx, cz * sy * cx + sz * sx],
-                [sz * cy, sz * sy * sx + cz * cx, sz * sy * cx - cz * sx],
-                [-sy, cy * sx, cy * cx]
-            ], dtype=np.float32)
-            pts = pts @ R.T
-        if np.any(piv != 0):
-            pts = pts + piv
-        if np.any(self.offset != 0):
-            pts = pts + self.offset
-        return pts
+    def manual_transform(self, points):
+        pts = np.asarray(points, dtype=np.float64)
+        piv = np.asarray(self.pivot, dtype=np.float64)
+        if not np.isfinite(self.scale) or self.scale <= 0:
+            raise ValueError("Scale must be finite and positive")
+        rx, ry, rz = np.radians([self.rotation_x_deg, self.rotation_y_deg, self.rotation_z_deg])
+        cx, sx, cy, sy, cz, sz = np.cos(rx), np.sin(rx), np.cos(ry), np.sin(ry), np.cos(rz), np.sin(rz)
+        matrix = np.array([[cz*cy, cz*sy*sx-sz*cx, cz*sy*cx+sz*sx],
+                           [sz*cy, sz*sy*sx+cz*cx, sz*sy*cx-cz*sx],
+                           [-sy, cy*sx, cy*cx]])
+        return (pts-piv) @ matrix.T * self.scale + piv + self.offset
+
+    def source_coordinates(self):
+        if self.coordinate_frame is None:
+            raise ValueError("Dataset has no verified coordinate frame")
+        f = self.coordinate_frame
+        return self.coords / f['unit_to_m'] + np.asarray(f['source_origin'])
+
+    def world_roi(self, minimum, maximum, viewport=None):
+        lo, hi = np.asarray([minimum, maximum], dtype=np.float64)
+        if lo.shape != (3,) or not np.isfinite([lo, hi]).all() or np.any(lo > hi):
+            raise ValueError("Invalid world ROI")
+        points = self.apply_transform(self.coords, viewport)
+        indices = np.flatnonzero(np.all((points >= lo) & (points <= hi), axis=1))
+        return points[indices], indices
 
 
 @dataclasses.dataclass

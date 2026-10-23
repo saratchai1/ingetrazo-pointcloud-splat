@@ -17,6 +17,7 @@ from PySide6.QtWidgets import (
     QColorDialog,
     QComboBox,
     QDialog,
+    QInputDialog,
     QDoubleSpinBox,
     QFileDialog,
     QFrame,
@@ -636,7 +637,16 @@ class PointCloudManagerPanel(QWidget):
             tr("Place up to 120 guide points sampled from the active dataset"),
             self._convert_to_guides)))
 
+        button = QPushButton('Rebar Inspection…')
+        button.clicked.connect(self._inspect_rebar)
+        vbox.addWidget(self._ds_widget(button))
         self.lay.addWidget(sec)
+
+    def _inspect_rebar(self):
+        if 0 <= self._active_idx < len(self.datasets):
+            from .rebar_dialog import RebarDialog
+            self._rebar_dialog = RebarDialog(self)
+            self._rebar_dialog.show()
 
     # ---- Status footer --------------------------------------------------------
 
@@ -709,15 +719,8 @@ class PointCloudManagerPanel(QWidget):
         if getattr(ds, "point_size", 1) < 2:
             ds.point_size = 3
 
-        # Auto-detect millimetre units if bounding box span exceeds 1,000
+        # Never infer physical units from cloud extent.
         auto_scaled = False
-        if ds._raw_bounds is not None:
-            span = float(np.max(ds._raw_bounds[1] - ds._raw_bounds[0]))
-            if span > 1000.0 and ds.scale == 1.0:
-                ds.scale = 0.001
-                auto_scaled = True
-                log.info(f"Auto-scaled {ds.name} from mm to m (scale 0.001)")
-
         self._apply_budget()
         self.datasets.append(ds)
 
@@ -914,7 +917,19 @@ class PointCloudManagerPanel(QWidget):
             elif suffix in (".xyz", ".pts", ".txt", ".csv"):
                 ds = read_xyz(path)
             else:  # .las / .laz
-                ds = read_las(path)
+                units, ok = QInputDialog.getItem(self, 'LAS source units',
+                    'Confirm survey coordinate units (LAS scale does not specify units)',
+                    ['m', 'mm', 'ft'], 0, False)
+                if not ok:
+                    QApplication.restoreOverrideCursor()
+                    return False
+                prior = next((d.coordinate_frame for d in self.datasets
+                              if getattr(d, 'coordinate_frame', None)), None)
+                factor = {'m': 1., 'mm': .001, 'ft': .3048}[units]
+                origin = None if prior is None else np.asarray(prior['source_origin']) * prior['unit_to_m'] / factor
+                ds = read_las(path, source_units=units, origin=origin)
+                if prior is not None and ds.coordinate_frame['crs_wkt'] != prior['crs_wkt']:
+                    raise ValueError('Scan CRS differs from the existing LAS frame; reproject before import')
         except Exception as e:
             QApplication.restoreOverrideCursor()
             log.exception(f"Failed to import point cloud from {path}: {e}")

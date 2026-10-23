@@ -308,6 +308,7 @@ class CloudRenderer:
             if ds.visible and len(ds.coords) > 0:
                 ds_tokens.append((
                     ds.name,
+                    self._get_obj_matrix(ds).tobytes(),
                     getattr(ds, 'splat_scale', 1.0),
                     getattr(ds, 'point_size', 2),
                     getattr(ds, 'opacity', 1.0),
@@ -532,7 +533,7 @@ class CloudRenderer:
         for ds in visible_ds:
             ds_type = type(ds).__name__
             if ds_type == "GaussianSplatDataset" or isinstance(ds, GaussianSplatDataset):
-                obj_mat = self._get_obj_matrix(ds)
+                obj_mat = self._get_obj_matrix(ds, viewport)
                 snapshots.append({
                     "type": "gs",
                     "coords": ds.coords,
@@ -545,7 +546,7 @@ class CloudRenderer:
                     "max_splats": min(getattr(ds, 'max_splats', 1500000), self.max_point_budget)
                 })
             elif ds_type == "PointCloudDataset" or isinstance(ds, PointCloudDataset):
-                obj_mat = self._get_obj_matrix(ds)
+                obj_mat = self._get_obj_matrix(ds, viewport)
                 # Pass references to worker thread so 162M slicing never blocks the GUI thread
                 snapshots.append({
                     "type": "pc",
@@ -596,7 +597,7 @@ class CloudRenderer:
                     n_total = len(raw_coords)
                     budget = max(1000000, min(s["budget"], 12000000))
                     step = max(1, n_total // budget)
-                    sub_coords = np.ascontiguousarray(raw_coords[::step])
+                    sub_coords = np.ascontiguousarray(raw_coords[::step], dtype=np.float32)
                     sub_colors = self._extract_colors_raw(
                         sub_coords, step, s["colors"], s["color_mode"],
                         s["colormap"], s["elevation_range"], s["intensities"],
@@ -629,8 +630,12 @@ class CloudRenderer:
 
         self._bg_executor.submit(_bg_task)
 
-    def _get_obj_matrix(self, ds) -> np.ndarray:
+    def _get_obj_matrix(self, ds, viewport=None) -> np.ndarray:
         """Compute 3x4 object transform matrix."""
+        if isinstance(ds, PointCloudDataset):
+            basis = np.vstack((np.zeros(3), np.eye(3)))
+            world = ds.apply_transform(basis, viewport)
+            return np.ascontiguousarray(np.column_stack(((world[1:]-world[0]).T, world[0])).ravel(), dtype=np.float32)
         obj_mat = np.array([
             1.0, 0.0, 0.0, 0.0,
             0.0, 1.0, 0.0, 0.0,
@@ -1113,7 +1118,7 @@ class CloudRenderer:
             log.debug(f"Camera extract error in _render_point_cloud: {e}")
             return False
 
-        obj_mat = self._get_obj_matrix(ds)
+        obj_mat = self._get_obj_matrix(ds, viewport)
 
         # Select points & colors based on movement state
         if is_moving or n_pts > self.max_point_budget:
@@ -1122,6 +1127,7 @@ class CloudRenderer:
             sub_coords = ds.coords
             sub_colors = self._extract_colors_for_points(ds, sub_coords, stride=1)
 
+        sub_coords = np.ascontiguousarray(sub_coords, dtype=np.float32)
         if self.clipping_enabled:
             mask = self._clip_box_mask(sub_coords, obj_mat, self.clip_min, self.clip_max)
             if not np.any(mask):

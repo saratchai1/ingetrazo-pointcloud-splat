@@ -78,9 +78,15 @@ def create_pointcloud_proxy(dataset, scene) -> Group:
     grp = Group(m, name=f"{kind}: {dataset.name}")
     # Fully transparent faces
     grp.material = {"color": (0.2, 0.6, 0.9), "opacity": 0.0}
-    grp.ext = {"type": "pointcloud_proxy", "dataset_name": dataset.name}
+    from copy import deepcopy
+    grp.ext = {"type": "pointcloud_proxy", "dataset_name": dataset.name,
+               "coordinate_frame": deepcopy(getattr(dataset, 'coordinate_frame', None)),
+               "source_path": dataset.filepath}
 
+    dataset._proxy_reference = np.array([[v.position.x(), v.position.y(), v.position.z()]
+                                         for v in m.vertices], dtype=np.float64)
     dataset.proxy_group = grp
+    sync_proxy_from_dataset(dataset)
     scene.groups.append(grp)
     return grp
 
@@ -178,7 +184,7 @@ def sync_proxy_from_dataset(dataset) -> None:
         return
 
     vertices = grp.mesh.vertices
-    if len(vertices) < 8:
+    if len(vertices) == 0:
         return
 
     min_p, max_p = dataset._raw_bounds
@@ -203,11 +209,38 @@ def sync_proxy_from_dataset(dataset) -> None:
         [-sy, cy * sx, cy * cx]
     ], dtype=np.float32)
 
-    target_corners = (raw_corners - piv) @ R.T + piv + dataset.offset
     m = grp.mesh
-    for i in range(8):
-        v = vertices[i]
-        tgt = QVector3D(float(target_corners[i, 0]), float(target_corners[i, 1]), float(target_corners[i, 2]))
-        delta = tgt - v.position
-        if delta.lengthSquared() > 1e-8:
-            m.move_vertex(v, delta)
+    grp.xform = None  # manual controls define an absolute pose
+    raw = getattr(dataset, '_proxy_reference', raw_corners)
+    target = (raw - piv) @ R.T * dataset.scale + piv + dataset.offset
+    for v, xyz in zip(vertices, target):
+        m.move_vertex(v, QVector3D(*map(float, xyz)) - v.position)
+
+
+def proxy_affine(dataset, viewport=None):
+    """Recover full affine mapping including native scale, without double transforms.
+
+    Mesh vertex insertion order differs from cube corner order: match by the
+    pre-transform coordinates stored on creation, rather than guessed indices.
+    """
+    grp = dataset.proxy_group
+    raw = getattr(dataset, '_proxy_reference', None)
+    if raw is None:
+        raise ValueError("Proxy reference unavailable; reimport dataset")
+    positions = [v.position for v in grp.mesh.vertices]
+    if grp.xform is not None:
+        positions = [grp.xform.map(p) for p in positions]
+    current = np.array([[p.x(), p.y(), p.z()] for p in positions], dtype=np.float64)
+    if viewport is not None and grp in getattr(viewport.scene, 'selection', ()):
+        mat = getattr(viewport, '_preview_matrix', None)
+        off = getattr(viewport, '_preview_offset', None)
+        if mat is not None:
+            current = np.array([[mat.map(p).x(), mat.map(p).y(), mat.map(p).z()] for p in positions])
+        elif off is not None:
+            current += [off.x(), off.y(), off.z()]
+    design = np.column_stack((raw, np.ones(len(raw))))
+    mapping, _, rank, _ = np.linalg.lstsq(design, current, rcond=None)
+    # A planar scan defines the mapping on its plane; least squares extends it.
+    if not np.allclose(design @ mapping, current, atol=1e-5):
+        raise ValueError("Proxy was deformed; inspection requires an affine transform")
+    return mapping[:3].T, mapping[3]
