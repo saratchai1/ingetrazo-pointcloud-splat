@@ -12,7 +12,8 @@ import numpy as np
 
 
 def inspect(dataset, minimum, maximum, direction, diameter_m=.016,
-            min_support=30, min_length=.25, seed=0, viewport=None):
+            min_support=30, min_length=.25, seed=0, viewport=None,
+            layer_normal=None, layer_rank=0):
     if not getattr(dataset, 'coordinate_frame', None):
         raise ValueError('Inspection needs a LAS/LAZ dataset with confirmed units')
     if not .001 <= diameter_m <= .1 or min_support < 3 or min_length <= 0:
@@ -29,6 +30,12 @@ def inspect(dataset, minimum, maximum, direction, diameter_m=.016,
     roi_points = len(points)
     from .background import separate_surfaces
     points, ids, background = separate_surfaces(points, ids, diameter_m, seed=seed, min_support=min_support)
+    layer = {'enabled': False, 'removed_points': 0}
+    if layer_normal is not None:
+        from .layers import select_layer
+        points, ids, layer = select_layer(points, ids, layer_normal, diameter_m, rank=layer_rank)
+        if abs(np.dot(layer['normal'], direction)) > np.sin(np.radians(5)):
+            raise ValueError('Layer normal must be perpendicular to the bar direction')
     transverse = points - np.outer(points @ direction, direction)
     remaining = np.arange(len(points))
     rng = np.random.default_rng(seed)
@@ -60,6 +67,10 @@ def inspect(dataset, minimum, maximum, direction, diameter_m=.016,
                                   'residual_p95_m': q95, 'axial_coverage': occupied,
                                   'max_axial_gap_m': float(np.diff(np.sort(points[best] @ direction)).max()),
                                   'confidence_heuristic': float(occupied * min(1, len(best)/(2*min_support)) * max(0, 1-q95/(2*radius)))}})
+    duplicates = {'grouped_proposals': 0}
+    if layer.get('enabled'):
+        from .duplicates import group_layer_duplicates
+        bars, duplicates = group_layer_duplicates(bars, direction, layer['normal'], diameter_m)
     bars.sort(key=lambda bar: tuple(np.asarray(bar['start'])-np.dot(bar['start'], direction)*direction))
     source_hash = None
     if dataset.filepath and Path(dataset.filepath).is_file():
@@ -69,13 +80,14 @@ def inspect(dataset, minimum, maximum, direction, diameter_m=.016,
     affine = np.eye(4)
     affine[:3, :3] = (basis[1:]-basis[0]).T
     affine[:3, 3] = basis[0]
-    return {'local_to_world_4x4': affine.tolist(), 'schema': 1, 'algorithm': 'parallel-continuous-tracks-v3', 'seed': seed,
+    return {'local_to_world_4x4': affine.tolist(), 'schema': 1, 'algorithm': 'parallel-layer-tracks-v4', 'seed': seed,
             'source': dataset.filepath, 'source_sha256': source_hash,
             'coordinate_frame': deepcopy(dataset.coordinate_frame),
             'world_roi_m': np.asarray([minimum, maximum]).tolist(),
             'direction': direction.tolist(), 'parameters': {'diameter_m': diameter_m,
             'min_support': min_support, 'min_length_m': min_length},
-            'roi_points': roi_points, 'background_filter': background, 'track_filter': track_filter, 'bars': bars, 'spacing': spacing(bars, direction),
+            'roi_points': roi_points, 'layer_filter': layer, 'duplicate_filter': duplicates,
+            'background_filter': background, 'track_filter': track_filter, 'bars': bars, 'spacing': spacing(bars, direction),
             'limitations': 'One parallel family in one layer. Partial surfaces bias centres; diameter is design input. Confidence is heuristic. Review required.'}
 
 

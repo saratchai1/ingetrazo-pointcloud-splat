@@ -1,0 +1,343 @@
+{
+  "algorithm": "parallel-layer-tracks-v4",
+  "baseline_commit": "f3a05576c692287237ca5d27d4846a2b8e7076b7",
+  "dataset_doi": "10.5281/zenodo.7933479",
+  "license": "CC BY 4.0; Moreu, Sanei, Lippitt",
+  "scope": "Provisional specimen-level count comparison; no registered individual bar/bay truth",
+  "same_inputs_verified": true,
+  "reference_counts_used_by_detector": false,
+  "verified_spacing_intervals": 0,
+  "reference_spacing_intervals": 32,
+  "results": [
+    {
+      "scan": "drone-t1",
+      "family": 1,
+      "before": 0,
+      "current_roi_only": 0,
+      "after": 0,
+      "assessment": {
+        "expected_count": 5,
+        "detected_count": 0,
+        "count_error": -5,
+        "count_matches": false,
+        "reference_spacing_count": 16,
+        "reference_spacing_m": [
+          0.13335,
+          0.14605,
+          0.13335,
+          0.127,
+          0.13335,
+          0.13335,
+          0.13335,
+          0.12065000000000001,
+          0.13335,
+          0.12065000000000001,
+          0.13335,
+          0.12065000000000001,
+          0.13018000000000002,
+          0.1143,
+          0.13335,
+          0.11748
+        ],
+        "spacing_mae_m": null,
+        "spacing_max_abs_error_m": null,
+        "per_spacing_error_m": null,
+        "spacing_status": "unavailable_count_mismatch"
+      },
+      "adjacent_candidate_spacing": [],
+      "spacing_basis": "Adjacent detected parallel tracks with axial overlap; NOT registered per-bay ground truth",
+      "layer_filter": {
+        "enabled": true,
+        "normal": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "selected_rank": 0,
+        "bin_m": 0.00396875,
+        "half_width_m": 0.01190625,
+        "mode_separation_m": 0.03175,
+        "modes": [
+          {
+            "depth_m": -0.08769488656969711,
+            "support": 110,
+            "peak_score": 177
+          }
+        ],
+        "mode_inventory_limit": 32,
+        "inventory_truncated": false,
+        "removed_points": 63,
+        "retained_points": 110,
+        "selected_depth_m": -0.08769488656969711
+      },
+      "duplicate_filter": {
+        "grouped_proposals": 0,
+        "max_distance_m": 0.015875,
+        "max_in_plane_distance_m": 0.01190625,
+        "max_depth_distance_m": 0.015875,
+        "minimum_weaker_overlap": 0.8,
+        "minimum_support_ratio": 4.0
+      },
+      "source_sha256": "84d3e007a955dac7a3f05d8ba62e8ae66410a699a7463a89d3c66a5166da0254"
+    },
+    {
+      "scan": "drone-t1",
+      "family": 2,
+      "before": 0,
+      "current_roi_only": 0,
+      "after": 0,
+      "assessment": {
+        "expected_count": 5,
+        "detected_count": 0,
+        "count_error": -5,
+        "count_matches": false,
+        "reference_spacing_count": 16,
+        "reference_spacing_m": [
+          0.1397,
+          0.13335,
+          0.1397,
+          0.14605,
+          0.127,
+          0.127,
+          0.12383,
+          0.11112999999999999,
+          0.11112999999999999,
+          0.12065000000000001,
+          0.127,
+          0.127,
+          0.127,
+          0.127,
+          0.13653,
+          0.1397
+        ],
+        "spacing_mae_m": null,
+        "spacing_max_abs_error_m": null,
+        "per_spacing_error_m": null,
+        "spacing_status": "unavailable_count_mismatch"
+      },
+      "adjacent_candidate_spacing": [],
+      "spacing_basis": "Adjacent detected parallel tracks with axial overlap; NOT registered per-bay ground truth",
+      "layer_filter": {
+        "enabled": true,
+        "normal": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "selected_rank": 0,
+        "bin_m": 0.00396875,
+        "half_width_m": 0.01190625,
+        "mode_separation_m": 0.03175,
+        "modes": [
+          {
+            "depth_m": -0.08769488656969711,
+            "support": 110,
+            "peak_score": 177
+          }
+        ],
+        "mode_inventory_limit": 32,
+        "inventory_truncated": false,
+        "removed_points": 63,
+        "retained_points": 110,
+        "selected_depth_m": -0.08769488656969711
+      },
+      "duplicate_filter": {
+        "grouped_proposals": 0,
+        "max_distance_m": 0.015875,
+        "max_in_plane_distance_m": 0.01190625,
+        "max_depth_distance_m": 0.015875,
+        "minimum_weaker_overlap": 0.8,
+        "minimum_support_ratio": 4.0
+      },
+      "source_sha256": "84d3e007a955dac7a3f05d8ba62e8ae66410a699a7463a89d3c66a5166da0254"
+    },
+    {
+      "scan": "drone-t8",
+      "family": 1,
+      "before": 10,
+      "current_roi_only": 10,
+      "after": 4,
+      "assessment": {
+        "expected_count": 5,
+        "detected_count": 4,
+        "count_error": -1,
+        "count_matches": false,
+        "reference_spacing_count": 16,
+        "reference_spacing_m": [
+          0.13335,
+          0.14605,
+          0.13335,
+          0.127,
+          0.13335,
+          0.13335,
+          0.13335,
+          0.12065000000000001,
+          0.13335,
+          0.12065000000000001,
+          0.13335,
+          0.12065000000000001,
+          0.13018000000000002,
+          0.1143,
+          0.13335,
+          0.11748
+        ],
+        "spacing_mae_m": null,
+        "spacing_max_abs_error_m": null,
+        "per_spacing_error_m": null,
+        "spacing_status": "unavailable_count_mismatch"
+      },
+      "adjacent_candidate_spacing": [
+        {
+          "bars": [
+            0,
+            1
+          ],
+          "centreline_mm": 137.90071138374057
+        },
+        {
+          "bars": [
+            1,
+            2
+          ],
+          "centreline_mm": 123.90295062275331
+        },
+        {
+          "bars": [
+            2,
+            3
+          ],
+          "centreline_mm": 125.73646257622642
+        }
+      ],
+      "spacing_basis": "Adjacent detected parallel tracks with axial overlap; NOT registered per-bay ground truth",
+      "layer_filter": {
+        "enabled": true,
+        "normal": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "selected_rank": 0,
+        "bin_m": 0.00396875,
+        "half_width_m": 0.01190625,
+        "mode_separation_m": 0.03175,
+        "modes": [
+          {
+            "depth_m": -0.10212248910505567,
+            "support": 16943,
+            "peak_score": 27020
+          }
+        ],
+        "mode_inventory_limit": 32,
+        "inventory_truncated": false,
+        "removed_points": 9607,
+        "retained_points": 16943,
+        "selected_depth_m": -0.10212248910505567
+      },
+      "duplicate_filter": {
+        "grouped_proposals": 1,
+        "max_distance_m": 0.015875,
+        "max_in_plane_distance_m": 0.01190625,
+        "max_depth_distance_m": 0.015875,
+        "minimum_weaker_overlap": 0.8,
+        "minimum_support_ratio": 4.0
+      },
+      "source_sha256": "17b763895d1e841fba065992a29c540d25d63f64c3610ae053ae69ff34108b0c"
+    },
+    {
+      "scan": "drone-t8",
+      "family": 2,
+      "before": 7,
+      "current_roi_only": 7,
+      "after": 4,
+      "assessment": {
+        "expected_count": 5,
+        "detected_count": 4,
+        "count_error": -1,
+        "count_matches": false,
+        "reference_spacing_count": 16,
+        "reference_spacing_m": [
+          0.1397,
+          0.13335,
+          0.1397,
+          0.14605,
+          0.127,
+          0.127,
+          0.12383,
+          0.11112999999999999,
+          0.11112999999999999,
+          0.12065000000000001,
+          0.127,
+          0.127,
+          0.127,
+          0.127,
+          0.13653,
+          0.1397
+        ],
+        "spacing_mae_m": null,
+        "spacing_max_abs_error_m": null,
+        "per_spacing_error_m": null,
+        "spacing_status": "unavailable_count_mismatch"
+      },
+      "adjacent_candidate_spacing": [
+        {
+          "bars": [
+            3,
+            2
+          ],
+          "centreline_mm": 122.57191259832683
+        },
+        {
+          "bars": [
+            2,
+            1
+          ],
+          "centreline_mm": 137.250864647532
+        },
+        {
+          "bars": [
+            1,
+            0
+          ],
+          "centreline_mm": 124.22597164912025
+        }
+      ],
+      "spacing_basis": "Adjacent detected parallel tracks with axial overlap; NOT registered per-bay ground truth",
+      "layer_filter": {
+        "enabled": true,
+        "normal": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "selected_rank": 0,
+        "bin_m": 0.00396875,
+        "half_width_m": 0.01190625,
+        "mode_separation_m": 0.03175,
+        "modes": [
+          {
+            "depth_m": -0.10212248910505567,
+            "support": 16943,
+            "peak_score": 27020
+          }
+        ],
+        "mode_inventory_limit": 32,
+        "inventory_truncated": false,
+        "removed_points": 9607,
+        "retained_points": 16943,
+        "selected_depth_m": -0.10212248910505567
+      },
+      "duplicate_filter": {
+        "grouped_proposals": 0,
+        "max_distance_m": 0.015875,
+        "max_in_plane_distance_m": 0.01190625,
+        "max_depth_distance_m": 0.015875,
+        "minimum_weaker_overlap": 0.8,
+        "minimum_support_ratio": 4.0
+      },
+      "source_sha256": "17b763895d1e841fba065992a29c540d25d63f64c3610ae053ae69ff34108b0c"
+    }
+  ],
+  "real_data_validation": "FAIL",
+  "production_modified": false
+}

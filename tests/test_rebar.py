@@ -79,12 +79,13 @@ def test_transform_roi_and_renderer_agree(tmp_path):
     assert np.allclose(pts, ds.apply_transform(ds.coords)[ids])
 
 
-def test_native_undo_redo_and_persistence(tmp_path):
+@pytest.mark.parametrize('use_layer', [False, True])
+def test_native_undo_redo_and_persistence(tmp_path, use_layer):
     from core.scene import Scene
     from core.history import History
     from formats import igz
     ds, _=cloud(tmp_path)
-    report=inspect(ds, [-3]*3, [3]*3, [1,0,0])
+    report=inspect(ds, [-3]*3, [3]*3, [1,0,0], layer_normal=[0,0,1] if use_layer else None)
     for b in report['bars']: b['accepted']=True
     scene=Scene(); hist=History(scene)
     original=scene.version
@@ -180,6 +181,10 @@ def test_review_dialog_end_to_end_offscreen(tmp_path):
             setattr(manager,f'spin_{axis}_{end}',spin)
     dialog=RebarDialog(manager)
     dialog.analyze()
+    assert dialog.table.rowCount()==3
+    dialog.layer_normal.setCurrentText('Z')
+    dialog.analyze()
+    assert dialog.report['layer_filter']['enabled']
     assert dialog.table.rowCount()==3
     for row in range(3): dialog.table.item(row,0).setCheckState(Qt.Checked)
     dialog.table.item(0,1).setText('0.05')

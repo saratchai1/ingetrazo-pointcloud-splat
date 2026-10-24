@@ -7,7 +7,7 @@ or spacing. Missing scan support is a reason to withhold a candidate.
 import numpy as np
 
 
-def continuous_tracks(points, clusters, direction, diameter, min_support, min_length):
+def _track_pass(points, clusters, direction, diameter, min_support, min_length):
     """Consolidate nearby proposals, then split at unsupported axial gaps."""
     radius = diameter * .8
     diagnostics = {'merged_proposals': 0, 'rejected_short_or_sparse': 0,
@@ -70,4 +70,28 @@ def continuous_tracks(points, clusters, direction, diameter, min_support, min_le
                 continue
             tracks.append((segment, centre, low-centre@direction, high-centre@direction,
                            float(coverage), q95))
+    return tracks, diagnostics
+
+
+def continuous_tracks(points, clusters, direction, diameter, min_support, min_length):
+    """Consolidate again after disconnected support has been removed.
+
+    Raw proposal centres can be biased by isolated points at other depths. Once
+    split, overlapping valid segments may fit one envelope even if their raw
+    proposals could not merge. Each successful pass strictly reduces tracks.
+    """
+    tracks, diagnostics = _track_pass(points, clusters, direction, diameter, min_support, min_length)
+    diagnostics['post_split_merges'] = 0
+    while len(tracks) > 1:
+        refined, stats = _track_pass(points, [track[0] for track in tracks], direction,
+                                     diameter, min_support, min_length)
+        if not stats['merged_proposals']:
+            break
+        diagnostics['post_split_merges'] += stats['merged_proposals']
+        diagnostics['merged_proposals'] += stats['merged_proposals']
+        for key in ('rejected_short_or_sparse', 'rejected_coverage', 'rejected_direction', 'rejected_width'):
+            diagnostics[key] += stats[key]
+        if len(refined) >= len(tracks):
+            raise RuntimeError('Track consolidation did not reduce candidates')
+        tracks = refined
     return tracks, diagnostics

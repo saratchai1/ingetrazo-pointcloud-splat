@@ -4,7 +4,7 @@ from copy import deepcopy
 import json
 import numpy as np
 from PySide6.QtWidgets import (QDialog, QVBoxLayout, QLabel, QComboBox, QDoubleSpinBox,
-    QPushButton, QTableWidget, QTableWidgetItem, QMessageBox, QFileDialog)
+    QPushButton, QTableWidget, QTableWidgetItem, QMessageBox, QFileDialog, QSpinBox)
 from PySide6.QtCore import Qt, QPointF
 from PySide6.QtGui import QColor, QPen, QVector3D
 from ..rebar import inspect, commit_review, spacing
@@ -36,6 +36,15 @@ class RebarDialog(QDialog):
         layout.addWidget(self.direction)
         self.diameter = QDoubleSpinBox(); self.diameter.setRange(3, 100); self.diameter.setValue(16)
         self.diameter.setSuffix(' mm (design diameter)'); layout.addWidget(self.diameter)
+        self.layer_normal = QComboBox()
+        self.layer_normal.addItems(['Use section box only', 'X', 'Y', 'Z'])
+        self.layer_normal.setEditable(True)
+        self.layer_normal.setToolTip('Optional layer normal: X/Y/Z or world x,y,z, perpendicular to the bars')
+        layout.addWidget(QLabel('Separate a depth layer along this normal (crop unrelated objects first):'))
+        layout.addWidget(self.layer_normal)
+        self.layer_rank = QSpinBox(); self.layer_rank.setRange(1, 32)
+        self.layer_rank.setPrefix('Layer by peak strength (1 = strongest): ')
+        layout.addWidget(self.layer_rank)
         detect = QPushButton('Analyze section box'); detect.clicked.connect(self.analyze); layout.addWidget(detect)
         self.table = QTableWidget(0, 9)
         self.table.setHorizontalHeaderLabels(['Accept', 'X1 m', 'Y1 m', 'Z1 m', 'X2 m', 'Y2 m', 'Z2 m', 'Support / residual', 'Quality'])
@@ -57,8 +66,15 @@ class RebarDialog(QDialog):
             direction = {'X':[1,0,0], 'Y':[0,1,0], 'Z':[0,0,1]}.get(text)
             if direction is None:
                 direction = [float(x) for x in text.split(',')]
+            text = self.layer_normal.currentText().strip().upper()
+            normal = None
+            if text != 'USE SECTION BOX ONLY':
+                normal = {'X':[1,0,0], 'Y':[0,1,0], 'Z':[0,0,1]}.get(text)
+                if normal is None:
+                    normal = [float(x) for x in text.split(',')]
             self.report = inspect(self.dataset, low, high, direction, self.diameter.value()/1000,
-                                  viewport=m.app.viewport)
+                                  viewport=m.app.viewport, layer_normal=normal,
+                                  layer_rank=self.layer_rank.value()-1)
             self.analysis_version = m.app.viewport.scene.version
             self.transform_sample = self.dataset.apply_transform(np.vstack((np.zeros(3), np.eye(3))), m.app.viewport).copy()
             self.table.setRowCount(len(self.report['bars']))
@@ -95,7 +111,13 @@ class RebarDialog(QDialog):
 
     def update_spacing(self, report):
         removed = report.get('background_filter', {}).get('removed_points', 0)
-        self.evidence.setText(f'Surface points excluded: {removed:,}. Centreline spacing: '+('; '.join(f"{s['bars'][0]+1}–{s['bars'][1]+1}: {s['centreline_m']*1000:.2f} mm" for s in report['spacing']) or 'No overlapping pairs'))
+        layer = report.get('layer_filter', {})
+        layer_text = (f" Layer {layer['selected_rank']+1}: {layer['retained_points']:,} points retained, "
+                      f"{layer['removed_points']:,} outside depth band." if layer.get('enabled') else '')
+        grouped = report.get('duplicate_filter', {}).get('grouped_proposals', 0)
+        if grouped:
+            layer_text += f' {grouped} weak overlapping proposals grouped; review dashed overlays and JSON evidence.'
+        self.evidence.setText(f'Surface points excluded: {removed:,}.'+layer_text+' Centreline spacing: '+('; '.join(f"{s['bars'][0]+1}–{s['bars'][1]+1}: {s['centreline_m']*1000:.2f} mm" for s in report['spacing']) or 'No overlapping pairs'))
 
     def create(self):
         try:
@@ -130,6 +152,13 @@ class RebarDialog(QDialog):
                 painter.setPen(QPen(QColor('#32d583' if accepted else '#ffb547'), 2))
                 painter.drawLine(QPointF(*a), QPointF(*b))
                 painter.drawText(QPointF(*a), str(row+1))
+                for grouped in self.report['bars'][row].get('grouped_duplicate_proposals', []):
+                    proposal = grouped['proposal']
+                    a = viewport._world_to_pixel(QVector3D(*proposal['start']))
+                    b = viewport._world_to_pixel(QVector3D(*proposal['end']))
+                    if a is not None and b is not None:
+                        painter.setPen(QPen(QColor('#ffb547'), 1, Qt.DashLine))
+                        painter.drawLine(QPointF(*a), QPointF(*b))
             except (ValueError, TypeError, AttributeError):
                 continue
 

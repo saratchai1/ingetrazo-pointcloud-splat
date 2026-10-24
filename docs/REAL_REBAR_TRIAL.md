@@ -37,9 +37,10 @@ The script never attaches to a running IngeTrazo document. It uses fixed scanner
 | Depth slab, initial guided axes | 0 / 1 | 63 / 60 |
 | Depth slab, geometry-only axes | 1 / 1 | 60 / 65 |
 | Continuity/width filtering v3, same slab and geometry-only axes | 0 / 0 | 10 / 7 |
+| Guided depth band + duplicate grouping v4 | 0 / 0 | 4 / 4 |
 | Reference specimen grid | 5 / 5 | 5 / 5 |
 
-The baseline rows above describe the pre-continuity detector. The current v3 row was rerun with identical raw hashes, ROI, rigid transform and geometry-only directions. See [continuity follow-up](CONTINUITY_TRIAL.md) for thresholds, regression tests and remaining errors.
+The baseline rows above describe the pre-continuity detector. The v3 row was rerun with identical raw hashes, ROI, rigid transform and geometry-only directions. See [continuity follow-up](CONTINUITY_TRIAL.md) for v3 thresholds and regressions; see [the v4 layer trial](LAYER_TRIAL.md) for the latest depth-selection/grouping results and remaining errors.
 
 All runs retain candidates as unaccepted. No broad supporting plane is excluded in these ROIs under the current thresholds. Relative to the specimen count, final t1 count deltas are -4/-4 and final t8 deltas are +55/+60. These are count discrepancies, not independently matched precision/recall measurements.
 

@@ -64,6 +64,8 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--data-dir',type=Path,required=True)
     parser.add_argument('--output-dir',type=Path,required=True)
+    parser.add_argument('--layer-mode', choices=['roi', 'dominant'], default='roi',
+                        help='Optional dominant depth-band selection inside the existing guided ROI')
     args=parser.parse_args()
     reference=json.loads((Path(__file__).parents[1]/'docs/data/real_rebar_reference.json').read_text())
     results=[];args.output_dir.mkdir(parents=True,exist_ok=True)
@@ -93,7 +95,8 @@ def main():
         ds.rotation_x_deg,ds.rotation_y_deg,ds.rotation_z_deg=Rotation.from_matrix(rotation).as_euler('xyz',degrees=True)
         ds.offset=-centre@rotation.T
         for family,direction in enumerate(directions):
-            report=inspect(ds,roi_low,roi_high,direction,diameter_m=.015875)
+            report=inspect(ds,roi_low,roi_high,direction,diameter_m=.015875,
+                           layer_normal=[0,0,1] if args.layer_mode=='dominant' else None)
             ref_key='horizontal_midbay_spacing_mm' if family==0 else 'vertical_midbay_spacing_mm'
             assessment=compare_reference(len(report['bars']),5,[],np.asarray(reference[ref_key]).ravel()/1000,
                                          correspondence_verified=False)
