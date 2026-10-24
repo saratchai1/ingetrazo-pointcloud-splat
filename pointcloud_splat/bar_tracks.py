@@ -7,9 +7,21 @@ or spacing. Missing scan support is a reason to withhold a candidate.
 import numpy as np
 
 
-def _track_pass(points, clusters, direction, diameter, min_support, min_length):
+def axial_cell_centre(sample, direction, diameter, radius):
+    """Equal axial-cell influence limits dense crossings and local anchors."""
+    axial = sample @ direction
+    transverse = sample-np.outer(axial,direction)
+    keys = np.floor((axial-np.quantile(axial,.01))/max(2*diameter,.5*radius)).astype(int)
+    medians = [np.median(transverse[keys==key],axis=0)
+               for key in np.unique(keys) if np.count_nonzero(keys==key)>=3]
+    if not medians:
+        return sample.mean(0)
+    return np.median(medians,axis=0)+axial.mean()*direction
+
+
+def _track_pass(points, clusters, direction, diameter, min_support, min_length, support_radius=None, robust_centres=False):
     """Consolidate nearby proposals, then split at unsupported axial gaps."""
-    radius = diameter * .8
+    radius = diameter * .8 if support_radius is None else support_radius
     diagnostics = {'merged_proposals': 0, 'rejected_short_or_sparse': 0,
                    'rejected_coverage': 0, 'rejected_direction': 0, 'rejected_width': 0,
                    'max_gap_m': diameter * 3, 'coverage_cell_m': diameter * 2,
@@ -59,11 +71,13 @@ def _track_pass(points, clusters, direction, diameter, min_support, min_length):
                 continue
             sample = points[segment]
             centre = sample.mean(0)
+            if robust_centres:
+                centre = axial_cell_centre(sample, direction, diameter, radius)
             _, _, axes = np.linalg.svd(sample-centre, full_matrices=False)
             if abs(axes[0] @ direction) < np.cos(np.radians(5)):
                 diagnostics['rejected_direction'] += 1
                 continue
-            residual = np.linalg.norm(transverse[segment]-transverse[segment].mean(0), axis=1)
+            residual = np.linalg.norm(transverse[segment]-(centre-(centre@direction)*direction), axis=1)
             q95 = float(np.quantile(residual, .95))
             if q95 > radius:
                 diagnostics['rejected_width'] += 1
@@ -73,18 +87,18 @@ def _track_pass(points, clusters, direction, diameter, min_support, min_length):
     return tracks, diagnostics
 
 
-def continuous_tracks(points, clusters, direction, diameter, min_support, min_length):
+def continuous_tracks(points, clusters, direction, diameter, min_support, min_length, support_radius=None, robust_centres=False):
     """Consolidate again after disconnected support has been removed.
 
     Raw proposal centres can be biased by isolated points at other depths. Once
     split, overlapping valid segments may fit one envelope even if their raw
     proposals could not merge. Each successful pass strictly reduces tracks.
     """
-    tracks, diagnostics = _track_pass(points, clusters, direction, diameter, min_support, min_length)
+    tracks, diagnostics = _track_pass(points, clusters, direction, diameter, min_support, min_length, support_radius, robust_centres)
     diagnostics['post_split_merges'] = 0
     while len(tracks) > 1:
         refined, stats = _track_pass(points, [track[0] for track in tracks], direction,
-                                     diameter, min_support, min_length)
+                                     diameter, min_support, min_length, support_radius, robust_centres)
         if not stats['merged_proposals']:
             break
         diagnostics['post_split_merges'] += stats['merged_proposals']

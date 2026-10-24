@@ -55,3 +55,7 @@ The next engineering work is bar continuity/local direction discrimination and p
 ## Original-record ROI and cell audit
 
 A follow-up audited original invalid-depth records and source-image clipping, mapped eight retained tracks to manual RGB trace IDs, and measured six scan-local cells without extending unsupported tracks. The rightmost V4 trace has zero usable XYZ even in a 15-pixel corridor, while the top fragment is clipped and short. These observations distinguish missing source evidence from downstream cropping; they do not establish paper-label registration or a whole-specimen count pass. See [ROI and cell audit](ROI_AUDIT.md). Reference errors remain unavailable (0/32 verified pairs).
+
+A separate real wingwall source now supplies physically labeled photos and tape references: [18-interval benchmark](WINGWALL_TRIAL.md). Its independently registered results do not establish correspondences for t1/t8.
+
+A separate real wingwall source now supplies physically labeled photos and tape references: [18-interval benchmark](WINGWALL_TRIAL.md). Its independently registered results do not establish correspondences for t1/t8.

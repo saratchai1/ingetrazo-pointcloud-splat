@@ -36,6 +36,10 @@ class RebarDialog(QDialog):
         layout.addWidget(self.direction)
         self.diameter = QDoubleSpinBox(); self.diameter.setRange(3, 100); self.diameter.setValue(16)
         self.diameter.setSuffix(' mm (design diameter)'); layout.addWidget(self.diameter)
+        self.scan_noise = QDoubleSpinBox(); self.scan_noise.setRange(0, 50)
+        self.scan_noise.setSuffix(' mm scan blur allowance (0 = standard)')
+        self.scan_noise.setToolTip('Use a known scan blur allowance with a layer normal. This is not measurement accuracy or measured diameter.')
+        layout.addWidget(self.scan_noise)
         self.layer_normal = QComboBox()
         self.layer_normal.addItems(['Use section box only', 'X', 'Y', 'Z'])
         self.layer_normal.setEditable(True)
@@ -74,7 +78,8 @@ class RebarDialog(QDialog):
                     normal = [float(x) for x in text.split(',')]
             self.report = inspect(self.dataset, low, high, direction, self.diameter.value()/1000,
                                   viewport=m.app.viewport, layer_normal=normal,
-                                  layer_rank=self.layer_rank.value()-1)
+                                  layer_rank=self.layer_rank.value()-1,
+                                  scan_noise_m=self.scan_noise.value()/1000)
             self.analysis_version = m.app.viewport.scene.version
             self.transform_sample = self.dataset.apply_transform(np.vstack((np.zeros(3), np.eye(3))), m.app.viewport).copy()
             self.table.setRowCount(len(self.report['bars']))

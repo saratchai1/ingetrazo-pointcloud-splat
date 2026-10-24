@@ -1,0 +1,218 @@
+{
+  "dataset_doi": "10.5281/zenodo.4273237",
+  "dataset_license": "CC BY 4.0",
+  "authors": [
+    "Fernando Moreu",
+    "Christopher Lippitt",
+    "Xinxing Yuan"
+  ],
+  "report_url": "https://rosap.ntl.bts.gov/view/dot/58940/dot_58940_DS1.pdf",
+  "reference_page_pdf": 30,
+  "reference_page_printed": 20,
+  "reference_figure": 14,
+  "reference_basis": "Published field steel-tape centre spacings, ordered on the asymmetric stepped wingwall plot, NOT design dimensions or author algorithm outputs",
+  "x_tape_inches": [
+    8.5,
+    8.8,
+    8.8,
+    9.5,
+    9.3,
+    8.8,
+    9.3,
+    8.8,
+    8.3,
+    7.5,
+    8.3
+  ],
+  "y_tape_inches": [
+    9.8,
+    8.8,
+    9.5,
+    8.0,
+    5.5,
+    7.5,
+    5.75
+  ],
+  "x_bar_ids": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "y_bar_ids": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H"
+  ],
+  "anchor_evidence": {
+    "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+    "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+    "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+  },
+  "source_notes": [
+    "Table5 third X row prints (3-6), a label typo resolved by Fig14 showing the third adjacent interval and source RB3/RB4 labels.",
+    "Fig14 gives top Y tape 5.75 inches; Table5 rounds it to 5.8. Use the finer published Fig14 value consistently.",
+    "Most tape values are published at 0.1 inch resolution (2.54 mm); no sub-mm accuracy or metrological calibration is implied.",
+    "MAT is the source authors CSV-exported XYZ, as documented in densityByLayer_example.m. Metre convention follows companion GeoSLAM E57; no independent scale calibration is claimed."
+  ],
+  "files": [
+    {
+      "name": "small_rebar_4M.mat",
+      "sha256": "87cce057c0ffd69d0b5d90f3c93a73afec6e0d7c9635ae53fe7cc99080231f3c",
+      "size": 50911265
+    },
+    {
+      "name": "1-5.png",
+      "sha256": "847fdf06b58aaee75852311407c0473e1050b902be9803b151162e363fed6a29",
+      "size": 4486238
+    },
+    {
+      "name": "A-C.png",
+      "sha256": "30abd49c52dd779fd6c50ebd534183723d17b56e264a1903fa36adfc168146e2",
+      "size": 4304977
+    },
+    {
+      "name": "drawing.PNG",
+      "sha256": "c5bbdc2955eaddf655ef4021c6cab4e37f7f99e3d7764c7f834033cb7208b769",
+      "size": 38614
+    },
+    {
+      "name": "report.pdf",
+      "sha256": "9924bd3bfb037f8b4d4f6eb12b6cebeb572f845315d443603535bb9fc96360de",
+      "size": 5930180
+    }
+  ],
+  "protocol": {
+    "source_roi_m": [
+      [
+        0.18,
+        0.15,
+        0.18
+      ],
+      [
+        1.72,
+        2.8,
+        0.27
+      ]
+    ],
+    "sample_count": 180000,
+    "sample_seed": 123,
+    "direction_x_family": [
+      0,
+      1,
+      0
+    ],
+    "direction_y_family": [
+      1,
+      0,
+      0
+    ],
+    "layer_normal": [
+      0,
+      0,
+      1
+    ],
+    "diameter_m": 0.015875,
+    "scan_noise_m": 0.02
+  },
+  "scan_identity_windows_m": {
+    "X": [
+      [
+        0.2,
+        0.36
+      ],
+      [
+        0.44,
+        0.59
+      ],
+      [
+        0.66,
+        0.82
+      ],
+      [
+        0.87,
+        1.03
+      ],
+      [
+        1.12,
+        1.27
+      ],
+      [
+        1.36,
+        1.52
+      ],
+      [
+        1.57,
+        1.73
+      ],
+      [
+        1.8,
+        1.96
+      ],
+      [
+        2.03,
+        2.19
+      ],
+      [
+        2.25,
+        2.41
+      ],
+      [
+        2.45,
+        2.6
+      ],
+      [
+        2.65,
+        2.79
+      ]
+    ],
+    "Y": [
+      [
+        0.19,
+        0.28
+      ],
+      [
+        0.42,
+        0.51
+      ],
+      [
+        0.65,
+        0.74
+      ],
+      [
+        0.89,
+        0.98
+      ],
+      [
+        1.12,
+        1.2
+      ],
+      [
+        1.24,
+        1.33
+      ],
+      [
+        1.45,
+        1.53
+      ],
+      [
+        1.62,
+        1.71
+      ]
+    ]
+  },
+  "identity_window_basis": "Manual scan-side bar identity regions viewed in original XYZ and asymmetric source diagram. Used only after detection to reject wrong identities; NOT metric spacing truth or detector priors."
+}

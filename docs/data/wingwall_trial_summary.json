@@ -1,0 +1,1650 @@
+{
+  "protocol": {
+    "source_rows": 4182318,
+    "roi_rows": 733390,
+    "sample_rows": 180000,
+    "sample_seed": 123,
+    "sample_method": "uniform_without_replacement; sorted original record IDs",
+    "source_to_analysis_4x4": [
+      [
+        0.0,
+        -1.0,
+        0.0,
+        2.9388
+      ],
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "counts": [
+    {
+      "family": "X",
+      "detected": 12,
+      "expected": 12,
+      "matched": true,
+      "source_identities_matched": true
+    },
+    {
+      "family": "Y",
+      "detected": 8,
+      "expected": 8,
+      "matched": true,
+      "source_identities_matched": true
+    }
+  ],
+  "line_assignments": [
+    {
+      "family": "X",
+      "source_label": "1",
+      "candidate_index": 0,
+      "start": [
+        0.2843,
+        0.19130000000000003,
+        0.2286
+      ],
+      "end": [
+        0.2843,
+        0.9431839999999998,
+        0.2286
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "X",
+      "source_label": "2",
+      "candidate_index": 1,
+      "start": [
+        0.51535,
+        0.19130000000000003,
+        0.221
+      ],
+      "end": [
+        0.51535,
+        1.056,
+        0.221
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "X",
+      "source_label": "3",
+      "candidate_index": 2,
+      "start": [
+        0.7406000000000001,
+        0.19465,
+        0.2221
+      ],
+      "end": [
+        0.7406000000000001,
+        1.1541000000000001,
+        0.2221
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "X",
+      "source_label": "4",
+      "candidate_index": 3,
+      "start": [
+        0.9510000000000001,
+        0.19805199999999995,
+        0.22694999999999999
+      ],
+      "end": [
+        0.9510000000000001,
+        1.192148,
+        0.22694999999999999
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "X",
+      "source_label": "5",
+      "candidate_index": 4,
+      "start": [
+        1.1981000000000002,
+        0.20530000000000004,
+        0.2333
+      ],
+      "end": [
+        1.1981000000000002,
+        1.6653,
+        0.2333
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "X",
+      "source_label": "6",
+      "candidate_index": 5,
+      "start": [
+        1.4422000000000001,
+        0.23919999999999997,
+        0.22805
+      ],
+      "end": [
+        1.4422000000000001,
+        1.70224,
+        0.22805
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "X",
+      "source_label": "7",
+      "candidate_index": 6,
+      "start": [
+        1.64945,
+        0.22504999999999997,
+        0.23370000000000002
+      ],
+      "end": [
+        1.64945,
+        1.71135,
+        0.23370000000000002
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "X",
+      "source_label": "8",
+      "candidate_index": 7,
+      "start": [
+        1.8851,
+        0.22753800000000002,
+        0.23865
+      ],
+      "end": [
+        1.8851,
+        1.6915549999999997,
+        0.23865
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "X",
+      "source_label": "9",
+      "candidate_index": 8,
+      "start": [
+        2.1122,
+        0.23634,
+        0.2369
+      ],
+      "end": [
+        2.1122,
+        1.6982,
+        0.2369
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "X",
+      "source_label": "10",
+      "candidate_index": 9,
+      "start": [
+        2.3310000000000004,
+        0.22160000000000002,
+        0.2449
+      ],
+      "end": [
+        2.3310000000000004,
+        1.697073,
+        0.2449
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "X",
+      "source_label": "11",
+      "candidate_index": 10,
+      "start": [
+        2.525,
+        0.24363100000000004,
+        0.24085
+      ],
+      "end": [
+        2.525,
+        1.6882830000000002,
+        0.24085
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "X",
+      "source_label": "12",
+      "candidate_index": 11,
+      "start": [
+        2.724525,
+        0.22083600000000003,
+        0.244525
+      ],
+      "end": [
+        2.724525,
+        1.7126409999999999,
+        0.244525
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "Y",
+      "source_label": "A",
+      "candidate_index": 0,
+      "start": [
+        0.23980000000000024,
+        0.23419999999999996,
+        0.23965
+      ],
+      "end": [
+        2.750322,
+        0.23419999999999996,
+        0.23965
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "Y",
+      "source_label": "B",
+      "candidate_index": 1,
+      "start": [
+        0.29190000000000005,
+        0.46265,
+        0.23335
+      ],
+      "end": [
+        2.7309569999999996,
+        0.46265,
+        0.23335
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "Y",
+      "source_label": "C",
+      "candidate_index": 2,
+      "start": [
+        0.2631000000000001,
+        0.688675,
+        0.22715000000000002
+      ],
+      "end": [
+        2.730428,
+        0.688675,
+        0.22715000000000002
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "Y",
+      "source_label": "D",
+      "candidate_index": 3,
+      "start": [
+        0.28403800000000023,
+        0.9340999999999999,
+        0.22685
+      ],
+      "end": [
+        2.7258860000000005,
+        0.9340999999999999,
+        0.22685
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "Y",
+      "source_label": "E",
+      "candidate_index": 4,
+      "start": [
+        0.9134249999999999,
+        1.1615250000000001,
+        0.22735
+      ],
+      "end": [
+        2.72806,
+        1.1615250000000001,
+        0.22735
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "Y",
+      "source_label": "F",
+      "candidate_index": 5,
+      "start": [
+        1.0976530000000002,
+        1.2809,
+        0.226325
+      ],
+      "end": [
+        2.729447,
+        1.2809,
+        0.226325
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "Y",
+      "source_label": "G",
+      "candidate_index": 6,
+      "start": [
+        1.37626,
+        1.49345,
+        0.22385
+      ],
+      "end": [
+        2.7261,
+        1.49345,
+        0.22385
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "Y",
+      "source_label": "H",
+      "candidate_index": 7,
+      "start": [
+        1.1981000000000002,
+        1.6627,
+        0.2234
+      ],
+      "end": [
+        2.7333000000000003,
+        1.6627,
+        0.2234
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    }
+  ],
+  "spacing_assessment": {
+    "reference_cells": 18,
+    "scored_cells": 18,
+    "verified_pairs": 18,
+    "pairs": [
+      {
+        "reference_id": "X:1-2",
+        "measurement_id": "X:1-2",
+        "verified": true,
+        "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+        "status": "scored",
+        "error_m": 0.015274960798093346,
+        "reference_m": 0.21589999999999998,
+        "measured_m": 0.23117496079809333,
+        "reference_display_increment_m": 0.00254
+      },
+      {
+        "reference_id": "X:2-3",
+        "measurement_id": "X:2-3",
+        "verified": true,
+        "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+        "status": "scored",
+        "error_m": 0.0017326858885373664,
+        "reference_m": 0.22352,
+        "measured_m": 0.22525268588853736,
+        "reference_display_increment_m": 0.00254
+      },
+      {
+        "reference_id": "X:3-4",
+        "measurement_id": "X:3-4",
+        "verified": true,
+        "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+        "status": "scored",
+        "error_m": -0.013064107946581915,
+        "reference_m": 0.22352,
+        "measured_m": 0.21045589205341808,
+        "reference_display_increment_m": 0.00254
+      },
+      {
+        "reference_id": "X:4-5",
+        "measurement_id": "X:4-5",
+        "verified": true,
+        "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+        "status": "scored",
+        "error_m": 0.005881577994801351,
+        "reference_m": 0.2413,
+        "measured_m": 0.24718157799480134,
+        "reference_display_increment_m": 0.00254
+      },
+      {
+        "reference_id": "X:5-6",
+        "measurement_id": "X:5-6",
+        "verified": true,
+        "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+        "status": "scored",
+        "error_m": 0.00793645086706185,
+        "reference_m": 0.23622,
+        "measured_m": 0.24415645086706186,
+        "reference_display_increment_m": 0.00254
+      },
+      {
+        "reference_id": "X:6-7",
+        "measurement_id": "X:6-7",
+        "verified": true,
+        "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+        "status": "scored",
+        "error_m": -0.016192999828772953,
+        "reference_m": 0.22352,
+        "measured_m": 0.20732700017122704,
+        "reference_display_increment_m": 0.00254
+      },
+      {
+        "reference_id": "X:7-8",
+        "measurement_id": "X:7-8",
+        "verified": true,
+        "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+        "status": "scored",
+        "error_m": -0.0005180165548029081,
+        "reference_m": 0.23622,
+        "measured_m": 0.2357019834451971,
+        "reference_display_increment_m": 0.00254
+      },
+      {
+        "reference_id": "X:8-9",
+        "measurement_id": "X:8-9",
+        "verified": true,
+        "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+        "status": "scored",
+        "error_m": 0.003586742524302966,
+        "reference_m": 0.22352,
+        "measured_m": 0.22710674252430296,
+        "reference_display_increment_m": 0.00254
+      },
+      {
+        "reference_id": "X:9-10",
+        "measurement_id": "X:9-10",
+        "verified": true,
+        "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+        "status": "scored",
+        "error_m": 0.008126203438196533,
+        "reference_m": 0.21082,
+        "measured_m": 0.21894620343819654,
+        "reference_display_increment_m": 0.00254
+      },
+      {
+        "reference_id": "X:10-11",
+        "measurement_id": "X:10-11",
+        "verified": true,
+        "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+        "status": "scored",
+        "error_m": 0.0035422698795285756,
+        "reference_m": 0.1905,
+        "measured_m": 0.19404226987952858,
+        "reference_display_increment_m": 0.00254
+      },
+      {
+        "reference_id": "X:11-12",
+        "measurement_id": "X:11-12",
+        "verified": true,
+        "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+        "status": "scored",
+        "error_m": -0.011261158426894097,
+        "reference_m": 0.21082,
+        "measured_m": 0.1995588415731059,
+        "reference_display_increment_m": 0.00254
+      },
+      {
+        "reference_id": "Y:A-B",
+        "measurement_id": "Y:A-B",
+        "verified": true,
+        "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+        "status": "scored",
+        "error_m": -0.020383148485851377,
+        "reference_m": 0.24892,
+        "measured_m": 0.22853685151414863,
+        "reference_display_increment_m": 0.00254
+      },
+      {
+        "reference_id": "Y:B-C",
+        "measurement_id": "Y:B-C",
+        "verified": true,
+        "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+        "status": "scored",
+        "error_m": 0.002590018851443221,
+        "reference_m": 0.22352,
+        "measured_m": 0.22611001885144322,
+        "reference_display_increment_m": 0.00254
+      },
+      {
+        "reference_id": "Y:C-D",
+        "measurement_id": "Y:C-D",
+        "verified": true,
+        "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+        "status": "scored",
+        "error_m": 0.0041251833553352935,
+        "reference_m": 0.2413,
+        "measured_m": 0.24542518335533528,
+        "reference_display_increment_m": 0.00254
+      },
+      {
+        "reference_id": "Y:D-E",
+        "measurement_id": "Y:D-E",
+        "verified": true,
+        "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+        "status": "scored",
+        "error_m": 0.024225549631082782,
+        "reference_m": 0.2032,
+        "measured_m": 0.22742554963108277,
+        "reference_display_increment_m": 0.00254
+      },
+      {
+        "reference_id": "Y:E-F",
+        "measurement_id": "Y:E-F",
+        "verified": true,
+        "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+        "status": "scored",
+        "error_m": -0.02032059955754531,
+        "reference_m": 0.1397,
+        "measured_m": 0.11937940044245468,
+        "reference_display_increment_m": 0.00254
+      },
+      {
+        "reference_id": "Y:F-G",
+        "measurement_id": "Y:F-G",
+        "verified": true,
+        "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+        "status": "scored",
+        "error_m": 0.022064409356317233,
+        "reference_m": 0.1905,
+        "measured_m": 0.21256440935631724,
+        "reference_display_increment_m": 0.00254
+      },
+      {
+        "reference_id": "Y:G-H",
+        "measurement_id": "Y:G-H",
+        "verified": true,
+        "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+        "status": "scored",
+        "error_m": 0.02320059822641704,
+        "reference_m": 0.14604999999999999,
+        "measured_m": 0.16925059822641703,
+        "reference_display_increment_m": 0.000254
+      }
+    ],
+    "status": "complete_verified",
+    "spacing_mae_m": 0.011334815645087006,
+    "spacing_max_abs_error_m": 0.024225549631082782
+  },
+  "crosswalk_basis": "Manually reviewed asymmetric shape and physically labeled photos; not a best-error permutation",
+  "tolerance_verdict": "No field compliance decision. Published tape rounding and scanner error remain.",
+  "reference_sha256": "a6d3ad037a08c7ecbb9b0c336f770e62e632ee727a5e07233fbadff039980201",
+  "sensitivity": [
+    {
+      "seed": 456,
+      "scan_noise_m": 0.02,
+      "counts": [
+        {
+          "family": "X",
+          "detected": 12,
+          "expected": 12,
+          "matched": true,
+          "source_identities_matched": true
+        },
+        {
+          "family": "Y",
+          "detected": 8,
+          "expected": 8,
+          "matched": true,
+          "source_identities_matched": true
+        }
+      ],
+      "line_assignments": [
+        {
+          "family": "X",
+          "source_label": "1",
+          "candidate_index": 0,
+          "start": [
+            0.2836000000000001,
+            0.1945,
+            0.22797499999999998
+          ],
+          "end": [
+            0.2836000000000001,
+            0.9453679999999999,
+            0.22797499999999998
+          ],
+          "anchor_basis": {
+            "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+            "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+            "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+          }
+        },
+        {
+          "family": "X",
+          "source_label": "2",
+          "candidate_index": 1,
+          "start": [
+            0.5149999999999999,
+            0.19355900000000004,
+            0.21955000000000002
+          ],
+          "end": [
+            0.5149999999999999,
+            1.0587879999999998,
+            0.21955000000000002
+          ],
+          "anchor_basis": {
+            "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+            "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+            "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+          }
+        },
+        {
+          "family": "X",
+          "source_label": "3",
+          "candidate_index": 2,
+          "start": [
+            0.7381500000000001,
+            0.19179999999999997,
+            0.22260000000000002
+          ],
+          "end": [
+            0.7381500000000001,
+            1.1506259999999997,
+            0.22260000000000002
+          ],
+          "anchor_basis": {
+            "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+            "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+            "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+          }
+        },
+        {
+          "family": "X",
+          "source_label": "4",
+          "candidate_index": 3,
+          "start": [
+            0.9492750000000001,
+            0.19879999999999998,
+            0.227375
+          ],
+          "end": [
+            0.9492750000000001,
+            1.172188,
+            0.227375
+          ],
+          "anchor_basis": {
+            "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+            "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+            "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+          }
+        },
+        {
+          "family": "X",
+          "source_label": "5",
+          "candidate_index": 4,
+          "start": [
+            1.19785,
+            0.206882,
+            0.23195
+          ],
+          "end": [
+            1.19785,
+            1.6667,
+            0.23195
+          ],
+          "anchor_basis": {
+            "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+            "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+            "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+          }
+        },
+        {
+          "family": "X",
+          "source_label": "6",
+          "candidate_index": 5,
+          "start": [
+            1.4402000000000001,
+            0.237004,
+            0.22975
+          ],
+          "end": [
+            1.4402000000000001,
+            1.703599,
+            0.22975
+          ],
+          "anchor_basis": {
+            "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+            "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+            "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+          }
+        },
+        {
+          "family": "X",
+          "source_label": "7",
+          "candidate_index": 6,
+          "start": [
+            1.65115,
+            0.2257,
+            0.2342
+          ],
+          "end": [
+            1.65115,
+            1.70965,
+            0.2342
+          ],
+          "anchor_basis": {
+            "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+            "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+            "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+          }
+        },
+        {
+          "family": "X",
+          "source_label": "8",
+          "candidate_index": 7,
+          "start": [
+            1.885075,
+            0.22651299999999996,
+            0.238325
+          ],
+          "end": [
+            1.885075,
+            1.6963219999999992,
+            0.238325
+          ],
+          "anchor_basis": {
+            "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+            "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+            "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+          }
+        },
+        {
+          "family": "X",
+          "source_label": "9",
+          "candidate_index": 8,
+          "start": [
+            2.1117,
+            0.23677700000000002,
+            0.2369
+          ],
+          "end": [
+            2.1117,
+            1.694446,
+            0.2369
+          ],
+          "anchor_basis": {
+            "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+            "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+            "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+          }
+        },
+        {
+          "family": "X",
+          "source_label": "10",
+          "candidate_index": 9,
+          "start": [
+            2.33005,
+            0.22446599999999994,
+            0.24430000000000002
+          ],
+          "end": [
+            2.33005,
+            1.6970020000000001,
+            0.24430000000000002
+          ],
+          "anchor_basis": {
+            "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+            "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+            "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+          }
+        },
+        {
+          "family": "X",
+          "source_label": "11",
+          "candidate_index": 10,
+          "start": [
+            2.5242,
+            0.24340000000000006,
+            0.2409
+          ],
+          "end": [
+            2.5242,
+            1.688,
+            0.2409
+          ],
+          "anchor_basis": {
+            "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+            "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+            "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+          }
+        },
+        {
+          "family": "X",
+          "source_label": "12",
+          "candidate_index": 11,
+          "start": [
+            2.7253,
+            0.22657400000000005,
+            0.24517499999999998
+          ],
+          "end": [
+            2.7253,
+            1.7090020000000001,
+            0.24517499999999998
+          ],
+          "anchor_basis": {
+            "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+            "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+            "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+          }
+        },
+        {
+          "family": "Y",
+          "source_label": "A",
+          "candidate_index": 0,
+          "start": [
+            0.23641500000000004,
+            0.23145,
+            0.238725
+          ],
+          "end": [
+            2.753085,
+            0.23145,
+            0.238725
+          ],
+          "anchor_basis": {
+            "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+            "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+            "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+          }
+        },
+        {
+          "family": "Y",
+          "source_label": "B",
+          "candidate_index": 1,
+          "start": [
+            0.2899130000000001,
+            0.45965,
+            0.232825
+          ],
+          "end": [
+            2.7291450000000004,
+            0.45965,
+            0.232825
+          ],
+          "anchor_basis": {
+            "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+            "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+            "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+          }
+        },
+        {
+          "family": "Y",
+          "source_label": "C",
+          "candidate_index": 2,
+          "start": [
+            0.2654620000000001,
+            0.69055,
+            0.226675
+          ],
+          "end": [
+            2.733238,
+            0.69055,
+            0.226675
+          ],
+          "anchor_basis": {
+            "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+            "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+            "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+          }
+        },
+        {
+          "family": "Y",
+          "source_label": "D",
+          "candidate_index": 3,
+          "start": [
+            0.3181670000000003,
+            0.93475,
+            0.227
+          ],
+          "end": [
+            2.726573,
+            0.93475,
+            0.227
+          ],
+          "anchor_basis": {
+            "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+            "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+            "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+          }
+        },
+        {
+          "family": "Y",
+          "source_label": "E",
+          "candidate_index": 4,
+          "start": [
+            0.855464,
+            1.1609,
+            0.22767500000000002
+          ],
+          "end": [
+            2.7286,
+            1.1609,
+            0.22767500000000002
+          ],
+          "anchor_basis": {
+            "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+            "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+            "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+          }
+        },
+        {
+          "family": "Y",
+          "source_label": "F",
+          "candidate_index": 5,
+          "start": [
+            1.099536,
+            1.2843499999999999,
+            0.22794999999999999
+          ],
+          "end": [
+            2.725641,
+            1.2843499999999999,
+            0.22794999999999999
+          ],
+          "anchor_basis": {
+            "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+            "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+            "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+          }
+        },
+        {
+          "family": "Y",
+          "source_label": "G",
+          "candidate_index": 6,
+          "start": [
+            1.371178,
+            1.4926499999999998,
+            0.2244
+          ],
+          "end": [
+            2.7275220000000004,
+            1.4926499999999998,
+            0.2244
+          ],
+          "anchor_basis": {
+            "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+            "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+            "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+          }
+        },
+        {
+          "family": "Y",
+          "source_label": "H",
+          "candidate_index": 7,
+          "start": [
+            1.1998560000000003,
+            1.6624500000000002,
+            0.222375
+          ],
+          "end": [
+            2.7398720000000005,
+            1.6624500000000002,
+            0.222375
+          ],
+          "anchor_basis": {
+            "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+            "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+            "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+          }
+        }
+      ],
+      "spacing_assessment": {
+        "reference_cells": 18,
+        "scored_cells": 18,
+        "verified_pairs": 18,
+        "pairs": [
+          {
+            "reference_id": "X:1-2",
+            "measurement_id": "X:1-2",
+            "verified": true,
+            "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+            "status": "scored",
+            "error_m": 0.015653321343054666,
+            "reference_m": 0.21589999999999998,
+            "measured_m": 0.23155332134305465,
+            "reference_display_increment_m": 0.00254
+          },
+          {
+            "reference_id": "X:2-3",
+            "measurement_id": "X:2-3",
+            "verified": true,
+            "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+            "status": "scored",
+            "error_m": -0.00034915737041255057,
+            "reference_m": 0.22352,
+            "measured_m": 0.22317084262958745,
+            "reference_display_increment_m": 0.00254
+          },
+          {
+            "reference_id": "X:3-4",
+            "measurement_id": "X:3-4",
+            "verified": true,
+            "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+            "status": "scored",
+            "error_m": -0.012341008975797957,
+            "reference_m": 0.22352,
+            "measured_m": 0.21117899102420204,
+            "reference_display_increment_m": 0.00254
+          },
+          {
+            "reference_id": "X:4-5",
+            "measurement_id": "X:4-5",
+            "verified": true,
+            "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+            "status": "scored",
+            "error_m": 0.007317097662248501,
+            "reference_m": 0.2413,
+            "measured_m": 0.2486170976622485,
+            "reference_display_increment_m": 0.00254
+          },
+          {
+            "reference_id": "X:5-6",
+            "measurement_id": "X:5-6",
+            "verified": true,
+            "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+            "status": "scored",
+            "error_m": 0.006139985352367983,
+            "reference_m": 0.23622,
+            "measured_m": 0.242359985352368,
+            "reference_display_increment_m": 0.00254
+          },
+          {
+            "reference_id": "X:6-7",
+            "measurement_id": "X:6-7",
+            "verified": true,
+            "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+            "status": "scored",
+            "error_m": -0.012523068742694987,
+            "reference_m": 0.22352,
+            "measured_m": 0.210996931257305,
+            "reference_display_increment_m": 0.00254
+          },
+          {
+            "reference_id": "X:7-8",
+            "measurement_id": "X:7-8",
+            "verified": true,
+            "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+            "status": "scored",
+            "error_m": -0.0022586329968127816,
+            "reference_m": 0.23622,
+            "measured_m": 0.23396136700318723,
+            "reference_display_increment_m": 0.00254
+          },
+          {
+            "reference_id": "X:8-9",
+            "measurement_id": "X:8-9",
+            "verified": true,
+            "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+            "status": "scored",
+            "error_m": 0.003109480099125539,
+            "reference_m": 0.22352,
+            "measured_m": 0.22662948009912554,
+            "reference_display_increment_m": 0.00254
+          },
+          {
+            "reference_id": "X:9-10",
+            "measurement_id": "X:9-10",
+            "verified": true,
+            "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+            "status": "scored",
+            "error_m": 0.007655359022476521,
+            "reference_m": 0.21082,
+            "measured_m": 0.21847535902247653,
+            "reference_display_increment_m": 0.00254
+          },
+          {
+            "reference_id": "X:10-11",
+            "measurement_id": "X:10-11",
+            "verified": true,
+            "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+            "status": "scored",
+            "error_m": 0.0036797685136122082,
+            "reference_m": 0.1905,
+            "measured_m": 0.1941797685136122,
+            "reference_display_increment_m": 0.00254
+          },
+          {
+            "reference_id": "X:11-12",
+            "measurement_id": "X:11-12",
+            "verified": true,
+            "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+            "status": "scored",
+            "error_m": -0.009674565985205774,
+            "reference_m": 0.21082,
+            "measured_m": 0.20114543401479423,
+            "reference_display_increment_m": 0.00254
+          },
+          {
+            "reference_id": "Y:A-B",
+            "measurement_id": "Y:A-B",
+            "verified": true,
+            "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+            "status": "scored",
+            "error_m": -0.020643741926585774,
+            "reference_m": 0.24892,
+            "measured_m": 0.22827625807341423,
+            "reference_display_increment_m": 0.00254
+          },
+          {
+            "reference_id": "Y:B-C",
+            "measurement_id": "Y:B-C",
+            "verified": true,
+            "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+            "status": "scored",
+            "error_m": 0.007461887818071139,
+            "reference_m": 0.22352,
+            "measured_m": 0.23098188781807114,
+            "reference_display_increment_m": 0.00254
+          },
+          {
+            "reference_id": "Y:C-D",
+            "measurement_id": "Y:C-D",
+            "verified": true,
+            "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+            "status": "scored",
+            "error_m": 0.0029002162673079923,
+            "reference_m": 0.2413,
+            "measured_m": 0.24420021626730798,
+            "reference_display_increment_m": 0.00254
+          },
+          {
+            "reference_id": "Y:D-E",
+            "measurement_id": "Y:D-E",
+            "verified": true,
+            "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+            "status": "scored",
+            "error_m": 0.022951007349072045,
+            "reference_m": 0.2032,
+            "measured_m": 0.22615100734907204,
+            "reference_display_increment_m": 0.00254
+          },
+          {
+            "reference_id": "Y:E-F",
+            "measurement_id": "Y:E-F",
+            "verified": true,
+            "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+            "status": "scored",
+            "error_m": -0.01624969370228374,
+            "reference_m": 0.1397,
+            "measured_m": 0.12345030629771625,
+            "reference_display_increment_m": 0.00254
+          },
+          {
+            "reference_id": "Y:F-G",
+            "measurement_id": "Y:F-G",
+            "verified": true,
+            "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+            "status": "scored",
+            "error_m": 0.017830248643829844,
+            "reference_m": 0.1905,
+            "measured_m": 0.20833024864382985,
+            "reference_display_increment_m": 0.00254
+          },
+          {
+            "reference_id": "Y:G-H",
+            "measurement_id": "Y:G-H",
+            "verified": true,
+            "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+            "status": "scored",
+            "error_m": 0.023762074438186342,
+            "reference_m": 0.14604999999999999,
+            "measured_m": 0.16981207443818633,
+            "reference_display_increment_m": 0.000254
+          }
+        ],
+        "status": "complete_verified",
+        "spacing_mae_m": 0.010694462011619242,
+        "spacing_max_abs_error_m": 0.023762074438186342
+      },
+      "crosswalk_basis": "Manually reviewed asymmetric shape and physically labeled photos; not a best-error permutation",
+      "tolerance_verdict": "No field compliance decision. Published tape rounding and scanner error remain."
+    },
+    {
+      "seed": 123,
+      "scan_noise_m": 0.015,
+      "counts": [
+        {
+          "family": "X",
+          "detected": 13,
+          "expected": 12,
+          "matched": false,
+          "source_identities_matched": false
+        },
+        {
+          "family": "Y",
+          "detected": 9,
+          "expected": 8,
+          "matched": false,
+          "source_identities_matched": false
+        }
+      ],
+      "line_assignments": [],
+      "spacing_assessment": {
+        "reference_cells": 18,
+        "scored_cells": 0,
+        "verified_pairs": 0,
+        "pairs": [],
+        "status": "unavailable_unverified_correspondence",
+        "spacing_mae_m": null,
+        "spacing_max_abs_error_m": null
+      },
+      "crosswalk_basis": "Manually reviewed asymmetric shape and physically labeled photos; not a best-error permutation",
+      "tolerance_verdict": "No field compliance decision. Published tape rounding and scanner error remain."
+    },
+    {
+      "seed": 123,
+      "scan_noise_m": 0.025,
+      "counts": [
+        {
+          "family": "X",
+          "detected": 11,
+          "expected": 12,
+          "matched": false,
+          "source_identities_matched": false
+        },
+        {
+          "family": "Y",
+          "detected": 8,
+          "expected": 8,
+          "matched": true,
+          "source_identities_matched": true
+        }
+      ],
+      "line_assignments": [
+        {
+          "family": "Y",
+          "source_label": "A",
+          "candidate_index": 0,
+          "start": [
+            0.2378760000000002,
+            0.23370000000000002,
+            0.23735
+          ],
+          "end": [
+            2.752196,
+            0.23370000000000002,
+            0.23735
+          ],
+          "anchor_basis": {
+            "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+            "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+            "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+          }
+        },
+        {
+          "family": "Y",
+          "source_label": "B",
+          "candidate_index": 1,
+          "start": [
+            0.2868409999999999,
+            0.4583,
+            0.2326
+          ],
+          "end": [
+            2.7334180000000003,
+            0.4583,
+            0.2326
+          ],
+          "anchor_basis": {
+            "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+            "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+            "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+          }
+        },
+        {
+          "family": "Y",
+          "source_label": "C",
+          "candidate_index": 2,
+          "start": [
+            0.25950000000000006,
+            0.68885,
+            0.22665000000000002
+          ],
+          "end": [
+            2.7353560000000003,
+            0.68885,
+            0.22665000000000002
+          ],
+          "anchor_basis": {
+            "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+            "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+            "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+          }
+        },
+        {
+          "family": "Y",
+          "source_label": "D",
+          "candidate_index": 3,
+          "start": [
+            0.32797200000000015,
+            0.9337500000000001,
+            0.22549999999999998
+          ],
+          "end": [
+            2.728146,
+            0.9337500000000001,
+            0.22549999999999998
+          ],
+          "anchor_basis": {
+            "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+            "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+            "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+          }
+        },
+        {
+          "family": "Y",
+          "source_label": "E",
+          "candidate_index": 4,
+          "start": [
+            0.8813000000000002,
+            1.161375,
+            0.227625
+          ],
+          "end": [
+            2.72878,
+            1.161375,
+            0.227625
+          ],
+          "anchor_basis": {
+            "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+            "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+            "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+          }
+        },
+        {
+          "family": "Y",
+          "source_label": "F",
+          "candidate_index": 5,
+          "start": [
+            1.0949680000000002,
+            1.2819,
+            0.2265
+          ],
+          "end": [
+            2.7317,
+            1.2819,
+            0.2265
+          ],
+          "anchor_basis": {
+            "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+            "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+            "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+          }
+        },
+        {
+          "family": "Y",
+          "source_label": "G",
+          "candidate_index": 6,
+          "start": [
+            1.3718800000000002,
+            1.492375,
+            0.2241
+          ],
+          "end": [
+            2.72788,
+            1.492375,
+            0.2241
+          ],
+          "anchor_basis": {
+            "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+            "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+            "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+          }
+        },
+        {
+          "family": "Y",
+          "source_label": "H",
+          "candidate_index": 7,
+          "start": [
+            1.2003840000000001,
+            1.6701000000000001,
+            0.2233
+          ],
+          "end": [
+            2.741174,
+            1.6701000000000001,
+            0.2233
+          ],
+          "anchor_basis": {
+            "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+            "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+            "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+          }
+        }
+      ],
+      "spacing_assessment": {
+        "reference_cells": 18,
+        "scored_cells": 7,
+        "verified_pairs": 7,
+        "pairs": [
+          {
+            "reference_id": "Y:A-B",
+            "measurement_id": "Y:A-B",
+            "verified": true,
+            "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+            "status": "scored",
+            "error_m": -0.024269777431670497,
+            "reference_m": 0.24892,
+            "measured_m": 0.2246502225683295,
+            "reference_display_increment_m": 0.00254
+          },
+          {
+            "reference_id": "Y:B-C",
+            "measurement_id": "Y:B-C",
+            "verified": true,
+            "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+            "status": "scored",
+            "error_m": 0.007106765575897511,
+            "reference_m": 0.22352,
+            "measured_m": 0.2306267655758975,
+            "reference_display_increment_m": 0.00254
+          },
+          {
+            "reference_id": "Y:C-D",
+            "measurement_id": "Y:C-D",
+            "verified": true,
+            "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+            "status": "scored",
+            "error_m": 0.003602700066781761,
+            "reference_m": 0.2413,
+            "measured_m": 0.24490270006678175,
+            "reference_display_increment_m": 0.00254
+          },
+          {
+            "reference_id": "Y:D-E",
+            "measurement_id": "Y:D-E",
+            "verified": true,
+            "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+            "status": "scored",
+            "error_m": 0.024434918784443066,
+            "reference_m": 0.2032,
+            "measured_m": 0.22763491878444306,
+            "reference_display_increment_m": 0.00254
+          },
+          {
+            "reference_id": "Y:E-F",
+            "measurement_id": "Y:E-F",
+            "verified": true,
+            "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+            "status": "scored",
+            "error_m": -0.019169749647650697,
+            "reference_m": 0.1397,
+            "measured_m": 0.1205302503523493,
+            "reference_display_increment_m": 0.00254
+          },
+          {
+            "reference_id": "Y:F-G",
+            "measurement_id": "Y:F-G",
+            "verified": true,
+            "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+            "status": "scored",
+            "error_m": 0.0199886828905535,
+            "reference_m": 0.1905,
+            "measured_m": 0.2104886828905535,
+            "reference_display_increment_m": 0.00254
+          },
+          {
+            "reference_id": "Y:G-H",
+            "measurement_id": "Y:G-H",
+            "verified": true,
+            "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+            "status": "scored",
+            "error_m": 0.0316768005254133,
+            "reference_m": 0.14604999999999999,
+            "measured_m": 0.1777268005254133,
+            "reference_display_increment_m": 0.000254
+          }
+        ],
+        "status": "partial_verified",
+        "spacing_mae_m": 0.01860705641748719,
+        "spacing_max_abs_error_m": 0.0316768005254133
+      },
+      "crosswalk_basis": "Manually reviewed asymmetric shape and physically labeled photos; not a best-error permutation",
+      "tolerance_verdict": "No field compliance decision. Published tape rounding and scanner error remain."
+    }
+  ],
+  "source": "https://doi.org/10.5281/zenodo.4273237",
+  "report_url": "https://rosap.ntl.bts.gov/view/dot/58940/dot_58940_DS1.pdf",
+  "files": [
+    {
+      "name": "small_rebar_4M.mat",
+      "sha256": "87cce057c0ffd69d0b5d90f3c93a73afec6e0d7c9635ae53fe7cc99080231f3c",
+      "size": 50911265
+    },
+    {
+      "name": "1-5.png",
+      "sha256": "847fdf06b58aaee75852311407c0473e1050b902be9803b151162e363fed6a29",
+      "size": 4486238
+    },
+    {
+      "name": "A-C.png",
+      "sha256": "30abd49c52dd779fd6c50ebd534183723d17b56e264a1903fa36adfc168146e2",
+      "size": 4304977
+    },
+    {
+      "name": "drawing.PNG",
+      "sha256": "c5bbdc2955eaddf655ef4021c6cab4e37f7f99e3d7764c7f834033cb7208b769",
+      "size": 38614
+    },
+    {
+      "name": "report.pdf",
+      "sha256": "9924bd3bfb037f8b4d4f6eb12b6cebeb572f845315d443603535bb9fc96360de",
+      "size": 5930180
+    }
+  ],
+  "tests": {
+    "custom_core": "99 passed",
+    "upstream_core": "99 passed",
+    "failures": 0,
+    "skips": 0
+  },
+  "regression": {
+    "original_floor_and_rotated_wall": "zero bars in default and noise modes",
+    "synthetic_spacing": "150/150/300 mm within 2 mm in noise mode",
+    "t8_counts": [
+      4,
+      4
+    ],
+    "t1_counts": [
+      0,
+      0
+    ],
+    "t8_baseline": "identical endpoints/source point IDs/spacing",
+    "t8_verified_reference_pairs": 0
+  }
+}

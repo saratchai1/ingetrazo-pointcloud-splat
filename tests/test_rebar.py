@@ -79,13 +79,13 @@ def test_transform_roi_and_renderer_agree(tmp_path):
     assert np.allclose(pts, ds.apply_transform(ds.coords)[ids])
 
 
-@pytest.mark.parametrize('use_layer', [False, True])
-def test_native_undo_redo_and_persistence(tmp_path, use_layer):
+@pytest.mark.parametrize('use_layer,scan_noise', [(False,0.),(True,0.),(True,.003)])
+def test_native_undo_redo_and_persistence(tmp_path, use_layer, scan_noise):
     from core.scene import Scene
     from core.history import History
     from formats import igz
     ds, _=cloud(tmp_path)
-    report=inspect(ds, [-3]*3, [3]*3, [1,0,0], layer_normal=[0,0,1] if use_layer else None)
+    report=inspect(ds, [-3]*3, [3]*3, [1,0,0], layer_normal=[0,0,1] if use_layer else None, scan_noise_m=scan_noise)
     for b in report['bars']: b['accepted']=True
     scene=Scene(); hist=History(scene)
     original=scene.version
@@ -185,6 +185,9 @@ def test_review_dialog_end_to_end_offscreen(tmp_path):
     dialog.layer_normal.setCurrentText('Z')
     dialog.analyze()
     assert dialog.report['layer_filter']['enabled']
+    dialog.scan_noise.setValue(3)
+    dialog.analyze()
+    assert dialog.report['density_proposals']['enabled']
     assert dialog.table.rowCount()==3
     for row in range(3): dialog.table.item(row,0).setCheckState(Qt.Checked)
     dialog.table.item(0,1).setText('0.05')
@@ -252,12 +255,14 @@ def test_native_instance_transform_and_flat_scan(tmp_path):
 
 
 @pytest.mark.parametrize('vertical', [False, True])
-def test_real_rohbau_floor_and_rotated_wall_are_not_bars(vertical):
+@pytest.mark.parametrize('scan_noise', [0., .02])
+def test_real_rohbau_floor_and_rotated_wall_are_not_bars(vertical, scan_noise):
     ds=read_las(Path(__file__).parent/'fixtures/rohbau3d-floor.laz',source_units='m',origin=[0,0,0])
     if vertical:
         ds.rotation_x_deg=90
     points=ds.apply_transform(ds.coords)
-    report=inspect(ds,points.min(0)-.001,points.max(0)+.001,[1,0,0])
+    report=inspect(ds,points.min(0)-.001,points.max(0)+.001,[1,0,0],
+                   layer_normal=([0,1,0] if vertical else [0,0,1]),scan_noise_m=scan_noise)
     assert report['bars']==[]
     assert report['background_filter']['removed_points'] > .99*len(points)
     assert report['background_filter']['planes'][0]['kind']==('vertical_surface' if vertical else 'horizontal_surface')

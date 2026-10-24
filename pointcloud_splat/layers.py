@@ -7,7 +7,7 @@ classifier. Users must crop out unrelated foreground/background first.
 import numpy as np
 
 
-def select_layer(points, ids, normal, diameter, *, rank=0):
+def select_layer(points, ids, normal, diameter, *, rank=0, noise_m=0.):
     normal = np.asarray(normal, dtype=float)
     if normal.shape != (3,) or not np.isfinite(normal).all() or np.linalg.norm(normal) < 1e-12:
         raise ValueError('Provide a finite nonzero layer normal')
@@ -15,7 +15,7 @@ def select_layer(points, ids, normal, diameter, *, rank=0):
         raise ValueError('Layer rank must be a nonnegative integer')
     normal = normal / np.linalg.norm(normal)
     info = {'enabled': True, 'normal': normal.tolist(), 'selected_rank': rank,
-            'bin_m': diameter / 4, 'half_width_m': .75 * diameter,
+            'noise_allowance_m': noise_m, 'bin_m': diameter / 4, 'half_width_m': .75 * diameter + 2*noise_m,
             'mode_separation_m': 2 * diameter, 'modes': [],
             'mode_inventory_limit': 32, 'inventory_truncated': False,
             'excluded_point_indices': [], 'removed_points': 0, 'retained_points': len(points)}
