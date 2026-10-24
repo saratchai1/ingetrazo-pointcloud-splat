@@ -33,6 +33,7 @@ def inspect(dataset, minimum, maximum, direction, diameter_m=.016,
     remaining = np.arange(len(points))
     rng = np.random.default_rng(seed)
     bars = []
+    clusters = []
     radius = diameter_m * .8
     while len(remaining) >= min_support:
         candidates = rng.choice(remaining, min(128, len(remaining)), replace=False)
@@ -49,26 +50,15 @@ def inspect(dataset, minimum, maximum, direction, diameter_m=.016,
             remaining = np.setdiff1d(remaining, candidates)
             continue
         remaining = np.setdiff1d(remaining, best)
-        sample = points[best]
-        centre = sample.mean(axis=0)
-        _, _, vt = np.linalg.svd(sample-centre, full_matrices=False)
-        fitted = vt[0]
-        if np.dot(fitted, direction) < 0:
-            fitted = -fitted
-        if abs(np.dot(fitted, direction)) < np.cos(np.radians(5)):
-            continue
-        # Preserve the common direction so spacing has an unambiguous definition.
-        axial = (sample-centre) @ direction
-        low, high = np.quantile(axial, [.01, .99])
-        if high-low < min_length:
-            continue
-        residual = np.linalg.norm(sample-centre-np.outer(axial, direction), axis=1)
-        occupied = np.count_nonzero(np.histogram(axial, bins=10, range=(low, high))[0]) / 10
-        q95 = float(np.quantile(residual, .95))
+        clusters.append(best)
+    from .bar_tracks import continuous_tracks
+    tracks, track_filter = continuous_tracks(points, clusters, direction, diameter_m, min_support, min_length)
+    for best, centre, low, high, occupied, q95 in tracks:
         bars.append({'start': (centre+low*direction).tolist(), 'end': (centre+high*direction).tolist(),
                      'diameter_m': diameter_m, 'diameter_basis': 'design_input', 'accepted': False,
                      'evidence': {'point_indices': ids[best].tolist(), 'support': len(best),
                                   'residual_p95_m': q95, 'axial_coverage': occupied,
+                                  'max_axial_gap_m': float(np.diff(np.sort(points[best] @ direction)).max()),
                                   'confidence_heuristic': float(occupied * min(1, len(best)/(2*min_support)) * max(0, 1-q95/(2*radius)))}})
     bars.sort(key=lambda bar: tuple(np.asarray(bar['start'])-np.dot(bar['start'], direction)*direction))
     source_hash = None
@@ -79,13 +69,13 @@ def inspect(dataset, minimum, maximum, direction, diameter_m=.016,
     affine = np.eye(4)
     affine[:3, :3] = (basis[1:]-basis[0]).T
     affine[:3, 3] = basis[0]
-    return {'local_to_world_4x4': affine.tolist(), 'schema': 1, 'algorithm': 'parallel-cluster-pca-v2', 'seed': seed,
+    return {'local_to_world_4x4': affine.tolist(), 'schema': 1, 'algorithm': 'parallel-continuous-tracks-v3', 'seed': seed,
             'source': dataset.filepath, 'source_sha256': source_hash,
             'coordinate_frame': deepcopy(dataset.coordinate_frame),
             'world_roi_m': np.asarray([minimum, maximum]).tolist(),
             'direction': direction.tolist(), 'parameters': {'diameter_m': diameter_m,
             'min_support': min_support, 'min_length_m': min_length},
-            'roi_points': roi_points, 'background_filter': background, 'bars': bars, 'spacing': spacing(bars, direction),
+            'roi_points': roi_points, 'background_filter': background, 'track_filter': track_filter, 'bars': bars, 'spacing': spacing(bars, direction),
             'limitations': 'One parallel family in one layer. Partial surfaces bias centres; diameter is design input. Confidence is heuristic. Review required.'}
 
 

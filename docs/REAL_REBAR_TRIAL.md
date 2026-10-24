@@ -1,6 +1,6 @@
 # Real RGB-D rebar trial: count validation fails
 
-The 851915c detector was tested on real physical rebar scanned with Azure Kinect outdoors, rather than synthetic points. **It does not pass this trial.** After depth-layer isolation and a geometry-only direction estimate, `drone-t1` produces 1/1 candidates and `drone-t8` produces 60/65, compared with the specimen's five grid lines in each direction. No candidate was accepted or added to a production document.
+The baseline 851915c detector was tested on real physical rebar scanned with Azure Kinect outdoors, rather than synthetic points. **It does not pass this trial.** After depth-layer isolation and a geometry-only direction estimate, `drone-t1` produces 1/1 candidates and `drone-t8` produces 60/65, compared with the specimen's five grid lines in each direction. No candidate was accepted or added to a production document.
 
 ## Sources and reference strength
 
@@ -36,7 +36,10 @@ The script never attaches to a running IngeTrazo document. It uses fixed scanner
 | Broad ROI, initial guided axes | 97 / 94 | 180 / 188 |
 | Depth slab, initial guided axes | 0 / 1 | 63 / 60 |
 | Depth slab, geometry-only axes | 1 / 1 | 60 / 65 |
+| Continuity/width filtering v3, same slab and geometry-only axes | 0 / 0 | 10 / 7 |
 | Reference specimen grid | 5 / 5 | 5 / 5 |
+
+The baseline rows above describe the pre-continuity detector. The current v3 row was rerun with identical raw hashes, ROI, rigid transform and geometry-only directions. See [continuity follow-up](CONTINUITY_TRIAL.md) for thresholds, regression tests and remaining errors.
 
 All runs retain candidates as unaccepted. No broad supporting plane is excluded in these ROIs under the current thresholds. Relative to the specimen count, final t1 count deltas are -4/-4 and final t8 deltas are +55/+60. These are count discrepancies, not independently matched precision/recall measurements.
 
