@@ -51,3 +51,7 @@ Visible failures include sparse-capture under-detection, over-segmentation of no
 A White Rock PLY and the source paper's tape reference (111.76/142.24 mm for one chosen bay) were inspected, but the chosen bay cannot be registered reliably to the released scan; no spacing score is assigned. A separate author's irregular-rebar repository has PCD scans but no readily verified paired measurements/units/license, so it is not promoted to a ground-truth benchmark.
 
 The next engineering work is bar continuity/local direction discrimination and proper foreground/layer segmentation, followed by a scan with independently registered bar/bay annotations. This trial does not establish field readiness.
+
+## Original-record ROI and cell audit
+
+A follow-up audited original invalid-depth records and source-image clipping, mapped eight retained tracks to manual RGB trace IDs, and measured six scan-local cells without extending unsupported tracks. The rightmost V4 trace has zero usable XYZ even in a 15-pixel corridor, while the top fragment is clipped and short. These observations distinguish missing source evidence from downstream cropping; they do not establish paper-label registration or a whole-specimen count pass. See [ROI and cell audit](ROI_AUDIT.md). Reference errors remain unavailable (0/32 verified pairs).

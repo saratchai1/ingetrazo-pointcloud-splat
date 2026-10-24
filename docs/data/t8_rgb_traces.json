@@ -1,0 +1,112 @@
+{
+  "source_sha256": "17b763895d1e841fba065992a29c540d25d63f64c3610ae053ae69ff34108b0c",
+  "width": 1920,
+  "height": 1080,
+  "source_record_order_verified": false,
+  "record_order_basis": "1920x1080 records, reconstructed RGB recognizable; source does not declare organization or registration calibration in PLY header",
+  "annotation_basis": "Manual RGB trace corridors, not independently labeled steel depth points",
+  "traces": {
+    "V0": [
+      [
+        1040,
+        0
+      ],
+      [
+        1065,
+        620
+      ]
+    ],
+    "V1": [
+      [
+        1170,
+        0
+      ],
+      [
+        1200,
+        610
+      ]
+    ],
+    "V2": [
+      [
+        1304,
+        0
+      ],
+      [
+        1340,
+        610
+      ]
+    ],
+    "V3": [
+      [
+        1452,
+        0
+      ],
+      [
+        1490,
+        590
+      ]
+    ],
+    "V4": [
+      [
+        1620,
+        0
+      ],
+      [
+        1650,
+        570
+      ]
+    ],
+    "H_top_fragment": [
+      [
+        965,
+        22
+      ],
+      [
+        1115,
+        0
+      ]
+    ],
+    "H0": [
+      [
+        990,
+        155
+      ],
+      [
+        1680,
+        15
+      ]
+    ],
+    "H1": [
+      [
+        990,
+        280
+      ],
+      [
+        1680,
+        205
+      ]
+    ],
+    "H2": [
+      [
+        990,
+        430
+      ],
+      [
+        1690,
+        360
+      ]
+    ],
+    "H3": [
+      [
+        990,
+        550
+      ],
+      [
+        1690,
+        510
+      ]
+    ]
+  },
+  "reference_label_mapping_verified": false,
+  "reference_mapping_blocker": "Fig.13 A-E/1-5 labels have no fiducial/landmark mapping to released t8; Fig.10 photograph resembles specimen but does not anchor those diagram labels."
+}

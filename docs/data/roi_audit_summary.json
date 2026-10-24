@@ -1,0 +1,398 @@
+{
+  "source_sha256": "17b763895d1e841fba065992a29c540d25d63f64c3610ae053ae69ff34108b0c",
+  "organized_record_layout": "1920x1080 records, reconstructed RGB recognizable; source does not declare organization or registration calibration in PLY header",
+  "record_order_independently_verified": false,
+  "stage_counts": {
+    "source_box": 344666,
+    "depth_slab": 26550,
+    "surface_filter": 26550,
+    "selected_layer": 16943
+  },
+  "assessment": {
+    "reference_cells": 32,
+    "scored_cells": 0,
+    "verified_pairs": 0,
+    "pairs": [],
+    "status": "unavailable_unverified_correspondence",
+    "spacing_mae_m": null,
+    "spacing_max_abs_error_m": null
+  },
+  "reference_mapping_blocker": "Fig.13 A-E/1-5 labels have no fiducial/landmark mapping to released t8; Fig.10 photograph resembles specimen but does not anchor those diagram labels.",
+  "production_modified": false,
+  "line_assignments": [
+    {
+      "candidate_id": "F1B1",
+      "scan_trace_id": "V0",
+      "median_distance_px": 13.791212269930947,
+      "p95_distance_px": 20.721467667391714,
+      "matched": true
+    },
+    {
+      "candidate_id": "F1B2",
+      "scan_trace_id": "V1",
+      "median_distance_px": 3.0291258173205975,
+      "p95_distance_px": 9.468883568413524,
+      "matched": true
+    },
+    {
+      "candidate_id": "F1B3",
+      "scan_trace_id": "V2",
+      "median_distance_px": 2.8295030254531337,
+      "p95_distance_px": 13.96586397872587,
+      "matched": true
+    },
+    {
+      "candidate_id": "F1B4",
+      "scan_trace_id": "V3",
+      "median_distance_px": 13.439949436749407,
+      "p95_distance_px": 19.466445767373386,
+      "matched": true
+    },
+    {
+      "candidate_id": "F2B1",
+      "scan_trace_id": "H3",
+      "median_distance_px": 8.956817114546533,
+      "p95_distance_px": 16.458864570360987,
+      "matched": true
+    },
+    {
+      "candidate_id": "F2B2",
+      "scan_trace_id": "H2",
+      "median_distance_px": 7.661786364616916,
+      "p95_distance_px": 18.447989506493187,
+      "matched": true
+    },
+    {
+      "candidate_id": "F2B3",
+      "scan_trace_id": "H1",
+      "median_distance_px": 11.238154799915597,
+      "p95_distance_px": 21.979237368296467,
+      "matched": true
+    },
+    {
+      "candidate_id": "F2B4",
+      "scan_trace_id": "H0",
+      "median_distance_px": 16.41906320329128,
+      "p95_distance_px": 32.74154368185729,
+      "matched": true
+    }
+  ],
+  "scan_grid": {
+    "basis": "projected_straight_tracks; averaged opposite edges; no extrapolation",
+    "columns": [
+      "V0",
+      "V1",
+      "V2",
+      "V3"
+    ],
+    "rows": [
+      "H0",
+      "H1",
+      "H2",
+      "H3"
+    ],
+    "cells": [
+      {
+        "scan_cell_id": "H0:H1/V0:V1",
+        "columns": [
+          "V0",
+          "V1"
+        ],
+        "rows": [
+          "H0",
+          "H1"
+        ],
+        "status": "measured",
+        "horizontal_m": 0.13789465560308137,
+        "vertical_m": 0.12249642931461362
+      },
+      {
+        "scan_cell_id": "H0:H1/V1:V2",
+        "columns": [
+          "V1",
+          "V2"
+        ],
+        "rows": [
+          "H0",
+          "H1"
+        ],
+        "status": "measured",
+        "horizontal_m": 0.12390354352201016,
+        "vertical_m": 0.12249642931461362
+      },
+      {
+        "scan_cell_id": "H0:H1/V2:V3",
+        "columns": [
+          "V2",
+          "V3"
+        ],
+        "rows": [
+          "H0",
+          "H1"
+        ],
+        "status": "unavailable_outside_track_support",
+        "horizontal_m": null,
+        "vertical_m": null
+      },
+      {
+        "scan_cell_id": "H1:H2/V0:V1",
+        "columns": [
+          "V0",
+          "V1"
+        ],
+        "rows": [
+          "H1",
+          "H2"
+        ],
+        "status": "measured",
+        "horizontal_m": 0.13789465560308137,
+        "vertical_m": 0.13722850926761765
+      },
+      {
+        "scan_cell_id": "H1:H2/V1:V2",
+        "columns": [
+          "V1",
+          "V2"
+        ],
+        "rows": [
+          "H1",
+          "H2"
+        ],
+        "status": "measured",
+        "horizontal_m": 0.12390354352201016,
+        "vertical_m": 0.13722850926761765
+      },
+      {
+        "scan_cell_id": "H1:H2/V2:V3",
+        "columns": [
+          "V2",
+          "V3"
+        ],
+        "rows": [
+          "H1",
+          "H2"
+        ],
+        "status": "unavailable_outside_track_support",
+        "horizontal_m": null,
+        "vertical_m": null
+      },
+      {
+        "scan_cell_id": "H2:H3/V0:V1",
+        "columns": [
+          "V0",
+          "V1"
+        ],
+        "rows": [
+          "H2",
+          "H3"
+        ],
+        "status": "measured",
+        "horizontal_m": 0.13789465560308137,
+        "vertical_m": 0.12422618920843329
+      },
+      {
+        "scan_cell_id": "H2:H3/V1:V2",
+        "columns": [
+          "V1",
+          "V2"
+        ],
+        "rows": [
+          "H2",
+          "H3"
+        ],
+        "status": "measured",
+        "horizontal_m": 0.12390354352201016,
+        "vertical_m": 0.12422618920843329
+      },
+      {
+        "scan_cell_id": "H2:H3/V2:V3",
+        "columns": [
+          "V2",
+          "V3"
+        ],
+        "rows": [
+          "H2",
+          "H3"
+        ],
+        "status": "unavailable_outside_track_support",
+        "horizontal_m": null,
+        "vertical_m": null
+      }
+    ],
+    "reference_correspondence_verified": false
+  },
+  "trace_counts": {
+    "5": [
+      {
+        "trace_id": "V0",
+        "in_image_records": 6826,
+        "valid_source_depth_records": 4683,
+        "invalid_source_depth_records": 2143,
+        "stage_retained": {
+          "source_box": 4683,
+          "depth_slab": 539,
+          "surface_filter": 539,
+          "selected_layer": 328
+        },
+        "source_corridor_axial_span_m": 0.6044146873527002,
+        "retained_corridor_axial_span_m": 0.5175962241552063
+      },
+      {
+        "trace_id": "V1",
+        "in_image_records": 6721,
+        "valid_source_depth_records": 5269,
+        "invalid_source_depth_records": 1452,
+        "stage_retained": {
+          "source_box": 5269,
+          "depth_slab": 4930,
+          "surface_filter": 4930,
+          "selected_layer": 3786
+        },
+        "source_corridor_axial_span_m": 0.5718363674135716,
+        "retained_corridor_axial_span_m": 0.5371210006310689
+      },
+      {
+        "trace_id": "V2",
+        "in_image_records": 6709,
+        "valid_source_depth_records": 4171,
+        "invalid_source_depth_records": 2538,
+        "stage_retained": {
+          "source_box": 4171,
+          "depth_slab": 3654,
+          "surface_filter": 3654,
+          "selected_layer": 2502
+        },
+        "source_corridor_axial_span_m": 0.5960028533812913,
+        "retained_corridor_axial_span_m": 0.45263664318144037
+      },
+      {
+        "trace_id": "V3",
+        "in_image_records": 6489,
+        "valid_source_depth_records": 1295,
+        "invalid_source_depth_records": 5194,
+        "stage_retained": {
+          "source_box": 1295,
+          "depth_slab": 215,
+          "surface_filter": 215,
+          "selected_layer": 107
+        },
+        "source_corridor_axial_span_m": 0.33006557434587974,
+        "retained_corridor_axial_span_m": 0.26341965978380727
+      },
+      {
+        "trace_id": "V4",
+        "in_image_records": 6281,
+        "valid_source_depth_records": 0,
+        "invalid_source_depth_records": 6281,
+        "stage_retained": {
+          "source_box": 0,
+          "depth_slab": 0,
+          "surface_filter": 0,
+          "selected_layer": 0
+        },
+        "source_corridor_axial_span_m": null,
+        "retained_corridor_axial_span_m": null
+      },
+      {
+        "trace_id": "H_top_fragment",
+        "in_image_records": 1562,
+        "valid_source_depth_records": 605,
+        "invalid_source_depth_records": 957,
+        "stage_retained": {
+          "source_box": 605,
+          "depth_slab": 352,
+          "surface_filter": 352,
+          "selected_layer": 165
+        },
+        "source_corridor_axial_span_m": 0.14660104577128674,
+        "retained_corridor_axial_span_m": 0.04904019626163783
+      },
+      {
+        "trace_id": "H0",
+        "in_image_records": 7481,
+        "valid_source_depth_records": 3212,
+        "invalid_source_depth_records": 4269,
+        "stage_retained": {
+          "source_box": 3212,
+          "depth_slab": 207,
+          "surface_filter": 207,
+          "selected_layer": 160
+        },
+        "source_corridor_axial_span_m": 0.41249008941656573,
+        "retained_corridor_axial_span_m": 0.259072506084627
+      },
+      {
+        "trace_id": "H1",
+        "in_image_records": 7556,
+        "valid_source_depth_records": 3327,
+        "invalid_source_depth_records": 4229,
+        "stage_retained": {
+          "source_box": 3327,
+          "depth_slab": 851,
+          "surface_filter": 851,
+          "selected_layer": 469
+        },
+        "source_corridor_axial_span_m": 0.43573114498030513,
+        "retained_corridor_axial_span_m": 0.3218712244644748
+      },
+      {
+        "trace_id": "H2",
+        "in_image_records": 7641,
+        "valid_source_depth_records": 2566,
+        "invalid_source_depth_records": 5075,
+        "stage_retained": {
+          "source_box": 2566,
+          "depth_slab": 1060,
+          "surface_filter": 1060,
+          "selected_layer": 530
+        },
+        "source_corridor_axial_span_m": 0.4580131568392334,
+        "retained_corridor_axial_span_m": 0.43182829950327356
+      },
+      {
+        "trace_id": "H3",
+        "in_image_records": 7711,
+        "valid_source_depth_records": 3092,
+        "invalid_source_depth_records": 4619,
+        "stage_retained": {
+          "source_box": 3092,
+          "depth_slab": 853,
+          "surface_filter": 853,
+          "selected_layer": 419
+        },
+        "source_corridor_axial_span_m": 0.5252899233629937,
+        "retained_corridor_axial_span_m": 0.49631425878960034
+      }
+    ],
+    "15": [
+      {
+        "trace_id": "V4",
+        "in_image_records": 17695,
+        "valid_source_depth_records": 0,
+        "invalid_source_depth_records": 17695,
+        "stage_retained": {
+          "source_box": 0,
+          "depth_slab": 0,
+          "surface_filter": 0,
+          "selected_layer": 0
+        },
+        "source_corridor_axial_span_m": null,
+        "retained_corridor_axial_span_m": null
+      },
+      {
+        "trace_id": "H_top_fragment",
+        "in_image_records": 3881,
+        "valid_source_depth_records": 1913,
+        "invalid_source_depth_records": 1968,
+        "stage_retained": {
+          "source_box": 1913,
+          "depth_slab": 474,
+          "surface_filter": 474,
+          "selected_layer": 231
+        },
+        "source_corridor_axial_span_m": 0.14605869166952956,
+        "retained_corridor_axial_span_m": 0.04533673212884673
+      }
+    ]
+  }
+}
