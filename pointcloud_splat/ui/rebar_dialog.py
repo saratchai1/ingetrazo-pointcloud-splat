@@ -94,7 +94,8 @@ class RebarDialog(QDialog):
         return report
 
     def update_spacing(self, report):
-        self.evidence.setText('Centreline spacing: '+('; '.join(f"{s['bars'][0]+1}–{s['bars'][1]+1}: {s['centreline_m']*1000:.2f} mm" for s in report['spacing']) or 'No overlapping pairs'))
+        removed = report.get('background_filter', {}).get('removed_points', 0)
+        self.evidence.setText(f'Surface points excluded: {removed:,}. Centreline spacing: '+('; '.join(f"{s['bars'][0]+1}–{s['bars'][1]+1}: {s['centreline_m']*1000:.2f} mm" for s in report['spacing']) or 'No overlapping pairs'))
 
     def create(self):
         try:

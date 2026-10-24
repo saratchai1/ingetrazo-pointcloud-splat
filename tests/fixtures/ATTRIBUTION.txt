@@ -1,0 +1,14 @@
+rohbau3d-floor.laz is derived from Rohbau3D by Lukas Rauch and Thomas Braml.
+Dataset DOI: https://doi.org/10.60776/ZWJFI4
+Paper DOI: https://doi.org/10.1038/s41597-025-05827-7
+Source repository: https://github.com/RauchLukas/rohbau3d
+License: CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+
+Modifications: first 1,000,000 records of site_02/scene_02000 were retained
+from Dataverse coordinate/class/color files 1238/7375/1237. A semantic Floor
+(class 4) ROI [1.2,-0.7,-1.5] to [1.8,-0.1,-1.3] metres contains 51,472 records.
+6,000 records were selected at linspace(0,51471,6000,dtype=int) positions,
+promoted to float64, and converted to LAZ with 1e-6 m scales and zero offsets.
+RGB, source_index, and rohbau_class were retained. This is a negative-control
+fixture, not a representative scene or rebar ground truth. No endorsement by
+the original authors is implied. The detector does not use semantic labels.

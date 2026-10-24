@@ -244,3 +244,51 @@ def test_native_instance_transform_and_flat_scan(tmp_path):
     transform=QMatrix4x4();transform.translate(1.,2.,3.);transform.scale(1.2)
     group.xform=transform
     assert np.allclose(ds.apply_transform(ds.coords),ds.coords*1.2+[1,2,3],atol=1e-6)
+
+
+@pytest.mark.parametrize('vertical', [False, True])
+def test_real_rohbau_floor_and_rotated_wall_are_not_bars(vertical):
+    ds=read_las(Path(__file__).parent/'fixtures/rohbau3d-floor.laz',source_units='m',origin=[0,0,0])
+    if vertical:
+        ds.rotation_x_deg=90
+    points=ds.apply_transform(ds.coords)
+    report=inspect(ds,points.min(0)-.001,points.max(0)+.001,[1,0,0])
+    assert report['bars']==[]
+    assert report['background_filter']['removed_points'] > .99*len(points)
+    assert report['background_filter']['planes'][0]['kind']==('vertical_surface' if vertical else 'horizontal_surface')
+    removed=report['background_filter']['planes'][0]['removed_point_indices']
+    assert len(set(removed))==len(removed) and max(removed)<ds.point_count
+
+
+@pytest.mark.parametrize('rotated', [False, True])
+def test_bars_survive_floor_and_wall_separation(tmp_path, rotated):
+    ds,_=cloud(tmp_path)
+    bars=ds.coords.copy();bars[:,2]+=.06
+    rng=np.random.default_rng(81)
+    x,y=np.meshgrid(np.linspace(0,2,160),np.linspace(-.1,.4,50))
+    floor=np.column_stack([x.ravel(),y.ravel(),np.zeros(x.size)])
+    x,z=np.meshgrid(np.linspace(0,2,160),np.linspace(0,.3,40))
+    wall=np.column_stack([x.ravel(),np.full(x.size,-.1),z.ravel()])
+    background=np.concatenate([floor,wall])+rng.normal(0,.0004,(len(floor)+len(wall),3))
+    ds.coords=np.concatenate([bars,background])
+    if rotated:
+        ds.rotation_x_deg=23;ds.rotation_y_deg=15;ds.rotation_z_deg=37
+        ds.offset=np.array([2.,1.,3.])
+    world=ds.apply_transform(ds.coords)
+    basis=ds.apply_transform(np.array([[1.,0.,0.],[0.,0.,0.]]))
+    report=inspect(ds,world.min(0)-.001,world.max(0)+.001,basis[0]-basis[1])
+    assert len(report['bars'])==3
+    assert sorted(s['centreline_m'] for s in report['spacing'])==pytest.approx([.15,.15,.30],abs=.001)
+    assert len(report['background_filter']['planes'])==2
+    # Evidence must still refer to original ROI records after filtering.
+    assert all(max(b['evidence']['point_indices'])<len(bars) for b in report['bars'])
+    assert report['background_filter']['removed_points'] >= .99*len(background)
+
+
+def test_coplanar_bars_are_not_mistaken_for_a_solid_plane(tmp_path):
+    ds,_=cloud(tmp_path)
+    ds.coords[:,2]=0.
+    report=inspect(ds,[-3]*3,[3]*3,[1,0,0])
+    assert len(report['bars'])==3
+    assert report['background_filter']['removed_points']==0
+    assert sorted(s['centreline_m'] for s in report['spacing'])==pytest.approx([.15,.15,.30],abs=.001)

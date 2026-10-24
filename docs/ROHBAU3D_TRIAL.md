@@ -1,6 +1,6 @@
-# Rohbau3D real-data trial: negative control fails
+# Rohbau3D real-data trial: broad-surface rejection regression
 
-The a5ab718 detector was exercised against a real scan subset from Rohbau3D, not only synthetic bars. Import/conversion succeeded, but a semantic Floor patch produced **28 false rebar candidates**. All candidates remained unaccepted; no production document was opened or modified. This failure is separate from the passing 29 automated synthetic/host tests.
+The original a5ab718 detector produced **28 false rebar candidates** on a semantic Floor patch. The current detector first separates broad geometric surfaces and produces **0 candidates on the identical LAZ input and ROI**. It removes 5,995 of 6,000 floor points, leaving five isolated points. The floor fixture is now an automated regression, including a rotated vertical-wall analogue. No production document was opened or modified.
 
 ## Source and selection
 
@@ -23,6 +23,14 @@ Every fifth prefix record was selected to make a 200,000-point LAZ preview. Coor
 
 Select semantic Floor class 4 in source ROI `[1.2, -0.7, -1.5]` to `[1.8, -0.1, -1.3]` metres. This contains 51,472 points. Retain 6,000 records at `linspace(0, count-1, 6000, dtype=int)` positions in the filtered record sequence. Export these as LAZ with the same coordinate settings. Call `inspect` using direction `[1,0,0]`, design diameter 0.016 m, minimum support 30, minimum length 0.25 m, seed 0, and that same world ROI.
 
-The detector produces **28 false candidates** on this floor patch. Axis-constrained clustering partitions a continuous planar surface into thin longitudinal bands, which can satisfy the existing line-support/coverage criteria. Heuristic confidence does not reliably distinguish these bands from bars. Candidate acceptance remains false throughout.
+The original a5ab718 detector produced **28 false candidates** on this floor patch. Axis-constrained clustering partitions a continuous planar surface into thin longitudinal bands, which can satisfy the existing line-support/coverage criteria. Heuristic confidence does not reliably distinguish these bands from bars. Candidate acceptance remains false throughout.
 
-Before field use, add and validate rejection of broad supporting surfaces/background, and evaluate against exposed-rebar scans with independently measured geometry. This trial does not establish positive rebar detection precision, recall, diameter accuracy or spacing accuracy. Live OpenGL interaction was not exercised.
+## Surface-separation fix and controls
+
+The current geometric prefilter uses deterministic sampled RANSAC with plane refinement. A plane is removed only when it has sufficiently broad support in two directions AND dense 2D cell occupancy at the design-diameter scale. Coplanarity alone is never sufficient: three parallel bars in one plane must not be treated as a solid floor. No semantic labels are used in filtering.
+
+The exact same fixture (SHA-256 checked against the earlier trial evidence) now yields 0 bar candidates; 5,995 points are attributed to an excluded plane and five remain. Reports retain plane equations in world metres, coverage, filter parameters and removed source record indices. A summary of excluded surface points is shown in the review dialog.
+
+Validation: 34 tests pass on each of the customized core and upstream core (24 extension cases plus 10 host plugin-data cases). Controls include this real floor patch, its rotated wall analogue, synthetic bars alone, coplanar bars, and bars mixed with both a floor and wall in ordinary and rotated coordinates. The three synthetic bars remain detected and their pair spacings remain 150, 150 and 300 mm within the existing 1 mm test tolerance. This is not a claim of field measurement accuracy.
+
+Before field use, evaluate against exposed-rebar scans with independently measured geometry. Sparse, perforated or curved backgrounds may remain; points within the removal tolerance of a supporting plane can be lost. The prefilter considers at most four broad planes per ROI. This trial does not establish positive rebar detection precision, recall, diameter accuracy or spacing accuracy. Live OpenGL interaction was not exercised.

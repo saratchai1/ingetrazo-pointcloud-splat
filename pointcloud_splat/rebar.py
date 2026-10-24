@@ -26,6 +26,9 @@ def inspect(dataset, minimum, maximum, direction, diameter_m=.016,
         ids = dataset.source_point_indices[ids]
     if len(points) > 200000:
         raise ValueError('Narrow ROI to at most 200,000 points for assisted analysis')
+    roi_points = len(points)
+    from .background import separate_surfaces
+    points, ids, background = separate_surfaces(points, ids, diameter_m, seed=seed, min_support=min_support)
     transverse = points - np.outer(points @ direction, direction)
     remaining = np.arange(len(points))
     rng = np.random.default_rng(seed)
@@ -76,13 +79,13 @@ def inspect(dataset, minimum, maximum, direction, diameter_m=.016,
     affine = np.eye(4)
     affine[:3, :3] = (basis[1:]-basis[0]).T
     affine[:3, 3] = basis[0]
-    return {'local_to_world_4x4': affine.tolist(), 'schema': 1, 'algorithm': 'parallel-cluster-pca-v1', 'seed': seed,
+    return {'local_to_world_4x4': affine.tolist(), 'schema': 1, 'algorithm': 'parallel-cluster-pca-v2', 'seed': seed,
             'source': dataset.filepath, 'source_sha256': source_hash,
             'coordinate_frame': deepcopy(dataset.coordinate_frame),
             'world_roi_m': np.asarray([minimum, maximum]).tolist(),
             'direction': direction.tolist(), 'parameters': {'diameter_m': diameter_m,
             'min_support': min_support, 'min_length_m': min_length},
-            'roi_points': len(points), 'bars': bars, 'spacing': spacing(bars, direction),
+            'roi_points': roi_points, 'background_filter': background, 'bars': bars, 'spacing': spacing(bars, direction),
             'limitations': 'One parallel family in one layer. Partial surfaces bias centres; diameter is design input. Confidence is heuristic. Review required.'}
 
 
