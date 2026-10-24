@@ -38,7 +38,7 @@ class RebarDialog(QDialog):
         self.diameter.setSuffix(' mm (design diameter)'); layout.addWidget(self.diameter)
         self.scan_noise = QDoubleSpinBox(); self.scan_noise.setRange(0, 50)
         self.scan_noise.setSuffix(' mm scan blur allowance (0 = standard)')
-        self.scan_noise.setToolTip('Use a known scan blur allowance with a layer normal. This is not measurement accuracy or measured diameter.')
+        self.scan_noise.setToolTip('Controls detection with a layer normal. Scan spacing uses a separate measurement window and requires unique matched support. This is not measurement accuracy or measured diameter.')
         layout.addWidget(self.scan_noise)
         self.layer_normal = QComboBox()
         self.layer_normal.addItems(['Use section box only', 'X', 'Y', 'Z'])
@@ -127,8 +127,8 @@ class RebarDialog(QDialog):
         if profile.get('enabled'):
             values = '; '.join(f"{s['bars'][0]+1}–{s['bars'][1]+1}: {s['median_m']*1000:.2f} mm"
                                for s in profile['pairs'] if s['median_m'] is not None)
-            self.evidence.setText(self.evidence.text()+'\nScan support spacing (paired sections, before endpoint edits): '+
-                                  (values or 'Insufficient shared scan support'))
+            self.evidence.setText(self.evidence.text()+'\nScan support spacing (fixed measurement window, before endpoint edits): '+
+                                  (values or 'No uniquely matched, sufficiently supported measurements'))
 
     def create(self):
         try:

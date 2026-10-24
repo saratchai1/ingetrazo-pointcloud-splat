@@ -82,3 +82,7 @@ python tools/run_wingwall_trial.py --data-dir /absolute/scratch/wingwall \
 The output explicitly records `measurement_metric=paired_profile`, the separate `centreline_assessment`, all ten settings, all source point IDs and section evidence. [Full numeric summary](data/wingwall_refinement_summary.json). Source attribution, hash-checked acquisition and anchor caveats remain in [WINGWALL_TRIAL.md](WINGWALL_TRIAL.md).
 
 No production checkout, operational plugin installation, live CAD document or work file was modified. PR remains draft. Automatic calibration, general automatic segmentation, native curved-bar reconstruction, live OpenGL review, worker/cancellation and automatic cloud-array reload remain incomplete.
+
+## Subsequent stability fix
+
+This page preserves the v6 results. [SPACING_STABILITY.md](SPACING_STABILITY.md) documents the v7 independent measurement support, all 15 cases, unchanged native detection and remaining nonzero errors.

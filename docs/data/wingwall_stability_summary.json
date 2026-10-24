@@ -1,0 +1,1238 @@
+{
+  "algorithm": "parallel-layer-density-v7",
+  "measurement_method": "fixed_support_paired_axial_sections",
+  "protocol": {
+    "source_rows": 4182318,
+    "roi_rows": 733390,
+    "sample_rows": 180000,
+    "sample_seed": 123,
+    "sample_method": "uniform_without_replacement; sorted original record IDs",
+    "source_to_analysis_4x4": [
+      [
+        0.0,
+        -1.0,
+        0.0,
+        2.9388
+      ],
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "source_reference_sha256": "a6d3ad037a08c7ecbb9b0c336f770e62e632ee727a5e07233fbadff039980201",
+  "counts": [
+    {
+      "family": "X",
+      "detected": 12,
+      "expected": 12,
+      "matched": true,
+      "source_identities_matched": true
+    },
+    {
+      "family": "Y",
+      "detected": 8,
+      "expected": 8,
+      "matched": true,
+      "source_identities_matched": true
+    }
+  ],
+  "previous_baseline_mae_m": 0.00950620799145803,
+  "previous_grid_max_abs_error_m": 0.03327657572913306,
+  "baseline_spacing_assessment": {
+    "reference_cells": 18,
+    "scored_cells": 18,
+    "verified_pairs": 18,
+    "pairs": [
+      {
+        "reference_id": "X:1-2",
+        "measurement_id": "X:1-2",
+        "verified": true,
+        "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+        "status": "scored",
+        "error_m": 0.011912230795451395,
+        "reference_m": 0.21589999999999998,
+        "measured_m": 0.22781223079545138,
+        "reference_display_increment_m": 0.00254
+      },
+      {
+        "reference_id": "X:2-3",
+        "measurement_id": "X:2-3",
+        "verified": true,
+        "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+        "status": "scored",
+        "error_m": 0.002545316521354757,
+        "reference_m": 0.22352,
+        "measured_m": 0.22606531652135475,
+        "reference_display_increment_m": 0.00254
+      },
+      {
+        "reference_id": "X:3-4",
+        "measurement_id": "X:3-4",
+        "verified": true,
+        "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+        "status": "scored",
+        "error_m": -0.008352826620787734,
+        "reference_m": 0.22352,
+        "measured_m": 0.21516717337921226,
+        "reference_display_increment_m": 0.00254
+      },
+      {
+        "reference_id": "X:4-5",
+        "measurement_id": "X:4-5",
+        "verified": true,
+        "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+        "status": "scored",
+        "error_m": 0.005460948851445352,
+        "reference_m": 0.2413,
+        "measured_m": 0.24676094885144534,
+        "reference_display_increment_m": 0.00254
+      },
+      {
+        "reference_id": "X:5-6",
+        "measurement_id": "X:5-6",
+        "verified": true,
+        "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+        "status": "scored",
+        "error_m": -0.0003748556116205115,
+        "reference_m": 0.23622,
+        "measured_m": 0.2358451443883795,
+        "reference_display_increment_m": 0.00254
+      },
+      {
+        "reference_id": "X:6-7",
+        "measurement_id": "X:6-7",
+        "verified": true,
+        "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+        "status": "scored",
+        "error_m": 0.0012069532340984734,
+        "reference_m": 0.22352,
+        "measured_m": 0.22472695323409847,
+        "reference_display_increment_m": 0.00254
+      },
+      {
+        "reference_id": "X:7-8",
+        "measurement_id": "X:7-8",
+        "verified": true,
+        "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+        "status": "scored",
+        "error_m": -0.0018698079795965439,
+        "reference_m": 0.23622,
+        "measured_m": 0.23435019202040347,
+        "reference_display_increment_m": 0.00254
+      },
+      {
+        "reference_id": "X:8-9",
+        "measurement_id": "X:8-9",
+        "verified": true,
+        "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+        "status": "scored",
+        "error_m": 0.004982412459912711,
+        "reference_m": 0.22352,
+        "measured_m": 0.2285024124599127,
+        "reference_display_increment_m": 0.00254
+      },
+      {
+        "reference_id": "X:9-10",
+        "measurement_id": "X:9-10",
+        "verified": true,
+        "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+        "status": "scored",
+        "error_m": 0.007451465152914755,
+        "reference_m": 0.21082,
+        "measured_m": 0.21827146515291476,
+        "reference_display_increment_m": 0.00254
+      },
+      {
+        "reference_id": "X:10-11",
+        "measurement_id": "X:10-11",
+        "verified": true,
+        "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+        "status": "scored",
+        "error_m": 0.003783632867001868,
+        "reference_m": 0.1905,
+        "measured_m": 0.19428363286700187,
+        "reference_display_increment_m": 0.00254
+      },
+      {
+        "reference_id": "X:11-12",
+        "measurement_id": "X:11-12",
+        "verified": true,
+        "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+        "status": "scored",
+        "error_m": -0.009819620647123967,
+        "reference_m": 0.21082,
+        "measured_m": 0.20100037935287604,
+        "reference_display_increment_m": 0.00254
+      },
+      {
+        "reference_id": "Y:A-B",
+        "measurement_id": "Y:A-B",
+        "verified": true,
+        "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+        "status": "scored",
+        "error_m": -0.01771825037927044,
+        "reference_m": 0.24892,
+        "measured_m": 0.23120174962072956,
+        "reference_display_increment_m": 0.00254
+      },
+      {
+        "reference_id": "Y:B-C",
+        "measurement_id": "Y:B-C",
+        "verified": true,
+        "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+        "status": "scored",
+        "error_m": 0.006014931211335339,
+        "reference_m": 0.22352,
+        "measured_m": 0.22953493121133534,
+        "reference_display_increment_m": 0.00254
+      },
+      {
+        "reference_id": "Y:C-D",
+        "measurement_id": "Y:C-D",
+        "verified": true,
+        "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+        "status": "scored",
+        "error_m": -0.004168369887102563,
+        "reference_m": 0.2413,
+        "measured_m": 0.23713163011289742,
+        "reference_display_increment_m": 0.00254
+      },
+      {
+        "reference_id": "Y:D-E",
+        "measurement_id": "Y:D-E",
+        "verified": true,
+        "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+        "status": "scored",
+        "error_m": 0.01580769683380273,
+        "reference_m": 0.2032,
+        "measured_m": 0.21900769683380272,
+        "reference_display_increment_m": 0.00254
+      },
+      {
+        "reference_id": "Y:E-F",
+        "measurement_id": "Y:E-F",
+        "verified": true,
+        "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+        "status": "scored",
+        "error_m": -0.01151401817207523,
+        "reference_m": 0.1397,
+        "measured_m": 0.12818598182792476,
+        "reference_display_increment_m": 0.00254
+      },
+      {
+        "reference_id": "Y:F-G",
+        "measurement_id": "Y:F-G",
+        "verified": true,
+        "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+        "status": "scored",
+        "error_m": 0.010867554639025195,
+        "reference_m": 0.1905,
+        "measured_m": 0.2013675546390252,
+        "reference_display_increment_m": 0.00254
+      },
+      {
+        "reference_id": "Y:G-H",
+        "measurement_id": "Y:G-H",
+        "verified": true,
+        "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+        "status": "scored",
+        "error_m": 0.021162533428411262,
+        "reference_m": 0.14604999999999999,
+        "measured_m": 0.16721253342841125,
+        "reference_display_increment_m": 0.000254
+      }
+    ],
+    "status": "complete_verified",
+    "spacing_mae_m": 0.00805630140512949,
+    "spacing_max_abs_error_m": 0.021162533428411262
+  },
+  "seed_summaries": [
+    {
+      "seed": 123,
+      "cases": 5,
+      "measurement_evidence_sha256": "414884a457630e10d68539116cbb019a62e9f42409ffdcdcd09f18cd36da6b41",
+      "max_allowance_spacing_drift_m": 0.0,
+      "spacing_mae_m": 0.00805630140512949,
+      "spacing_max_abs_error_m": 0.021162533428411262,
+      "pairs": [
+        {
+          "reference_id": "X:1-2",
+          "reference_m": 0.21589999999999998,
+          "measured_m": 0.22781223079545138,
+          "error_m": 0.011912230795451395
+        },
+        {
+          "reference_id": "X:2-3",
+          "reference_m": 0.22352,
+          "measured_m": 0.22606531652135475,
+          "error_m": 0.002545316521354757
+        },
+        {
+          "reference_id": "X:3-4",
+          "reference_m": 0.22352,
+          "measured_m": 0.21516717337921226,
+          "error_m": -0.008352826620787734
+        },
+        {
+          "reference_id": "X:4-5",
+          "reference_m": 0.2413,
+          "measured_m": 0.24676094885144534,
+          "error_m": 0.005460948851445352
+        },
+        {
+          "reference_id": "X:5-6",
+          "reference_m": 0.23622,
+          "measured_m": 0.2358451443883795,
+          "error_m": -0.0003748556116205115
+        },
+        {
+          "reference_id": "X:6-7",
+          "reference_m": 0.22352,
+          "measured_m": 0.22472695323409847,
+          "error_m": 0.0012069532340984734
+        },
+        {
+          "reference_id": "X:7-8",
+          "reference_m": 0.23622,
+          "measured_m": 0.23435019202040347,
+          "error_m": -0.0018698079795965439
+        },
+        {
+          "reference_id": "X:8-9",
+          "reference_m": 0.22352,
+          "measured_m": 0.2285024124599127,
+          "error_m": 0.004982412459912711
+        },
+        {
+          "reference_id": "X:9-10",
+          "reference_m": 0.21082,
+          "measured_m": 0.21827146515291476,
+          "error_m": 0.007451465152914755
+        },
+        {
+          "reference_id": "X:10-11",
+          "reference_m": 0.1905,
+          "measured_m": 0.19428363286700187,
+          "error_m": 0.003783632867001868
+        },
+        {
+          "reference_id": "X:11-12",
+          "reference_m": 0.21082,
+          "measured_m": 0.20100037935287604,
+          "error_m": -0.009819620647123967
+        },
+        {
+          "reference_id": "Y:A-B",
+          "reference_m": 0.24892,
+          "measured_m": 0.23120174962072956,
+          "error_m": -0.01771825037927044
+        },
+        {
+          "reference_id": "Y:B-C",
+          "reference_m": 0.22352,
+          "measured_m": 0.22953493121133534,
+          "error_m": 0.006014931211335339
+        },
+        {
+          "reference_id": "Y:C-D",
+          "reference_m": 0.2413,
+          "measured_m": 0.23713163011289742,
+          "error_m": -0.004168369887102563
+        },
+        {
+          "reference_id": "Y:D-E",
+          "reference_m": 0.2032,
+          "measured_m": 0.21900769683380272,
+          "error_m": 0.01580769683380273
+        },
+        {
+          "reference_id": "Y:E-F",
+          "reference_m": 0.1397,
+          "measured_m": 0.12818598182792476,
+          "error_m": -0.01151401817207523
+        },
+        {
+          "reference_id": "Y:F-G",
+          "reference_m": 0.1905,
+          "measured_m": 0.2013675546390252,
+          "error_m": 0.010867554639025195
+        },
+        {
+          "reference_id": "Y:G-H",
+          "reference_m": 0.14604999999999999,
+          "measured_m": 0.16721253342841125,
+          "error_m": 0.021162533428411262
+        }
+      ]
+    },
+    {
+      "seed": 456,
+      "cases": 5,
+      "measurement_evidence_sha256": "f96c106211ac45ee2aa55bf2ea013a869b167c402d665bfaee8c7e8d13bd1f7e",
+      "max_allowance_spacing_drift_m": 0.0,
+      "spacing_mae_m": 0.007977347997403971,
+      "spacing_max_abs_error_m": 0.01819770267837298,
+      "pairs": [
+        {
+          "reference_id": "X:1-2",
+          "reference_m": 0.21589999999999998,
+          "measured_m": 0.22770349503997217,
+          "error_m": 0.01180349503997219
+        },
+        {
+          "reference_id": "X:2-3",
+          "reference_m": 0.22352,
+          "measured_m": 0.22486340853949535,
+          "error_m": 0.0013434085394953554
+        },
+        {
+          "reference_id": "X:3-4",
+          "reference_m": 0.22352,
+          "measured_m": 0.21417390714090273,
+          "error_m": -0.009346092859097266
+        },
+        {
+          "reference_id": "X:4-5",
+          "reference_m": 0.2413,
+          "measured_m": 0.24862753266683896,
+          "error_m": 0.007327532666838971
+        },
+        {
+          "reference_id": "X:5-6",
+          "reference_m": 0.23622,
+          "measured_m": 0.23456163323213602,
+          "error_m": -0.001658366767863989
+        },
+        {
+          "reference_id": "X:6-7",
+          "reference_m": 0.22352,
+          "measured_m": 0.2244265350269024,
+          "error_m": 0.0009065350269024108
+        },
+        {
+          "reference_id": "X:7-8",
+          "reference_m": 0.23622,
+          "measured_m": 0.23431794638908898,
+          "error_m": -0.0019020536109110309
+        },
+        {
+          "reference_id": "X:8-9",
+          "reference_m": 0.22352,
+          "measured_m": 0.22865428598650803,
+          "error_m": 0.00513428598650803
+        },
+        {
+          "reference_id": "X:9-10",
+          "reference_m": 0.21082,
+          "measured_m": 0.21840228936529069,
+          "error_m": 0.007582289365290679
+        },
+        {
+          "reference_id": "X:10-11",
+          "reference_m": 0.1905,
+          "measured_m": 0.1943102930881426,
+          "error_m": 0.0038102930881425967
+        },
+        {
+          "reference_id": "X:11-12",
+          "reference_m": 0.21082,
+          "measured_m": 0.20249356162604262,
+          "error_m": -0.008326438373957384
+        },
+        {
+          "reference_id": "Y:A-B",
+          "reference_m": 0.24892,
+          "measured_m": 0.23172349902416023,
+          "error_m": -0.017196500975839774
+        },
+        {
+          "reference_id": "Y:B-C",
+          "reference_m": 0.22352,
+          "measured_m": 0.23010078226724912,
+          "error_m": 0.006580782267249119
+        },
+        {
+          "reference_id": "Y:C-D",
+          "reference_m": 0.2413,
+          "measured_m": 0.23675669519129586,
+          "error_m": -0.0045433048087041294
+        },
+        {
+          "reference_id": "Y:D-E",
+          "reference_m": 0.2032,
+          "measured_m": 0.21865566502634026,
+          "error_m": 0.01545566502634027
+        },
+        {
+          "reference_id": "Y:E-F",
+          "reference_m": 0.1397,
+          "measured_m": 0.12759801134813956,
+          "error_m": -0.012101988651860435
+        },
+        {
+          "reference_id": "Y:F-G",
+          "reference_m": 0.1905,
+          "measured_m": 0.20087552821992488,
+          "error_m": 0.010375528219924879
+        },
+        {
+          "reference_id": "Y:G-H",
+          "reference_m": 0.14604999999999999,
+          "measured_m": 0.16424770267837296,
+          "error_m": 0.01819770267837298
+        }
+      ]
+    },
+    {
+      "seed": 789,
+      "cases": 5,
+      "measurement_evidence_sha256": "984645d91ec6cec82792bcda77f404357b347e338191dd6b09bd69f74f0142d2",
+      "max_allowance_spacing_drift_m": 0.0,
+      "spacing_mae_m": 0.007793025211898759,
+      "spacing_max_abs_error_m": 0.018790193198277322,
+      "pairs": [
+        {
+          "reference_id": "X:1-2",
+          "reference_m": 0.21589999999999998,
+          "measured_m": 0.2285456389836889,
+          "error_m": 0.012645638983688923
+        },
+        {
+          "reference_id": "X:2-3",
+          "reference_m": 0.22352,
+          "measured_m": 0.22376426211528966,
+          "error_m": 0.0002442621152896618
+        },
+        {
+          "reference_id": "X:3-4",
+          "reference_m": 0.22352,
+          "measured_m": 0.21549505794797247,
+          "error_m": -0.008024942052027528
+        },
+        {
+          "reference_id": "X:4-5",
+          "reference_m": 0.2413,
+          "measured_m": 0.24724880181711695,
+          "error_m": 0.005948801817116961
+        },
+        {
+          "reference_id": "X:5-6",
+          "reference_m": 0.23622,
+          "measured_m": 0.2349231789330292,
+          "error_m": -0.0012968210669708213
+        },
+        {
+          "reference_id": "X:6-7",
+          "reference_m": 0.22352,
+          "measured_m": 0.22435797289153794,
+          "error_m": 0.000837972891537947
+        },
+        {
+          "reference_id": "X:7-8",
+          "reference_m": 0.23622,
+          "measured_m": 0.23436454510014967,
+          "error_m": -0.0018554548998503395
+        },
+        {
+          "reference_id": "X:8-9",
+          "reference_m": 0.22352,
+          "measured_m": 0.22860039916850564,
+          "error_m": 0.005080399168505639
+        },
+        {
+          "reference_id": "X:9-10",
+          "reference_m": 0.21082,
+          "measured_m": 0.21860185269114293,
+          "error_m": 0.0077818526911429264
+        },
+        {
+          "reference_id": "X:10-11",
+          "reference_m": 0.1905,
+          "measured_m": 0.19325010349285707,
+          "error_m": 0.0027501034928570645
+        },
+        {
+          "reference_id": "X:11-12",
+          "reference_m": 0.21082,
+          "measured_m": 0.20139698359210859,
+          "error_m": -0.009423016407891421
+        },
+        {
+          "reference_id": "Y:A-B",
+          "reference_m": 0.24892,
+          "measured_m": 0.23025327359236397,
+          "error_m": -0.01866672640763603
+        },
+        {
+          "reference_id": "Y:B-C",
+          "reference_m": 0.22352,
+          "measured_m": 0.23056355414505567,
+          "error_m": 0.007043554145055669
+        },
+        {
+          "reference_id": "Y:C-D",
+          "reference_m": 0.2413,
+          "measured_m": 0.2368653889870785,
+          "error_m": -0.004434611012921474
+        },
+        {
+          "reference_id": "Y:D-E",
+          "reference_m": 0.2032,
+          "measured_m": 0.21875036571398002,
+          "error_m": 0.015550365713980024
+        },
+        {
+          "reference_id": "Y:E-F",
+          "reference_m": 0.1397,
+          "measured_m": 0.12932818718284111,
+          "error_m": -0.010371812817158876
+        },
+        {
+          "reference_id": "Y:F-G",
+          "reference_m": 0.1905,
+          "measured_m": 0.20002792493226904,
+          "error_m": 0.009527924932269033
+        },
+        {
+          "reference_id": "Y:G-H",
+          "reference_m": 0.14604999999999999,
+          "measured_m": 0.1648401931982773,
+          "error_m": 0.018790193198277322
+        }
+      ]
+    }
+  ],
+  "centreline_assessment": {
+    "counts": [
+      {
+        "family": "X",
+        "detected": 12,
+        "expected": 12,
+        "matched": true,
+        "source_identities_matched": true
+      },
+      {
+        "family": "Y",
+        "detected": 8,
+        "expected": 8,
+        "matched": true,
+        "source_identities_matched": true
+      }
+    ],
+    "spacing_assessment": {
+      "reference_cells": 18,
+      "scored_cells": 18,
+      "verified_pairs": 18,
+      "pairs": [
+        {
+          "reference_id": "X:1-2",
+          "measurement_id": "X:1-2",
+          "verified": true,
+          "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+          "status": "scored",
+          "error_m": 0.01582466420301512,
+          "reference_m": 0.21589999999999998,
+          "measured_m": 0.2317246642030151,
+          "reference_display_increment_m": 0.00254
+        },
+        {
+          "reference_id": "X:2-3",
+          "measurement_id": "X:2-3",
+          "verified": true,
+          "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+          "status": "scored",
+          "error_m": 0.0011826924627294233,
+          "reference_m": 0.22352,
+          "measured_m": 0.22470269246272942,
+          "reference_display_increment_m": 0.00254
+        },
+        {
+          "reference_id": "X:3-4",
+          "measurement_id": "X:3-4",
+          "verified": true,
+          "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+          "status": "scored",
+          "error_m": -0.013065254270662824,
+          "reference_m": 0.22352,
+          "measured_m": 0.21045474572933717,
+          "reference_display_increment_m": 0.00254
+        },
+        {
+          "reference_id": "X:4-5",
+          "measurement_id": "X:4-5",
+          "verified": true,
+          "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+          "status": "scored",
+          "error_m": 0.005532985032389914,
+          "reference_m": 0.2413,
+          "measured_m": 0.2468329850323899,
+          "reference_display_increment_m": 0.00254
+        },
+        {
+          "reference_id": "X:5-6",
+          "measurement_id": "X:5-6",
+          "verified": true,
+          "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+          "status": "scored",
+          "error_m": 0.011454515493621004,
+          "reference_m": 0.23622,
+          "measured_m": 0.24767451549362102,
+          "reference_display_increment_m": 0.00254
+        },
+        {
+          "reference_id": "X:6-7",
+          "measurement_id": "X:6-7",
+          "verified": true,
+          "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+          "status": "scored",
+          "error_m": -0.019317317292352698,
+          "reference_m": 0.22352,
+          "measured_m": 0.2042026827076473,
+          "reference_display_increment_m": 0.00254
+        },
+        {
+          "reference_id": "X:7-8",
+          "measurement_id": "X:7-8",
+          "verified": true,
+          "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+          "status": "scored",
+          "error_m": -0.00046802757983147036,
+          "reference_m": 0.23622,
+          "measured_m": 0.23575197242016854,
+          "reference_display_increment_m": 0.00254
+        },
+        {
+          "reference_id": "X:8-9",
+          "measurement_id": "X:8-9",
+          "verified": true,
+          "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+          "status": "scored",
+          "error_m": 0.003837526816245912,
+          "reference_m": 0.22352,
+          "measured_m": 0.2273575268162459,
+          "reference_display_increment_m": 0.00254
+        },
+        {
+          "reference_id": "X:9-10",
+          "measurement_id": "X:9-10",
+          "verified": true,
+          "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+          "status": "scored",
+          "error_m": 0.007880051440323638,
+          "reference_m": 0.21082,
+          "measured_m": 0.21870005144032365,
+          "reference_display_increment_m": 0.00254
+        },
+        {
+          "reference_id": "X:10-11",
+          "measurement_id": "X:10-11",
+          "verified": true,
+          "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+          "status": "scored",
+          "error_m": 0.0034922807742613637,
+          "reference_m": 0.1905,
+          "measured_m": 0.19399228077426137,
+          "reference_display_increment_m": 0.00254
+        },
+        {
+          "reference_id": "X:11-12",
+          "measurement_id": "X:11-12",
+          "verified": true,
+          "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+          "status": "scored",
+          "error_m": -0.011261158426894097,
+          "reference_m": 0.21082,
+          "measured_m": 0.1995588415731059,
+          "reference_display_increment_m": 0.00254
+        },
+        {
+          "reference_id": "Y:A-B",
+          "measurement_id": "Y:A-B",
+          "verified": true,
+          "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+          "status": "scored",
+          "error_m": -0.020281803278629718,
+          "reference_m": 0.24892,
+          "measured_m": 0.22863819672137028,
+          "reference_display_increment_m": 0.00254
+        },
+        {
+          "reference_id": "Y:B-C",
+          "measurement_id": "Y:B-C",
+          "verified": true,
+          "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+          "status": "scored",
+          "error_m": 0.003055533763025725,
+          "reference_m": 0.22352,
+          "measured_m": 0.22657553376302572,
+          "reference_display_increment_m": 0.00254
+        },
+        {
+          "reference_id": "Y:C-D",
+          "measurement_id": "Y:C-D",
+          "verified": true,
+          "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+          "status": "scored",
+          "error_m": 0.0034770426837451296,
+          "reference_m": 0.2413,
+          "measured_m": 0.24477704268374512,
+          "reference_display_increment_m": 0.00254
+        },
+        {
+          "reference_id": "Y:D-E",
+          "measurement_id": "Y:D-E",
+          "verified": true,
+          "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+          "status": "scored",
+          "error_m": 0.024378033320441528,
+          "reference_m": 0.2032,
+          "measured_m": 0.22757803332044152,
+          "reference_display_increment_m": 0.00254
+        },
+        {
+          "reference_id": "Y:E-F",
+          "measurement_id": "Y:E-F",
+          "verified": true,
+          "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+          "status": "scored",
+          "error_m": -0.01999517292523252,
+          "reference_m": 0.1397,
+          "measured_m": 0.11970482707476747,
+          "reference_display_increment_m": 0.00254
+        },
+        {
+          "reference_id": "Y:F-G",
+          "measurement_id": "Y:F-G",
+          "verified": true,
+          "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+          "status": "scored",
+          "error_m": 0.021440340957072312,
+          "reference_m": 0.1905,
+          "measured_m": 0.21194034095707232,
+          "reference_display_increment_m": 0.00254
+        },
+        {
+          "reference_id": "Y:G-H",
+          "measurement_id": "Y:G-H",
+          "verified": true,
+          "anchor_evidence": "Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest",
+          "status": "scored",
+          "error_m": 0.02207526765777959,
+          "reference_m": 0.14604999999999999,
+          "measured_m": 0.16812526765777958,
+          "reference_display_increment_m": 0.000254
+        }
+      ],
+      "status": "complete_verified",
+      "spacing_mae_m": 0.011556648243236333,
+      "spacing_max_abs_error_m": 0.024378033320441528
+    }
+  },
+  "parameter_cases": [
+    {
+      "seed": 123,
+      "scan_noise_m": 0.02,
+      "counts": [
+        {
+          "family": "X",
+          "detected": 12,
+          "expected": 12,
+          "matched": true,
+          "source_identities_matched": true
+        },
+        {
+          "family": "Y",
+          "detected": 8,
+          "expected": 8,
+          "matched": true,
+          "source_identities_matched": true
+        }
+      ],
+      "scored_intervals": 18,
+      "spacing_mae_m": 0.00805630140512949,
+      "spacing_max_abs_error_m": 0.021162533428411262,
+      "measurement_evidence_sha256": "414884a457630e10d68539116cbb019a62e9f42409ffdcdcd09f18cd36da6b41",
+      "previous_mae_m": 0.00950620799145803,
+      "previous_max_abs_error_m": 0.022188107018424913
+    },
+    {
+      "seed": 123,
+      "scan_noise_m": 0.015,
+      "counts": [
+        {
+          "family": "X",
+          "detected": 12,
+          "expected": 12,
+          "matched": true,
+          "source_identities_matched": true
+        },
+        {
+          "family": "Y",
+          "detected": 8,
+          "expected": 8,
+          "matched": true,
+          "source_identities_matched": true
+        }
+      ],
+      "scored_intervals": 18,
+      "spacing_mae_m": 0.00805630140512949,
+      "spacing_max_abs_error_m": 0.021162533428411262,
+      "measurement_evidence_sha256": "414884a457630e10d68539116cbb019a62e9f42409ffdcdcd09f18cd36da6b41",
+      "previous_mae_m": 0.00782767694433036,
+      "previous_max_abs_error_m": 0.020436301708623678
+    },
+    {
+      "seed": 123,
+      "scan_noise_m": 0.0175,
+      "counts": [
+        {
+          "family": "X",
+          "detected": 12,
+          "expected": 12,
+          "matched": true,
+          "source_identities_matched": true
+        },
+        {
+          "family": "Y",
+          "detected": 8,
+          "expected": 8,
+          "matched": true,
+          "source_identities_matched": true
+        }
+      ],
+      "scored_intervals": 18,
+      "spacing_mae_m": 0.00805630140512949,
+      "spacing_max_abs_error_m": 0.021162533428411262,
+      "measurement_evidence_sha256": "414884a457630e10d68539116cbb019a62e9f42409ffdcdcd09f18cd36da6b41",
+      "previous_mae_m": 0.008560587127122586,
+      "previous_max_abs_error_m": 0.02198288005976176
+    },
+    {
+      "seed": 123,
+      "scan_noise_m": 0.0225,
+      "counts": [
+        {
+          "family": "X",
+          "detected": 12,
+          "expected": 12,
+          "matched": true,
+          "source_identities_matched": true
+        },
+        {
+          "family": "Y",
+          "detected": 8,
+          "expected": 8,
+          "matched": true,
+          "source_identities_matched": true
+        }
+      ],
+      "scored_intervals": 18,
+      "spacing_mae_m": 0.00805630140512949,
+      "spacing_max_abs_error_m": 0.021162533428411262,
+      "measurement_evidence_sha256": "414884a457630e10d68539116cbb019a62e9f42409ffdcdcd09f18cd36da6b41",
+      "previous_mae_m": 0.009567047186838491,
+      "previous_max_abs_error_m": 0.027031423777746283
+    },
+    {
+      "seed": 123,
+      "scan_noise_m": 0.025,
+      "counts": [
+        {
+          "family": "X",
+          "detected": 12,
+          "expected": 12,
+          "matched": true,
+          "source_identities_matched": true
+        },
+        {
+          "family": "Y",
+          "detected": 8,
+          "expected": 8,
+          "matched": true,
+          "source_identities_matched": true
+        }
+      ],
+      "scored_intervals": 18,
+      "spacing_mae_m": 0.00805630140512949,
+      "spacing_max_abs_error_m": 0.021162533428411262,
+      "measurement_evidence_sha256": "414884a457630e10d68539116cbb019a62e9f42409ffdcdcd09f18cd36da6b41",
+      "previous_mae_m": 0.009747827902590748,
+      "previous_max_abs_error_m": 0.03327657572913306
+    },
+    {
+      "seed": 456,
+      "scan_noise_m": 0.015,
+      "counts": [
+        {
+          "family": "X",
+          "detected": 12,
+          "expected": 12,
+          "matched": true,
+          "source_identities_matched": true
+        },
+        {
+          "family": "Y",
+          "detected": 8,
+          "expected": 8,
+          "matched": true,
+          "source_identities_matched": true
+        }
+      ],
+      "scored_intervals": 18,
+      "spacing_mae_m": 0.007977347997403971,
+      "spacing_max_abs_error_m": 0.01819770267837298,
+      "measurement_evidence_sha256": "f96c106211ac45ee2aa55bf2ea013a869b167c402d665bfaee8c7e8d13bd1f7e",
+      "previous_mae_m": 0.008145900210534263,
+      "previous_max_abs_error_m": 0.018825209750416155
+    },
+    {
+      "seed": 456,
+      "scan_noise_m": 0.0175,
+      "counts": [
+        {
+          "family": "X",
+          "detected": 12,
+          "expected": 12,
+          "matched": true,
+          "source_identities_matched": true
+        },
+        {
+          "family": "Y",
+          "detected": 8,
+          "expected": 8,
+          "matched": true,
+          "source_identities_matched": true
+        }
+      ],
+      "scored_intervals": 18,
+      "spacing_mae_m": 0.007977347997403971,
+      "spacing_max_abs_error_m": 0.01819770267837298,
+      "measurement_evidence_sha256": "f96c106211ac45ee2aa55bf2ea013a869b167c402d665bfaee8c7e8d13bd1f7e",
+      "previous_mae_m": 0.008278037333938584,
+      "previous_max_abs_error_m": 0.018864526656491243
+    },
+    {
+      "seed": 456,
+      "scan_noise_m": 0.02,
+      "counts": [
+        {
+          "family": "X",
+          "detected": 12,
+          "expected": 12,
+          "matched": true,
+          "source_identities_matched": true
+        },
+        {
+          "family": "Y",
+          "detected": 8,
+          "expected": 8,
+          "matched": true,
+          "source_identities_matched": true
+        }
+      ],
+      "scored_intervals": 18,
+      "spacing_mae_m": 0.007977347997403971,
+      "spacing_max_abs_error_m": 0.01819770267837298,
+      "measurement_evidence_sha256": "f96c106211ac45ee2aa55bf2ea013a869b167c402d665bfaee8c7e8d13bd1f7e",
+      "previous_mae_m": 0.00970511014068104,
+      "previous_max_abs_error_m": 0.02003066186205607
+    },
+    {
+      "seed": 456,
+      "scan_noise_m": 0.0225,
+      "counts": [
+        {
+          "family": "X",
+          "detected": 12,
+          "expected": 12,
+          "matched": true,
+          "source_identities_matched": true
+        },
+        {
+          "family": "Y",
+          "detected": 8,
+          "expected": 8,
+          "matched": true,
+          "source_identities_matched": true
+        }
+      ],
+      "scored_intervals": 18,
+      "spacing_mae_m": 0.007977347997403971,
+      "spacing_max_abs_error_m": 0.01819770267837298,
+      "measurement_evidence_sha256": "f96c106211ac45ee2aa55bf2ea013a869b167c402d665bfaee8c7e8d13bd1f7e",
+      "previous_mae_m": 0.00979391672707545,
+      "previous_max_abs_error_m": 0.022853914996198627
+    },
+    {
+      "seed": 456,
+      "scan_noise_m": 0.025,
+      "counts": [
+        {
+          "family": "X",
+          "detected": 12,
+          "expected": 12,
+          "matched": true,
+          "source_identities_matched": true
+        },
+        {
+          "family": "Y",
+          "detected": 8,
+          "expected": 8,
+          "matched": true,
+          "source_identities_matched": true
+        }
+      ],
+      "scored_intervals": 18,
+      "spacing_mae_m": 0.007977347997403971,
+      "spacing_max_abs_error_m": 0.01819770267837298,
+      "measurement_evidence_sha256": "f96c106211ac45ee2aa55bf2ea013a869b167c402d665bfaee8c7e8d13bd1f7e",
+      "previous_mae_m": 0.009928484118978958,
+      "previous_max_abs_error_m": 0.029023618252039945
+    },
+    {
+      "seed": 789,
+      "scan_noise_m": 0.015,
+      "counts": [
+        {
+          "family": "X",
+          "detected": 12,
+          "expected": 12,
+          "matched": true,
+          "source_identities_matched": true
+        },
+        {
+          "family": "Y",
+          "detected": 8,
+          "expected": 8,
+          "matched": true,
+          "source_identities_matched": true
+        }
+      ],
+      "scored_intervals": 18,
+      "spacing_mae_m": 0.007793025211898759,
+      "spacing_max_abs_error_m": 0.018790193198277322,
+      "measurement_evidence_sha256": "984645d91ec6cec82792bcda77f404357b347e338191dd6b09bd69f74f0142d2"
+    },
+    {
+      "seed": 789,
+      "scan_noise_m": 0.0175,
+      "counts": [
+        {
+          "family": "X",
+          "detected": 12,
+          "expected": 12,
+          "matched": true,
+          "source_identities_matched": true
+        },
+        {
+          "family": "Y",
+          "detected": 8,
+          "expected": 8,
+          "matched": true,
+          "source_identities_matched": true
+        }
+      ],
+      "scored_intervals": 18,
+      "spacing_mae_m": 0.007793025211898759,
+      "spacing_max_abs_error_m": 0.018790193198277322,
+      "measurement_evidence_sha256": "984645d91ec6cec82792bcda77f404357b347e338191dd6b09bd69f74f0142d2"
+    },
+    {
+      "seed": 789,
+      "scan_noise_m": 0.02,
+      "counts": [
+        {
+          "family": "X",
+          "detected": 12,
+          "expected": 12,
+          "matched": true,
+          "source_identities_matched": true
+        },
+        {
+          "family": "Y",
+          "detected": 8,
+          "expected": 8,
+          "matched": true,
+          "source_identities_matched": true
+        }
+      ],
+      "scored_intervals": 18,
+      "spacing_mae_m": 0.007793025211898759,
+      "spacing_max_abs_error_m": 0.018790193198277322,
+      "measurement_evidence_sha256": "984645d91ec6cec82792bcda77f404357b347e338191dd6b09bd69f74f0142d2"
+    },
+    {
+      "seed": 789,
+      "scan_noise_m": 0.0225,
+      "counts": [
+        {
+          "family": "X",
+          "detected": 12,
+          "expected": 12,
+          "matched": true,
+          "source_identities_matched": true
+        },
+        {
+          "family": "Y",
+          "detected": 8,
+          "expected": 8,
+          "matched": true,
+          "source_identities_matched": true
+        }
+      ],
+      "scored_intervals": 18,
+      "spacing_mae_m": 0.007793025211898759,
+      "spacing_max_abs_error_m": 0.018790193198277322,
+      "measurement_evidence_sha256": "984645d91ec6cec82792bcda77f404357b347e338191dd6b09bd69f74f0142d2"
+    },
+    {
+      "seed": 789,
+      "scan_noise_m": 0.025,
+      "counts": [
+        {
+          "family": "X",
+          "detected": 12,
+          "expected": 12,
+          "matched": true,
+          "source_identities_matched": true
+        },
+        {
+          "family": "Y",
+          "detected": 8,
+          "expected": 8,
+          "matched": true,
+          "source_identities_matched": true
+        }
+      ],
+      "scored_intervals": 18,
+      "spacing_mae_m": 0.007793025211898759,
+      "spacing_max_abs_error_m": 0.018790193198277322,
+      "measurement_evidence_sha256": "984645d91ec6cec82792bcda77f404357b347e338191dd6b09bd69f74f0142d2"
+    }
+  ],
+  "production_modified": false,
+  "measurement_windows": {
+    "layer_depth_m": 0.23357812500000003,
+    "layer_half_width_m": 0.03175,
+    "support_radius_m": 0.047625,
+    "mapping_distance_m": 0.03175,
+    "minimum_weaker_overlap": 0.8,
+    "window_basis": "fixed_design_diameter_heuristic"
+  },
+  "max_cross_sampling_spacing_range_m": 0.002964830750038283
+}

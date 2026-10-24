@@ -34,6 +34,7 @@ def inspect(dataset, minimum, maximum, direction, diameter_m=.016,
     roi_points = len(points)
     from .background import separate_surfaces
     points, ids, background = separate_surfaces(points, ids, diameter_m, seed=seed, min_support=min_support)
+    measurement_points, measurement_ids = points, ids
     layer = {'enabled': False, 'removed_points': 0}
     if layer_normal is not None:
         from .layers import select_layer
@@ -105,8 +106,10 @@ def inspect(dataset, minimum, maximum, direction, diameter_m=.016,
     bars.sort(key=lambda bar: tuple(np.asarray(bar['start'])-np.dot(bar['start'], direction)*direction))
     profile = {'enabled': False, 'pairs': []}
     if scan_noise_m:
-        from .profile_spacing import paired_profile_spacing
-        profile = paired_profile_spacing(points, ids, bars, direction, layer['normal'], diameter_m, min_length)
+        from .measurement_support import fixed_support_spacing
+        profile = fixed_support_spacing(measurement_points, measurement_ids, bars, direction,
+                                        layer['normal'], diameter_m, layer.get('selected_depth_m'),
+                                        min_support, min_length)
     source_hash = None
     if dataset.filepath and Path(dataset.filepath).is_file():
         with open(dataset.filepath, 'rb') as stream:
@@ -115,7 +118,7 @@ def inspect(dataset, minimum, maximum, direction, diameter_m=.016,
     affine = np.eye(4)
     affine[:3, :3] = (basis[1:]-basis[0]).T
     affine[:3, 3] = basis[0]
-    return {'local_to_world_4x4': affine.tolist(), 'schema': 1, 'algorithm': 'parallel-layer-density-v6', 'seed': seed,
+    return {'local_to_world_4x4': affine.tolist(), 'schema': 1, 'algorithm': 'parallel-layer-density-v7', 'seed': seed,
             'source': dataset.filepath, 'source_sha256': source_hash,
             'coordinate_frame': deepcopy(dataset.coordinate_frame),
             'world_roi_m': np.asarray([minimum, maximum]).tolist(),

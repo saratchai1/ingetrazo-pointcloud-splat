@@ -56,7 +56,7 @@ def _single_scale_proposals(points, direction, normal, diameter, noise_m, min_su
     return clusters, info
 
 
-def density_proposals(points, direction, normal, diameter, noise_m, min_support):
+def density_proposals(points, direction, normal, diameter, noise_m, min_support, *, support_radius_m=None):
     """Require a peak in three of four diameter-based smoothing scales.
 
     Proposal identity is independent of the requested support allowance. This
@@ -82,7 +82,9 @@ def density_proposals(points, direction, normal, diameter, noise_m, min_support)
                 chosen.append({'transverse_m': centre, 'scale_votes': len(matches)})
     side = np.cross(normal, direction); side /= np.linalg.norm(side)
     values = points @ side
-    radius = .8*diameter+2*noise_m
+    radius = .8*diameter+2*noise_m if support_radius_m is None else support_radius_m
+    if not np.isfinite(radius) or radius <= 0:
+        raise ValueError('Support radius must be finite and positive')
     clusters, peaks = [], []
     for peak in sorted(chosen, key=lambda p: p['transverse_m']):
         ids = np.flatnonzero(abs(values-peak['transverse_m']) <= radius)
@@ -91,5 +93,6 @@ def density_proposals(points, direction, normal, diameter, noise_m, min_support)
             peaks.append({**peak, 'support': len(ids)})
     return clusters, {'enabled': True, 'method': 'diameter_scale_consensus',
                       'noise_allowance_m': noise_m, 'support_radius_m': radius,
+                      'support_radius_basis': 'diameter_and_noise' if support_radius_m is None else 'explicit_geometry_window',
                       'minimum_scale_votes': 3, 'matching_distance_m': 2*diameter,
                       'scales_diameter': scales, 'scale_inventories': inventories, 'peaks': peaks}

@@ -100,14 +100,22 @@ def main():
             raise ValueError('Missing or modified source/anchor file: '+item['name'])
     runs,protocol=detect(args.data_dir/'small_rebar_4M.mat')
     summary=assess(runs,reference,metric='paired_profile')
+    evidence = {}
+    def register_evidence(fitted_runs):
+        profiles = [{'family':r['family'],'profile_spacing':r['report']['profile_spacing']} for r in fitted_runs]
+        fingerprint = hashlib.sha256(json.dumps(profiles,sort_keys=True,separators=(',',':')).encode()).hexdigest()
+        evidence.setdefault(fingerprint,profiles)
+        return fingerprint
     result={'centreline_assessment':assess(runs,reference),'reference':reference,'protocol':protocol,**summary,'runs':runs,'production_modified':False,
-            'reference_sha256':hashlib.sha256(ref_path.read_bytes()).hexdigest()}
+            'reference_sha256':hashlib.sha256(ref_path.read_bytes()).hexdigest(),
+            'measurement_evidence':evidence,'measurement_evidence_sha256':register_evidence(runs)}
     result['sensitivity']=[]
     if args.sensitivity:
-        for seed,noise in [(s,n) for s in (123,456) for n in (.015,.0175,.02,.0225,.025)
+        for seed,noise in [(s,n) for s in (123,456,789) for n in (.015,.0175,.02,.0225,.025)
                            if (s,n)!=(123,.02)]:
             other,meta=detect(args.data_dir/'small_rebar_4M.mat',seed,noise)
-            result['sensitivity'].append({'seed':seed,'scan_noise_m':noise,'centreline_assessment':assess(other,reference),
+            result['sensitivity'].append({'seed':seed,'scan_noise_m':noise,'measurement_evidence_sha256':register_evidence(other),
+                                          'centreline_assessment':assess(other,reference),
                                           **assess(other,reference,metric='paired_profile')})
     args.output_dir.mkdir(parents=True,exist_ok=True)
     (args.output_dir/'trial.json').write_text(json.dumps(result,indent=2,allow_nan=False)+'\n')
