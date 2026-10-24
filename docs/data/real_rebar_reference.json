@@ -1,0 +1,64 @@
+{
+  "paper": "Sanei et al., Computers in Industry 179 (2026), 104495",
+  "doi": "10.1016/j.compind.2026.104495",
+  "pdf_url": "https://fricke.co.uk/Research/SaneiComputersInIndustry2026.pdf",
+  "source_page": 12,
+  "source_figure": 13,
+  "reference_basis": "steel-tape measured top-layer spacing, not nominal 127 mm design",
+  "expected_grid_lines_each_direction": 5,
+  "horizontal_midbay_spacing_mm": [
+    [
+      133.35,
+      146.05,
+      133.35,
+      127.0
+    ],
+    [
+      133.35,
+      133.35,
+      133.35,
+      120.65
+    ],
+    [
+      133.35,
+      120.65,
+      133.35,
+      120.65
+    ],
+    [
+      130.18,
+      114.3,
+      133.35,
+      117.48
+    ]
+  ],
+  "vertical_midbay_spacing_mm": [
+    [
+      139.7,
+      133.35,
+      139.7,
+      146.05
+    ],
+    [
+      127.0,
+      127.0,
+      123.83,
+      111.13
+    ],
+    [
+      111.13,
+      120.65,
+      127.0,
+      127.0
+    ],
+    [
+      127.0,
+      127.0,
+      136.53,
+      139.7
+    ]
+  ],
+  "units": "mm",
+  "reference_correspondence": "Experimental setup/visible grid agrees; exact figure-to-scan bay registration is not supplied and is NOT verified",
+  "source_capture": "Real physical specimen scanned outdoors by Azure Kinect RGB-D; not synthetic point sampling"
+}
