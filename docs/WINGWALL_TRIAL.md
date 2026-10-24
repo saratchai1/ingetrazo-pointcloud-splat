@@ -76,3 +76,7 @@ The largest baseline errors are Y:D–E +24.23 mm, Y:G–H +23.20 mm, Y:F–G +2
 The final code also reruns the unchanged t1/t8 protocol. t1 remains 0/0, t8 remains 4/4. Every retained endpoint, source point ID and candidate spacing is exactly identical to the previous committed baseline. Its missing fifth line is not manufactured. Its unanchored Figure 13 values remain **0/32 verified matches**, distinct from this wingwall's 18/18. See [ROI_AUDIT.md](ROI_AUDIT.md).
 
 Development used disposable checkouts and offscreen documents only. No operational checkout, plugin installation, live document or production data was modified. Live OpenGL interaction, automatic scan reload after IGZ reopen, background cancellation and calibrated uncertainty remain incomplete.
+
+## Subsequent refinement
+
+This page preserves the v5 baseline. [SPACING_REFINEMENT.md](SPACING_REFINEMENT.md) records the v6 multi-scale count checks, both spacing metrics, unequal-visibility correction, all ten tested settings and the remaining errors. Original source anchors/reference values are unchanged.

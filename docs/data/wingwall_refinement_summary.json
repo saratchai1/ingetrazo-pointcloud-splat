@@ -1,0 +1,2743 @@
+{
+  "measurement_metric": "paired_profile",
+  "protocol": {
+    "source_rows": 4182318,
+    "roi_rows": 733390,
+    "sample_rows": 180000,
+    "sample_seed": 123,
+    "sample_method": "uniform_without_replacement; sorted original record IDs",
+    "source_to_analysis_4x4": [
+      [
+        0.0,
+        -1.0,
+        0.0,
+        2.9388
+      ],
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "counts": [
+    {
+      "family": "X",
+      "detected": 12,
+      "expected": 12,
+      "matched": true,
+      "source_identities_matched": true
+    },
+    {
+      "family": "Y",
+      "detected": 8,
+      "expected": 8,
+      "matched": true,
+      "source_identities_matched": true
+    }
+  ],
+  "line_assignments": [
+    {
+      "family": "X",
+      "source_label": "1",
+      "candidate_index": 0,
+      "start": [
+        0.2843,
+        0.19130000000000003,
+        0.2286
+      ],
+      "end": [
+        0.2843,
+        0.9431390000000001,
+        0.2286
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "X",
+      "source_label": "2",
+      "candidate_index": 1,
+      "start": [
+        0.5159000000000002,
+        0.19130000000000003,
+        0.221
+      ],
+      "end": [
+        0.5159000000000002,
+        1.056,
+        0.221
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "X",
+      "source_label": "3",
+      "candidate_index": 2,
+      "start": [
+        0.7406000000000001,
+        0.194662,
+        0.2221
+      ],
+      "end": [
+        0.7406000000000001,
+        1.1536920000000004,
+        0.2221
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "X",
+      "source_label": "4",
+      "candidate_index": 3,
+      "start": [
+        0.9510000000000001,
+        0.19799499999999992,
+        0.2269
+      ],
+      "end": [
+        0.9510000000000001,
+        1.1905400000000008,
+        0.2269
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "X",
+      "source_label": "5",
+      "candidate_index": 4,
+      "start": [
+        1.19775,
+        0.20530000000000004,
+        0.2333
+      ],
+      "end": [
+        1.19775,
+        1.6653,
+        0.2333
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "X",
+      "source_label": "6",
+      "candidate_index": 5,
+      "start": [
+        1.44535,
+        0.23933400000000005,
+        0.227225
+      ],
+      "end": [
+        1.44535,
+        1.702966,
+        0.227225
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "X",
+      "source_label": "7",
+      "candidate_index": 6,
+      "start": [
+        1.64945,
+        0.22510400000000008,
+        0.23370000000000002
+      ],
+      "end": [
+        1.64945,
+        1.711332,
+        0.23370000000000002
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "X",
+      "source_label": "8",
+      "candidate_index": 7,
+      "start": [
+        1.8851499999999999,
+        0.22748000000000002,
+        0.23865
+      ],
+      "end": [
+        1.8851499999999999,
+        1.6925000000000003,
+        0.23865
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "X",
+      "source_label": "9",
+      "candidate_index": 8,
+      "start": [
+        2.1125,
+        0.23605600000000004,
+        0.2368
+      ],
+      "end": [
+        2.1125,
+        1.6982,
+        0.2368
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "X",
+      "source_label": "10",
+      "candidate_index": 9,
+      "start": [
+        2.3310500000000003,
+        0.22160000000000002,
+        0.2449
+      ],
+      "end": [
+        2.3310500000000003,
+        1.6969,
+        0.2449
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "X",
+      "source_label": "11",
+      "candidate_index": 10,
+      "start": [
+        2.525,
+        0.24362400000000006,
+        0.24085
+      ],
+      "end": [
+        2.525,
+        1.6883320000000002,
+        0.24085
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "X",
+      "source_label": "12",
+      "candidate_index": 11,
+      "start": [
+        2.724525,
+        0.22084399999999993,
+        0.244525
+      ],
+      "end": [
+        2.724525,
+        1.712639,
+        0.244525
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "Y",
+      "source_label": "A",
+      "candidate_index": 0,
+      "start": [
+        0.23980000000000024,
+        0.23419999999999996,
+        0.23965
+      ],
+      "end": [
+        2.750332,
+        0.23419999999999996,
+        0.23965
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "Y",
+      "source_label": "B",
+      "candidate_index": 1,
+      "start": [
+        0.29190000000000005,
+        0.46275,
+        0.2333
+      ],
+      "end": [
+        2.7315,
+        0.46275,
+        0.2333
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "Y",
+      "source_label": "C",
+      "candidate_index": 2,
+      "start": [
+        0.2635560000000001,
+        0.68925,
+        0.22744999999999999
+      ],
+      "end": [
+        2.7298,
+        0.68925,
+        0.22744999999999999
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "Y",
+      "source_label": "D",
+      "candidate_index": 3,
+      "start": [
+        0.2819520000000002,
+        0.934025,
+        0.22645
+      ],
+      "end": [
+        2.725956,
+        0.934025,
+        0.22645
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "Y",
+      "source_label": "E",
+      "candidate_index": 4,
+      "start": [
+        0.9129,
+        1.1616,
+        0.227625
+      ],
+      "end": [
+        2.727888,
+        1.1616,
+        0.227625
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "Y",
+      "source_label": "F",
+      "candidate_index": 5,
+      "start": [
+        1.0977960000000002,
+        1.2812999999999999,
+        0.22655
+      ],
+      "end": [
+        2.7297720000000005,
+        1.2812999999999999,
+        0.22655
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "Y",
+      "source_label": "G",
+      "candidate_index": 6,
+      "start": [
+        1.376246,
+        1.493225,
+        0.22399999999999998
+      ],
+      "end": [
+        2.7261,
+        1.493225,
+        0.22399999999999998
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    },
+    {
+      "family": "Y",
+      "source_label": "H",
+      "candidate_index": 7,
+      "start": [
+        1.1980000000000002,
+        1.66135,
+        0.2237
+      ],
+      "end": [
+        2.733331,
+        1.66135,
+        0.2237
+      ],
+      "anchor_basis": {
+        "orientation": "Unique stepped/sloping outline in source MAT and report Fig.14; report frame X=source_max_Y-source_Y, Y=source_X. No reflection/orientation search against tape values.",
+        "x_labels": "Source annotated photo 1-5.png supplies physical RB1-RB5 labels at the low/sloping end; Fig.14 orders remaining columns continuously to flat high end.",
+        "y_labels": "Source annotated photo A-C.png supplies physical RB-A/RB-B/RB-C at the lower edge; Fig.14 orders remaining rows upward."
+      }
+    }
+  ],
+  "reference_sha256": "a6d3ad037a08c7ecbb9b0c336f770e62e632ee727a5e07233fbadff039980201",
+  "crosswalk_basis": "Manually reviewed asymmetric shape and physically labeled photos; not a best-error permutation",
+  "tolerance_verdict": "No field compliance decision. Published tape rounding and scanner error remain.",
+  "detector_algorithm": "parallel-layer-density-v6",
+  "spacing_assessment": {
+    "reference_cells": 18,
+    "scored_cells": 18,
+    "verified_pairs": 18,
+    "status": "complete_verified",
+    "spacing_mae_m": 0.00950620799145803,
+    "spacing_max_abs_error_m": 0.022188107018424913,
+    "pairs": [
+      {
+        "reference_id": "X:1-2",
+        "verified": true,
+        "status": "scored",
+        "error_m": 0.01302599786830691,
+        "reference_m": 0.21589999999999998,
+        "measured_m": 0.2289259978683069
+      },
+      {
+        "reference_id": "X:2-3",
+        "verified": true,
+        "status": "scored",
+        "error_m": 0.0006446994957058638,
+        "reference_m": 0.22352,
+        "measured_m": 0.22416469949570586
+      },
+      {
+        "reference_id": "X:3-4",
+        "verified": true,
+        "status": "scored",
+        "error_m": -0.008559059427494742,
+        "reference_m": 0.22352,
+        "measured_m": 0.21496094057250525
+      },
+      {
+        "reference_id": "X:4-5",
+        "verified": true,
+        "status": "scored",
+        "error_m": 0.005456935059584528,
+        "reference_m": 0.2413,
+        "measured_m": 0.24675693505958451
+      },
+      {
+        "reference_id": "X:5-6",
+        "verified": true,
+        "status": "scored",
+        "error_m": 0.012362184598977283,
+        "reference_m": 0.23622,
+        "measured_m": 0.2485821845989773
+      },
+      {
+        "reference_id": "X:6-7",
+        "verified": true,
+        "status": "scored",
+        "error_m": -0.015948440050184115,
+        "reference_m": 0.22352,
+        "measured_m": 0.20757155994981588
+      },
+      {
+        "reference_id": "X:7-8",
+        "verified": true,
+        "status": "scored",
+        "error_m": -0.0021838348447007216,
+        "reference_m": 0.23622,
+        "measured_m": 0.2340361651552993
+      },
+      {
+        "reference_id": "X:8-9",
+        "verified": true,
+        "status": "scored",
+        "error_m": 0.004833990549760081,
+        "reference_m": 0.22352,
+        "measured_m": 0.22835399054976008
+      },
+      {
+        "reference_id": "X:9-10",
+        "verified": true,
+        "status": "scored",
+        "error_m": 0.007169595029678538,
+        "reference_m": 0.21082,
+        "measured_m": 0.21798959502967855
+      },
+      {
+        "reference_id": "X:10-11",
+        "verified": true,
+        "status": "scored",
+        "error_m": 0.002975973960592626,
+        "reference_m": 0.1905,
+        "measured_m": 0.19347597396059263
+      },
+      {
+        "reference_id": "X:11-12",
+        "verified": true,
+        "status": "scored",
+        "error_m": -0.00845910333268432,
+        "reference_m": 0.21082,
+        "measured_m": 0.2023608966673157
+      },
+      {
+        "reference_id": "Y:A-B",
+        "verified": true,
+        "status": "scored",
+        "error_m": -0.018098085420971882,
+        "reference_m": 0.24892,
+        "measured_m": 0.23082191457902812
+      },
+      {
+        "reference_id": "Y:B-C",
+        "verified": true,
+        "status": "scored",
+        "error_m": 0.0058358274363308205,
+        "reference_m": 0.22352,
+        "measured_m": 0.22935582743633082
+      },
+      {
+        "reference_id": "Y:C-D",
+        "verified": true,
+        "status": "scored",
+        "error_m": -0.0037986592636095884,
+        "reference_m": 0.2413,
+        "measured_m": 0.2375013407363904
+      },
+      {
+        "reference_id": "Y:D-E",
+        "verified": true,
+        "status": "scored",
+        "error_m": 0.016350569345652044,
+        "reference_m": 0.2032,
+        "measured_m": 0.21955056934565204
+      },
+      {
+        "reference_id": "Y:E-F",
+        "verified": true,
+        "status": "scored",
+        "error_m": -0.011944364116489914,
+        "reference_m": 0.1397,
+        "measured_m": 0.12775563588351008
+      },
+      {
+        "reference_id": "Y:F-G",
+        "verified": true,
+        "status": "scored",
+        "error_m": 0.01127631702709564,
+        "reference_m": 0.1905,
+        "measured_m": 0.20177631702709564
+      },
+      {
+        "reference_id": "Y:G-H",
+        "verified": true,
+        "status": "scored",
+        "error_m": 0.022188107018424913,
+        "reference_m": 0.14604999999999999,
+        "measured_m": 0.1682381070184249
+      }
+    ]
+  },
+  "centreline_assessment": {
+    "measurement_metric": "centreline",
+    "counts": [
+      {
+        "family": "X",
+        "detected": 12,
+        "expected": 12,
+        "matched": true,
+        "source_identities_matched": true
+      },
+      {
+        "family": "Y",
+        "detected": 8,
+        "expected": 8,
+        "matched": true,
+        "source_identities_matched": true
+      }
+    ],
+    "spacing_assessment": {
+      "reference_cells": 18,
+      "scored_cells": 18,
+      "verified_pairs": 18,
+      "status": "complete_verified",
+      "spacing_mae_m": 0.011556648243236333,
+      "spacing_max_abs_error_m": 0.024378033320441528,
+      "pairs": [
+        {
+          "reference_id": "X:1-2",
+          "verified": true,
+          "status": "scored",
+          "error_m": 0.01582466420301512,
+          "reference_m": 0.21589999999999998,
+          "measured_m": 0.2317246642030151
+        },
+        {
+          "reference_id": "X:2-3",
+          "verified": true,
+          "status": "scored",
+          "error_m": 0.0011826924627294233,
+          "reference_m": 0.22352,
+          "measured_m": 0.22470269246272942
+        },
+        {
+          "reference_id": "X:3-4",
+          "verified": true,
+          "status": "scored",
+          "error_m": -0.013065254270662824,
+          "reference_m": 0.22352,
+          "measured_m": 0.21045474572933717
+        },
+        {
+          "reference_id": "X:4-5",
+          "verified": true,
+          "status": "scored",
+          "error_m": 0.005532985032389914,
+          "reference_m": 0.2413,
+          "measured_m": 0.2468329850323899
+        },
+        {
+          "reference_id": "X:5-6",
+          "verified": true,
+          "status": "scored",
+          "error_m": 0.011454515493621004,
+          "reference_m": 0.23622,
+          "measured_m": 0.24767451549362102
+        },
+        {
+          "reference_id": "X:6-7",
+          "verified": true,
+          "status": "scored",
+          "error_m": -0.019317317292352698,
+          "reference_m": 0.22352,
+          "measured_m": 0.2042026827076473
+        },
+        {
+          "reference_id": "X:7-8",
+          "verified": true,
+          "status": "scored",
+          "error_m": -0.00046802757983147036,
+          "reference_m": 0.23622,
+          "measured_m": 0.23575197242016854
+        },
+        {
+          "reference_id": "X:8-9",
+          "verified": true,
+          "status": "scored",
+          "error_m": 0.003837526816245912,
+          "reference_m": 0.22352,
+          "measured_m": 0.2273575268162459
+        },
+        {
+          "reference_id": "X:9-10",
+          "verified": true,
+          "status": "scored",
+          "error_m": 0.007880051440323638,
+          "reference_m": 0.21082,
+          "measured_m": 0.21870005144032365
+        },
+        {
+          "reference_id": "X:10-11",
+          "verified": true,
+          "status": "scored",
+          "error_m": 0.0034922807742613637,
+          "reference_m": 0.1905,
+          "measured_m": 0.19399228077426137
+        },
+        {
+          "reference_id": "X:11-12",
+          "verified": true,
+          "status": "scored",
+          "error_m": -0.011261158426894097,
+          "reference_m": 0.21082,
+          "measured_m": 0.1995588415731059
+        },
+        {
+          "reference_id": "Y:A-B",
+          "verified": true,
+          "status": "scored",
+          "error_m": -0.020281803278629718,
+          "reference_m": 0.24892,
+          "measured_m": 0.22863819672137028
+        },
+        {
+          "reference_id": "Y:B-C",
+          "verified": true,
+          "status": "scored",
+          "error_m": 0.003055533763025725,
+          "reference_m": 0.22352,
+          "measured_m": 0.22657553376302572
+        },
+        {
+          "reference_id": "Y:C-D",
+          "verified": true,
+          "status": "scored",
+          "error_m": 0.0034770426837451296,
+          "reference_m": 0.2413,
+          "measured_m": 0.24477704268374512
+        },
+        {
+          "reference_id": "Y:D-E",
+          "verified": true,
+          "status": "scored",
+          "error_m": 0.024378033320441528,
+          "reference_m": 0.2032,
+          "measured_m": 0.22757803332044152
+        },
+        {
+          "reference_id": "Y:E-F",
+          "verified": true,
+          "status": "scored",
+          "error_m": -0.01999517292523252,
+          "reference_m": 0.1397,
+          "measured_m": 0.11970482707476747
+        },
+        {
+          "reference_id": "Y:F-G",
+          "verified": true,
+          "status": "scored",
+          "error_m": 0.021440340957072312,
+          "reference_m": 0.1905,
+          "measured_m": 0.21194034095707232
+        },
+        {
+          "reference_id": "Y:G-H",
+          "verified": true,
+          "status": "scored",
+          "error_m": 0.02207526765777959,
+          "reference_m": 0.14604999999999999,
+          "measured_m": 0.16812526765777958
+        }
+      ]
+    }
+  },
+  "previous_centreline_assessment": {
+    "reference_cells": 18,
+    "scored_cells": 18,
+    "verified_pairs": 18,
+    "status": "complete_verified",
+    "spacing_mae_m": 0.011334815645087006,
+    "spacing_max_abs_error_m": 0.024225549631082782,
+    "pairs": [
+      {
+        "reference_id": "X:1-2",
+        "verified": true,
+        "status": "scored",
+        "error_m": 0.015274960798093346,
+        "reference_m": 0.21589999999999998,
+        "measured_m": 0.23117496079809333
+      },
+      {
+        "reference_id": "X:2-3",
+        "verified": true,
+        "status": "scored",
+        "error_m": 0.0017326858885373664,
+        "reference_m": 0.22352,
+        "measured_m": 0.22525268588853736
+      },
+      {
+        "reference_id": "X:3-4",
+        "verified": true,
+        "status": "scored",
+        "error_m": -0.013064107946581915,
+        "reference_m": 0.22352,
+        "measured_m": 0.21045589205341808
+      },
+      {
+        "reference_id": "X:4-5",
+        "verified": true,
+        "status": "scored",
+        "error_m": 0.005881577994801351,
+        "reference_m": 0.2413,
+        "measured_m": 0.24718157799480134
+      },
+      {
+        "reference_id": "X:5-6",
+        "verified": true,
+        "status": "scored",
+        "error_m": 0.00793645086706185,
+        "reference_m": 0.23622,
+        "measured_m": 0.24415645086706186
+      },
+      {
+        "reference_id": "X:6-7",
+        "verified": true,
+        "status": "scored",
+        "error_m": -0.016192999828772953,
+        "reference_m": 0.22352,
+        "measured_m": 0.20732700017122704
+      },
+      {
+        "reference_id": "X:7-8",
+        "verified": true,
+        "status": "scored",
+        "error_m": -0.0005180165548029081,
+        "reference_m": 0.23622,
+        "measured_m": 0.2357019834451971
+      },
+      {
+        "reference_id": "X:8-9",
+        "verified": true,
+        "status": "scored",
+        "error_m": 0.003586742524302966,
+        "reference_m": 0.22352,
+        "measured_m": 0.22710674252430296
+      },
+      {
+        "reference_id": "X:9-10",
+        "verified": true,
+        "status": "scored",
+        "error_m": 0.008126203438196533,
+        "reference_m": 0.21082,
+        "measured_m": 0.21894620343819654
+      },
+      {
+        "reference_id": "X:10-11",
+        "verified": true,
+        "status": "scored",
+        "error_m": 0.0035422698795285756,
+        "reference_m": 0.1905,
+        "measured_m": 0.19404226987952858
+      },
+      {
+        "reference_id": "X:11-12",
+        "verified": true,
+        "status": "scored",
+        "error_m": -0.011261158426894097,
+        "reference_m": 0.21082,
+        "measured_m": 0.1995588415731059
+      },
+      {
+        "reference_id": "Y:A-B",
+        "verified": true,
+        "status": "scored",
+        "error_m": -0.020383148485851377,
+        "reference_m": 0.24892,
+        "measured_m": 0.22853685151414863
+      },
+      {
+        "reference_id": "Y:B-C",
+        "verified": true,
+        "status": "scored",
+        "error_m": 0.002590018851443221,
+        "reference_m": 0.22352,
+        "measured_m": 0.22611001885144322
+      },
+      {
+        "reference_id": "Y:C-D",
+        "verified": true,
+        "status": "scored",
+        "error_m": 0.0041251833553352935,
+        "reference_m": 0.2413,
+        "measured_m": 0.24542518335533528
+      },
+      {
+        "reference_id": "Y:D-E",
+        "verified": true,
+        "status": "scored",
+        "error_m": 0.024225549631082782,
+        "reference_m": 0.2032,
+        "measured_m": 0.22742554963108277
+      },
+      {
+        "reference_id": "Y:E-F",
+        "verified": true,
+        "status": "scored",
+        "error_m": -0.02032059955754531,
+        "reference_m": 0.1397,
+        "measured_m": 0.11937940044245468
+      },
+      {
+        "reference_id": "Y:F-G",
+        "verified": true,
+        "status": "scored",
+        "error_m": 0.022064409356317233,
+        "reference_m": 0.1905,
+        "measured_m": 0.21256440935631724
+      },
+      {
+        "reference_id": "Y:G-H",
+        "verified": true,
+        "status": "scored",
+        "error_m": 0.02320059822641704,
+        "reference_m": 0.14604999999999999,
+        "measured_m": 0.16925059822641703
+      }
+    ]
+  },
+  "previous_detection_with_new_metric": {
+    "reference_cells": 18,
+    "scored_cells": 18,
+    "verified_pairs": 18,
+    "status": "complete_verified",
+    "spacing_mae_m": 0.009204230355594815,
+    "spacing_max_abs_error_m": 0.023734719037518642,
+    "pairs": [
+      {
+        "reference_id": "X:1-2",
+        "verified": true,
+        "status": "scored",
+        "error_m": 0.012779830767822936,
+        "reference_m": 0.21589999999999998,
+        "measured_m": 0.22867983076782292
+      },
+      {
+        "reference_id": "X:2-3",
+        "verified": true,
+        "status": "scored",
+        "error_m": 0.0006446994957058638,
+        "reference_m": 0.22352,
+        "measured_m": 0.22416469949570586
+      },
+      {
+        "reference_id": "X:3-4",
+        "verified": true,
+        "status": "scored",
+        "error_m": -0.00863028221038617,
+        "reference_m": 0.22352,
+        "measured_m": 0.21488971778961383
+      },
+      {
+        "reference_id": "X:4-5",
+        "verified": true,
+        "status": "scored",
+        "error_m": 0.005507313505900724,
+        "reference_m": 0.2413,
+        "measured_m": 0.2468073135059007
+      },
+      {
+        "reference_id": "X:5-6",
+        "verified": true,
+        "status": "scored",
+        "error_m": 0.008574567398880878,
+        "reference_m": 0.23622,
+        "measured_m": 0.2447945673988809
+      },
+      {
+        "reference_id": "X:6-7",
+        "verified": true,
+        "status": "scored",
+        "error_m": -0.012463308850314103,
+        "reference_m": 0.22352,
+        "measured_m": 0.2110566911496859
+      },
+      {
+        "reference_id": "X:7-8",
+        "verified": true,
+        "status": "scored",
+        "error_m": -0.0019121774377616196,
+        "reference_m": 0.23622,
+        "measured_m": 0.2343078225622384
+      },
+      {
+        "reference_id": "X:8-9",
+        "verified": true,
+        "status": "scored",
+        "error_m": 0.004785606589062935,
+        "reference_m": 0.22352,
+        "measured_m": 0.22830560658906293
+      },
+      {
+        "reference_id": "X:9-10",
+        "verified": true,
+        "status": "scored",
+        "error_m": 0.007282619946738622,
+        "reference_m": 0.21082,
+        "measured_m": 0.21810261994673863
+      },
+      {
+        "reference_id": "X:10-11",
+        "verified": true,
+        "status": "scored",
+        "error_m": 0.002975973960592626,
+        "reference_m": 0.1905,
+        "measured_m": 0.19347597396059263
+      },
+      {
+        "reference_id": "X:11-12",
+        "verified": true,
+        "status": "scored",
+        "error_m": -0.00845910333268432,
+        "reference_m": 0.21082,
+        "measured_m": 0.2023608966673157
+      },
+      {
+        "reference_id": "Y:A-B",
+        "verified": true,
+        "status": "scored",
+        "error_m": -0.01859021385264306,
+        "reference_m": 0.24892,
+        "measured_m": 0.23032978614735694
+      },
+      {
+        "reference_id": "Y:B-C",
+        "verified": true,
+        "status": "scored",
+        "error_m": 0.005619553500697538,
+        "reference_m": 0.22352,
+        "measured_m": 0.22913955350069753
+      },
+      {
+        "reference_id": "Y:C-D",
+        "verified": true,
+        "status": "scored",
+        "error_m": -0.003729732786855705,
+        "reference_m": 0.2413,
+        "measured_m": 0.23757026721314428
+      },
+      {
+        "reference_id": "Y:D-E",
+        "verified": true,
+        "status": "scored",
+        "error_m": 0.01650081929751651,
+        "reference_m": 0.2032,
+        "measured_m": 0.2197008192975165
+      },
+      {
+        "reference_id": "Y:E-F",
+        "verified": true,
+        "status": "scored",
+        "error_m": -0.011777484389963705,
+        "reference_m": 0.1397,
+        "measured_m": 0.12792251561003629
+      },
+      {
+        "reference_id": "Y:F-G",
+        "verified": true,
+        "status": "scored",
+        "error_m": 0.011708140039660697,
+        "reference_m": 0.1905,
+        "measured_m": 0.2022081400396607
+      },
+      {
+        "reference_id": "Y:G-H",
+        "verified": true,
+        "status": "scored",
+        "error_m": 0.023734719037518642,
+        "reference_m": 0.14604999999999999,
+        "measured_m": 0.16978471903751863
+      }
+    ]
+  },
+  "sensitivity": [
+    {
+      "seed": 123,
+      "scan_noise_m": 0.015,
+      "measurement_metric": "paired_profile",
+      "counts": [
+        {
+          "family": "X",
+          "detected": 12,
+          "expected": 12,
+          "matched": true,
+          "source_identities_matched": true
+        },
+        {
+          "family": "Y",
+          "detected": 8,
+          "expected": 8,
+          "matched": true,
+          "source_identities_matched": true
+        }
+      ],
+      "spacing_assessment": {
+        "reference_cells": 18,
+        "scored_cells": 18,
+        "verified_pairs": 18,
+        "status": "complete_verified",
+        "spacing_mae_m": 0.00782767694433036,
+        "spacing_max_abs_error_m": 0.020436301708623678,
+        "pairs": [
+          {
+            "reference_id": "X:1-2",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.011160179247705182,
+            "reference_m": 0.21589999999999998,
+            "measured_m": 0.22706017924770516
+          },
+          {
+            "reference_id": "X:2-3",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.0017461814387594032,
+            "reference_m": 0.22352,
+            "measured_m": 0.2252661814387594
+          },
+          {
+            "reference_id": "X:3-4",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.008646909548915366,
+            "reference_m": 0.22352,
+            "measured_m": 0.21487309045108463
+          },
+          {
+            "reference_id": "X:4-5",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.00514387292038726,
+            "reference_m": 0.2413,
+            "measured_m": 0.24644387292038725
+          },
+          {
+            "reference_id": "X:5-6",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.00026813280622853264,
+            "reference_m": 0.23622,
+            "measured_m": 0.23595186719377148
+          },
+          {
+            "reference_id": "X:6-7",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.0011232923147118656,
+            "reference_m": 0.22352,
+            "measured_m": 0.22239670768528813
+          },
+          {
+            "reference_id": "X:7-8",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.001493904305465088,
+            "reference_m": 0.23622,
+            "measured_m": 0.23472609569453493
+          },
+          {
+            "reference_id": "X:8-9",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.004813309002431987,
+            "reference_m": 0.22352,
+            "measured_m": 0.22833330900243198
+          },
+          {
+            "reference_id": "X:9-10",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.00778384831928261,
+            "reference_m": 0.21082,
+            "measured_m": 0.21860384831928262
+          },
+          {
+            "reference_id": "X:10-11",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.003226430824500748,
+            "reference_m": 0.1905,
+            "measured_m": 0.19372643082450075
+          },
+          {
+            "reference_id": "X:11-12",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.009576006300808931,
+            "reference_m": 0.21082,
+            "measured_m": 0.20124399369919108
+          },
+          {
+            "reference_id": "Y:A-B",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.017618784049888786,
+            "reference_m": 0.24892,
+            "measured_m": 0.23130121595011122
+          },
+          {
+            "reference_id": "Y:B-C",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.005499649811975732,
+            "reference_m": 0.22352,
+            "measured_m": 0.22901964981197573
+          },
+          {
+            "reference_id": "Y:C-D",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.0036823876307583436,
+            "reference_m": 0.2413,
+            "measured_m": 0.23761761236924164
+          },
+          {
+            "reference_id": "Y:D-E",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.016114249423059446,
+            "reference_m": 0.2032,
+            "measured_m": 0.21931424942305944
+          },
+          {
+            "reference_id": "Y:E-F",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.011880195196518784,
+            "reference_m": 0.1397,
+            "measured_m": 0.1278198048034812
+          },
+          {
+            "reference_id": "Y:F-G",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.010684550147924743,
+            "reference_m": 0.1905,
+            "measured_m": 0.20118455014792475
+          },
+          {
+            "reference_id": "Y:G-H",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.020436301708623678,
+            "reference_m": 0.14604999999999999,
+            "measured_m": 0.16648630170862366
+          }
+        ]
+      },
+      "centreline_metrics": {
+        "reference_cells": 18,
+        "scored_cells": 18,
+        "verified_pairs": 18,
+        "status": "complete_verified",
+        "spacing_mae_m": 0.009695214859701337,
+        "spacing_max_abs_error_m": 0.022675935249862278
+      }
+    },
+    {
+      "seed": 123,
+      "scan_noise_m": 0.0175,
+      "measurement_metric": "paired_profile",
+      "counts": [
+        {
+          "family": "X",
+          "detected": 12,
+          "expected": 12,
+          "matched": true,
+          "source_identities_matched": true
+        },
+        {
+          "family": "Y",
+          "detected": 8,
+          "expected": 8,
+          "matched": true,
+          "source_identities_matched": true
+        }
+      ],
+      "spacing_assessment": {
+        "reference_cells": 18,
+        "scored_cells": 18,
+        "verified_pairs": 18,
+        "status": "complete_verified",
+        "spacing_mae_m": 0.008560587127122586,
+        "spacing_max_abs_error_m": 0.02198288005976176,
+        "pairs": [
+          {
+            "reference_id": "X:1-2",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.01146653227772998,
+            "reference_m": 0.21589999999999998,
+            "measured_m": 0.22736653227772996
+          },
+          {
+            "reference_id": "X:2-3",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.002199937090191506,
+            "reference_m": 0.22352,
+            "measured_m": 0.2257199370901915
+          },
+          {
+            "reference_id": "X:3-4",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.00810296260509008,
+            "reference_m": 0.22352,
+            "measured_m": 0.21541703739490992
+          },
+          {
+            "reference_id": "X:4-5",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.00537661195148878,
+            "reference_m": 0.2413,
+            "measured_m": 0.24667661195148877
+          },
+          {
+            "reference_id": "X:5-6",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.004786751378765025,
+            "reference_m": 0.23622,
+            "measured_m": 0.24100675137876504
+          },
+          {
+            "reference_id": "X:6-7",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.006019199763338534,
+            "reference_m": 0.22352,
+            "measured_m": 0.21750080023666146
+          },
+          {
+            "reference_id": "X:7-8",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.001428768264230107,
+            "reference_m": 0.23622,
+            "measured_m": 0.2347912317357699
+          },
+          {
+            "reference_id": "X:8-9",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.0047224149889758815,
+            "reference_m": 0.22352,
+            "measured_m": 0.22824241498897588
+          },
+          {
+            "reference_id": "X:9-10",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.007965054334157035,
+            "reference_m": 0.21082,
+            "measured_m": 0.21878505433415704
+          },
+          {
+            "reference_id": "X:10-11",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.003165930147767698,
+            "reference_m": 0.1905,
+            "measured_m": 0.1936659301477677
+          },
+          {
+            "reference_id": "X:11-12",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.008556347803170272,
+            "reference_m": 0.21082,
+            "measured_m": 0.20226365219682974
+          },
+          {
+            "reference_id": "Y:A-B",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.018533845902146212,
+            "reference_m": 0.24892,
+            "measured_m": 0.2303861540978538
+          },
+          {
+            "reference_id": "Y:B-C",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.006105804299081308,
+            "reference_m": 0.22352,
+            "measured_m": 0.2296258042990813
+          },
+          {
+            "reference_id": "Y:C-D",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.004361505871249338,
+            "reference_m": 0.2413,
+            "measured_m": 0.23693849412875065
+          },
+          {
+            "reference_id": "Y:D-E",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.016258191407345718,
+            "reference_m": 0.2032,
+            "measured_m": 0.2194581914073457
+          },
+          {
+            "reference_id": "Y:E-F",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.012177413765247114,
+            "reference_m": 0.1397,
+            "measured_m": 0.12752258623475288
+          },
+          {
+            "reference_id": "Y:F-G",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.010880416378470203,
+            "reference_m": 0.1905,
+            "measured_m": 0.2013804163784702
+          },
+          {
+            "reference_id": "Y:G-H",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.02198288005976176,
+            "reference_m": 0.14604999999999999,
+            "measured_m": 0.16803288005976175
+          }
+        ]
+      },
+      "centreline_metrics": {
+        "reference_cells": 18,
+        "scored_cells": 18,
+        "verified_pairs": 18,
+        "status": "complete_verified",
+        "spacing_mae_m": 0.01020003454230473,
+        "spacing_max_abs_error_m": 0.025226231254206005
+      }
+    },
+    {
+      "seed": 123,
+      "scan_noise_m": 0.0225,
+      "measurement_metric": "paired_profile",
+      "counts": [
+        {
+          "family": "X",
+          "detected": 12,
+          "expected": 12,
+          "matched": true,
+          "source_identities_matched": true
+        },
+        {
+          "family": "Y",
+          "detected": 8,
+          "expected": 8,
+          "matched": true,
+          "source_identities_matched": true
+        }
+      ],
+      "spacing_assessment": {
+        "reference_cells": 18,
+        "scored_cells": 18,
+        "verified_pairs": 18,
+        "status": "complete_verified",
+        "spacing_mae_m": 0.009567047186838491,
+        "spacing_max_abs_error_m": 0.027031423777746283,
+        "pairs": [
+          {
+            "reference_id": "X:1-2",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.0132545548314498,
+            "reference_m": 0.21589999999999998,
+            "measured_m": 0.22915455483144978
+          },
+          {
+            "reference_id": "X:2-3",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.0013428081742287712,
+            "reference_m": 0.22352,
+            "measured_m": 0.22486280817422877
+          },
+          {
+            "reference_id": "X:3-4",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.008693553659148479,
+            "reference_m": 0.22352,
+            "measured_m": 0.21482644634085152
+          },
+          {
+            "reference_id": "X:4-5",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.00663592418203543,
+            "reference_m": 0.2413,
+            "measured_m": 0.24793592418203542
+          },
+          {
+            "reference_id": "X:5-6",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.009831517418001173,
+            "reference_m": 0.23622,
+            "measured_m": 0.2460515174180012
+          },
+          {
+            "reference_id": "X:6-7",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.01273464414933273,
+            "reference_m": 0.22352,
+            "measured_m": 0.21078535585066727
+          },
+          {
+            "reference_id": "X:7-8",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.002201095154441418,
+            "reference_m": 0.23622,
+            "measured_m": 0.2340189048455586
+          },
+          {
+            "reference_id": "X:8-9",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.004861260868039896,
+            "reference_m": 0.22352,
+            "measured_m": 0.2283812608680399
+          },
+          {
+            "reference_id": "X:9-10",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.007441025423728598,
+            "reference_m": 0.21082,
+            "measured_m": 0.2182610254237286
+          },
+          {
+            "reference_id": "X:10-11",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.003221146238607614,
+            "reference_m": 0.1905,
+            "measured_m": 0.19372114623860762
+          },
+          {
+            "reference_id": "X:11-12",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.008318839509498216,
+            "reference_m": 0.21082,
+            "measured_m": 0.2025011604905018
+          },
+          {
+            "reference_id": "Y:A-B",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.01839515828675728,
+            "reference_m": 0.24892,
+            "measured_m": 0.23052484171324272
+          },
+          {
+            "reference_id": "Y:B-C",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.006163425238396691,
+            "reference_m": 0.22352,
+            "measured_m": 0.2296834252383967
+          },
+          {
+            "reference_id": "Y:C-D",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.0037913215180027937,
+            "reference_m": 0.2413,
+            "measured_m": 0.2375086784819972
+          },
+          {
+            "reference_id": "Y:D-E",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.015555851350312455,
+            "reference_m": 0.2032,
+            "measured_m": 0.21875585135031245
+          },
+          {
+            "reference_id": "Y:E-F",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.011799843627929713,
+            "reference_m": 0.1397,
+            "measured_m": 0.12790015637207028
+          },
+          {
+            "reference_id": "Y:F-G",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.01093345595543549,
+            "reference_m": 0.1905,
+            "measured_m": 0.2014334559554355
+          },
+          {
+            "reference_id": "Y:G-H",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.027031423777746283,
+            "reference_m": 0.14604999999999999,
+            "measured_m": 0.17308142377774627
+          }
+        ]
+      },
+      "centreline_metrics": {
+        "reference_cells": 18,
+        "scored_cells": 18,
+        "verified_pairs": 18,
+        "status": "complete_verified",
+        "spacing_mae_m": 0.011685567967347522,
+        "spacing_max_abs_error_m": 0.02445264660702473
+      }
+    },
+    {
+      "seed": 123,
+      "scan_noise_m": 0.025,
+      "measurement_metric": "paired_profile",
+      "counts": [
+        {
+          "family": "X",
+          "detected": 12,
+          "expected": 12,
+          "matched": true,
+          "source_identities_matched": true
+        },
+        {
+          "family": "Y",
+          "detected": 8,
+          "expected": 8,
+          "matched": true,
+          "source_identities_matched": true
+        }
+      ],
+      "spacing_assessment": {
+        "reference_cells": 18,
+        "scored_cells": 18,
+        "verified_pairs": 18,
+        "status": "complete_verified",
+        "spacing_mae_m": 0.009747827902590748,
+        "spacing_max_abs_error_m": 0.03327657572913306,
+        "pairs": [
+          {
+            "reference_id": "X:1-2",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.01318123013464012,
+            "reference_m": 0.21589999999999998,
+            "measured_m": 0.2290812301346401
+          },
+          {
+            "reference_id": "X:2-3",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.0013428081742287712,
+            "reference_m": 0.22352,
+            "measured_m": 0.22486280817422877
+          },
+          {
+            "reference_id": "X:3-4",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.00822760913568743,
+            "reference_m": 0.22352,
+            "measured_m": 0.21529239086431257
+          },
+          {
+            "reference_id": "X:4-5",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.006208908930567442,
+            "reference_m": 0.2413,
+            "measured_m": 0.24750890893056743
+          },
+          {
+            "reference_id": "X:5-6",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.006666254621571138,
+            "reference_m": 0.23622,
+            "measured_m": 0.24288625462157115
+          },
+          {
+            "reference_id": "X:6-7",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.011496002710039477,
+            "reference_m": 0.22352,
+            "measured_m": 0.21202399728996052
+          },
+          {
+            "reference_id": "X:7-8",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.0021790840060921524,
+            "reference_m": 0.23622,
+            "measured_m": 0.23404091599390786
+          },
+          {
+            "reference_id": "X:8-9",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.005582147376924085,
+            "reference_m": 0.22352,
+            "measured_m": 0.22910214737692408
+          },
+          {
+            "reference_id": "X:9-10",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.007142905217418061,
+            "reference_m": 0.21082,
+            "measured_m": 0.21796290521741807
+          },
+          {
+            "reference_id": "X:10-11",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.0032319862593681303,
+            "reference_m": 0.1905,
+            "measured_m": 0.19373198625936813
+          },
+          {
+            "reference_id": "X:11-12",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.008815816874996413,
+            "reference_m": 0.21082,
+            "measured_m": 0.2020041831250036
+          },
+          {
+            "reference_id": "Y:A-B",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.01981303808046339,
+            "reference_m": 0.24892,
+            "measured_m": 0.2291069619195366
+          },
+          {
+            "reference_id": "Y:B-C",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.0058692979194976125,
+            "reference_m": 0.22352,
+            "measured_m": 0.2293892979194976
+          },
+          {
+            "reference_id": "Y:C-D",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.004428980244522068,
+            "reference_m": 0.2413,
+            "measured_m": 0.23687101975547792
+          },
+          {
+            "reference_id": "Y:D-E",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.015720336184972428,
+            "reference_m": 0.2032,
+            "measured_m": 0.21892033618497242
+          },
+          {
+            "reference_id": "Y:E-F",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.012162319293473167,
+            "reference_m": 0.1397,
+            "measured_m": 0.12753768070652682
+          },
+          {
+            "reference_id": "Y:F-G",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.010115601353038517,
+            "reference_m": 0.1905,
+            "measured_m": 0.20061560135303852
+          },
+          {
+            "reference_id": "Y:G-H",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.03327657572913306,
+            "reference_m": 0.14604999999999999,
+            "measured_m": 0.17932657572913305
+          }
+        ]
+      },
+      "centreline_metrics": {
+        "reference_cells": 18,
+        "scored_cells": 18,
+        "verified_pairs": 18,
+        "status": "complete_verified",
+        "spacing_mae_m": 0.011642716943535851,
+        "spacing_max_abs_error_m": 0.031101806369565582
+      }
+    },
+    {
+      "seed": 456,
+      "scan_noise_m": 0.015,
+      "measurement_metric": "paired_profile",
+      "counts": [
+        {
+          "family": "X",
+          "detected": 12,
+          "expected": 12,
+          "matched": true,
+          "source_identities_matched": true
+        },
+        {
+          "family": "Y",
+          "detected": 8,
+          "expected": 8,
+          "matched": true,
+          "source_identities_matched": true
+        }
+      ],
+      "spacing_assessment": {
+        "reference_cells": 18,
+        "scored_cells": 18,
+        "verified_pairs": 18,
+        "status": "complete_verified",
+        "spacing_mae_m": 0.008145900210534263,
+        "spacing_max_abs_error_m": 0.018825209750416155,
+        "pairs": [
+          {
+            "reference_id": "X:1-2",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.012916830803575557,
+            "reference_m": 0.21589999999999998,
+            "measured_m": 0.22881683080357554
+          },
+          {
+            "reference_id": "X:2-3",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.0010151698509608398,
+            "reference_m": 0.22352,
+            "measured_m": 0.22453516985096084
+          },
+          {
+            "reference_id": "X:3-4",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.01049316483597637,
+            "reference_m": 0.22352,
+            "measured_m": 0.21302683516402363
+          },
+          {
+            "reference_id": "X:4-5",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.007509289416613135,
+            "reference_m": 0.2413,
+            "measured_m": 0.24880928941661312
+          },
+          {
+            "reference_id": "X:5-6",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.0020157034979929322,
+            "reference_m": 0.23622,
+            "measured_m": 0.23420429650200708
+          },
+          {
+            "reference_id": "X:6-7",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.0006522759290231717,
+            "reference_m": 0.22352,
+            "measured_m": 0.22286772407097682
+          },
+          {
+            "reference_id": "X:7-8",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.001716114104691302,
+            "reference_m": 0.23622,
+            "measured_m": 0.2345038858953087
+          },
+          {
+            "reference_id": "X:8-9",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.004336341803339,
+            "reference_m": 0.22352,
+            "measured_m": 0.227856341803339
+          },
+          {
+            "reference_id": "X:9-10",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.008150917018676568,
+            "reference_m": 0.21082,
+            "measured_m": 0.21897091701867658
+          },
+          {
+            "reference_id": "X:10-11",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.0031298530702329463,
+            "reference_m": 0.1905,
+            "measured_m": 0.19362985307023295
+          },
+          {
+            "reference_id": "X:11-12",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.00844390210303983,
+            "reference_m": 0.21082,
+            "measured_m": 0.20237609789696018
+          },
+          {
+            "reference_id": "Y:A-B",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.018825209750416155,
+            "reference_m": 0.24892,
+            "measured_m": 0.23009479024958385
+          },
+          {
+            "reference_id": "Y:B-C",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.00710420731571082,
+            "reference_m": 0.22352,
+            "measured_m": 0.23062420731571082
+          },
+          {
+            "reference_id": "Y:C-D",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.003742380673656398,
+            "reference_m": 0.2413,
+            "measured_m": 0.2375576193263436
+          },
+          {
+            "reference_id": "Y:D-E",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.016384728165081297,
+            "reference_m": 0.2032,
+            "measured_m": 0.2195847281650813
+          },
+          {
+            "reference_id": "Y:E-F",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.012101988651860185,
+            "reference_m": 0.1397,
+            "measured_m": 0.1275980113481398
+          },
+          {
+            "reference_id": "Y:F-G",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.010777589160128553,
+            "reference_m": 0.1905,
+            "measured_m": 0.20127758916012856
+          },
+          {
+            "reference_id": "Y:G-H",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.017310537638641682,
+            "reference_m": 0.14604999999999999,
+            "measured_m": 0.16336053763864167
+          }
+        ]
+      },
+      "centreline_metrics": {
+        "reference_cells": 18,
+        "scored_cells": 18,
+        "verified_pairs": 18,
+        "status": "complete_verified",
+        "spacing_mae_m": 0.009706226302537884,
+        "spacing_max_abs_error_m": 0.021750034729937195
+      }
+    },
+    {
+      "seed": 456,
+      "scan_noise_m": 0.0175,
+      "measurement_metric": "paired_profile",
+      "counts": [
+        {
+          "family": "X",
+          "detected": 12,
+          "expected": 12,
+          "matched": true,
+          "source_identities_matched": true
+        },
+        {
+          "family": "Y",
+          "detected": 8,
+          "expected": 8,
+          "matched": true,
+          "source_identities_matched": true
+        }
+      ],
+      "spacing_assessment": {
+        "reference_cells": 18,
+        "scored_cells": 18,
+        "verified_pairs": 18,
+        "status": "complete_verified",
+        "spacing_mae_m": 0.008278037333938584,
+        "spacing_max_abs_error_m": 0.018864526656491243,
+        "pairs": [
+          {
+            "reference_id": "X:1-2",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.013780441296738694,
+            "reference_m": 0.21589999999999998,
+            "measured_m": 0.22968044129673867
+          },
+          {
+            "reference_id": "X:2-3",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.001985676203504927,
+            "reference_m": 0.22352,
+            "measured_m": 0.22550567620350492
+          },
+          {
+            "reference_id": "X:3-4",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.01038086703751459,
+            "reference_m": 0.22352,
+            "measured_m": 0.2131391329624854
+          },
+          {
+            "reference_id": "X:4-5",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.00747998417215659,
+            "reference_m": 0.2413,
+            "measured_m": 0.24877998417215658
+          },
+          {
+            "reference_id": "X:5-6",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.0016159665734623019,
+            "reference_m": 0.23622,
+            "measured_m": 0.2346040334265377
+          },
+          {
+            "reference_id": "X:6-7",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.0002771043411837759,
+            "reference_m": 0.22352,
+            "measured_m": 0.22324289565881622
+          },
+          {
+            "reference_id": "X:7-8",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.0020759156265669765,
+            "reference_m": 0.23622,
+            "measured_m": 0.23414408437343304
+          },
+          {
+            "reference_id": "X:8-9",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.004934924438060678,
+            "reference_m": 0.22352,
+            "measured_m": 0.22845492443806067
+          },
+          {
+            "reference_id": "X:9-10",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.00788425807468876,
+            "reference_m": 0.21082,
+            "measured_m": 0.21870425807468877
+          },
+          {
+            "reference_id": "X:10-11",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.002997351403061982,
+            "reference_m": 0.1905,
+            "measured_m": 0.19349735140306198
+          },
+          {
+            "reference_id": "X:11-12",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.008803063828796698,
+            "reference_m": 0.21082,
+            "measured_m": 0.2020169361712033
+          },
+          {
+            "reference_id": "Y:A-B",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.018539608039225747,
+            "reference_m": 0.24892,
+            "measured_m": 0.23038039196077426
+          },
+          {
+            "reference_id": "Y:B-C",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.006880005425347113,
+            "reference_m": 0.22352,
+            "measured_m": 0.2304000054253471
+          },
+          {
+            "reference_id": "Y:C-D",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.003689542366953763,
+            "reference_m": 0.2413,
+            "measured_m": 0.23761045763304622
+          },
+          {
+            "reference_id": "Y:D-E",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.01568655166546895,
+            "reference_m": 0.2032,
+            "measured_m": 0.21888655166546894
+          },
+          {
+            "reference_id": "Y:E-F",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.011929297176543813,
+            "reference_m": 0.1397,
+            "measured_m": 0.12777070282345618
+          },
+          {
+            "reference_id": "Y:F-G",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.01119958768512791,
+            "reference_m": 0.1905,
+            "measured_m": 0.2016995876851279
+          },
+          {
+            "reference_id": "Y:G-H",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.018864526656491243,
+            "reference_m": 0.14604999999999999,
+            "measured_m": 0.16491452665649123
+          }
+        ]
+      },
+      "centreline_metrics": {
+        "reference_cells": 18,
+        "scored_cells": 18,
+        "verified_pairs": 18,
+        "status": "complete_verified",
+        "spacing_mae_m": 0.009920989254076373,
+        "spacing_max_abs_error_m": 0.021175034818939037
+      }
+    },
+    {
+      "seed": 456,
+      "scan_noise_m": 0.02,
+      "measurement_metric": "paired_profile",
+      "counts": [
+        {
+          "family": "X",
+          "detected": 12,
+          "expected": 12,
+          "matched": true,
+          "source_identities_matched": true
+        },
+        {
+          "family": "Y",
+          "detected": 8,
+          "expected": 8,
+          "matched": true,
+          "source_identities_matched": true
+        }
+      ],
+      "spacing_assessment": {
+        "reference_cells": 18,
+        "scored_cells": 18,
+        "verified_pairs": 18,
+        "status": "complete_verified",
+        "spacing_mae_m": 0.00970511014068104,
+        "spacing_max_abs_error_m": 0.02003066186205607,
+        "pairs": [
+          {
+            "reference_id": "X:1-2",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.014408711298552784,
+            "reference_m": 0.21589999999999998,
+            "measured_m": 0.23030871129855277
+          },
+          {
+            "reference_id": "X:2-3",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.0018849910716265128,
+            "reference_m": 0.22352,
+            "measured_m": 0.2254049910716265
+          },
+          {
+            "reference_id": "X:3-4",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.0095542024995586,
+            "reference_m": 0.22352,
+            "measured_m": 0.2139657975004414
+          },
+          {
+            "reference_id": "X:4-5",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.006982961011174321,
+            "reference_m": 0.2413,
+            "measured_m": 0.2482829610111743
+          },
+          {
+            "reference_id": "X:5-6",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.013646691043235376,
+            "reference_m": 0.23622,
+            "measured_m": 0.2498666910432354
+          },
+          {
+            "reference_id": "X:6-7",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.013304584636022854,
+            "reference_m": 0.22352,
+            "measured_m": 0.21021541536397714
+          },
+          {
+            "reference_id": "X:7-8",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.001910181275266487,
+            "reference_m": 0.23622,
+            "measured_m": 0.23430981872473353
+          },
+          {
+            "reference_id": "X:8-9",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.004747792296679543,
+            "reference_m": 0.22352,
+            "measured_m": 0.22826779229667954
+          },
+          {
+            "reference_id": "X:9-10",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.007702018341401745,
+            "reference_m": 0.21082,
+            "measured_m": 0.21852201834140175
+          },
+          {
+            "reference_id": "X:10-11",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.0032516516058633815,
+            "reference_m": 0.1905,
+            "measured_m": 0.19375165160586338
+          },
+          {
+            "reference_id": "X:11-12",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.008126481356704685,
+            "reference_m": 0.21082,
+            "measured_m": 0.20269351864329532
+          },
+          {
+            "reference_id": "Y:A-B",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.01878764505957728,
+            "reference_m": 0.24892,
+            "measured_m": 0.23013235494042272
+          },
+          {
+            "reference_id": "Y:B-C",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.007248579754137646,
+            "reference_m": 0.22352,
+            "measured_m": 0.23076857975413764
+          },
+          {
+            "reference_id": "Y:C-D",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.003952952390664621,
+            "reference_m": 0.2413,
+            "measured_m": 0.23734704760933537
+          },
+          {
+            "reference_id": "Y:D-E",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.0160000057025545,
+            "reference_m": 0.2032,
+            "measured_m": 0.2192000057025545
+          },
+          {
+            "reference_id": "Y:E-F",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.01163848158014072,
+            "reference_m": 0.1397,
+            "measured_m": 0.12806151841985927
+          },
+          {
+            "reference_id": "Y:F-G",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.01151338974704158,
+            "reference_m": 0.1905,
+            "measured_m": 0.20201338974704158
+          },
+          {
+            "reference_id": "Y:G-H",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.02003066186205607,
+            "reference_m": 0.14604999999999999,
+            "measured_m": 0.16608066186205606
+          }
+        ]
+      },
+      "centreline_metrics": {
+        "reference_cells": 18,
+        "scored_cells": 18,
+        "verified_pairs": 18,
+        "status": "complete_verified",
+        "spacing_mae_m": 0.011406286517316205,
+        "spacing_max_abs_error_m": 0.025000547764460868
+      }
+    },
+    {
+      "seed": 456,
+      "scan_noise_m": 0.0225,
+      "measurement_metric": "paired_profile",
+      "counts": [
+        {
+          "family": "X",
+          "detected": 12,
+          "expected": 12,
+          "matched": true,
+          "source_identities_matched": true
+        },
+        {
+          "family": "Y",
+          "detected": 8,
+          "expected": 8,
+          "matched": true,
+          "source_identities_matched": true
+        }
+      ],
+      "spacing_assessment": {
+        "reference_cells": 18,
+        "scored_cells": 18,
+        "verified_pairs": 18,
+        "status": "complete_verified",
+        "spacing_mae_m": 0.00979391672707545,
+        "spacing_max_abs_error_m": 0.022853914996198627,
+        "pairs": [
+          {
+            "reference_id": "X:1-2",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.014853965296373672,
+            "reference_m": 0.21589999999999998,
+            "measured_m": 0.23075396529637365
+          },
+          {
+            "reference_id": "X:2-3",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.00188466388253819,
+            "reference_m": 0.22352,
+            "measured_m": 0.2254046638825382
+          },
+          {
+            "reference_id": "X:3-4",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.009837802420815417,
+            "reference_m": 0.22352,
+            "measured_m": 0.21368219757918458
+          },
+          {
+            "reference_id": "X:4-5",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.00814781476586604,
+            "reference_m": 0.2413,
+            "measured_m": 0.24944781476586603
+          },
+          {
+            "reference_id": "X:5-6",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.010707340893592793,
+            "reference_m": 0.23622,
+            "measured_m": 0.2469273408935928
+          },
+          {
+            "reference_id": "X:6-7",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.012973133861398256,
+            "reference_m": 0.22352,
+            "measured_m": 0.21054686613860174
+          },
+          {
+            "reference_id": "X:7-8",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.002149308366638236,
+            "reference_m": 0.23622,
+            "measured_m": 0.23407069163336178
+          },
+          {
+            "reference_id": "X:8-9",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.004455397649991033,
+            "reference_m": 0.22352,
+            "measured_m": 0.22797539764999103
+          },
+          {
+            "reference_id": "X:9-10",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.007646678488004766,
+            "reference_m": 0.21082,
+            "measured_m": 0.21846667848800477
+          },
+          {
+            "reference_id": "X:10-11",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.0032012648384105724,
+            "reference_m": 0.1905,
+            "measured_m": 0.19370126483841058
+          },
+          {
+            "reference_id": "X:11-12",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.008556347803170716,
+            "reference_m": 0.21082,
+            "measured_m": 0.2022636521968293
+          },
+          {
+            "reference_id": "Y:A-B",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.02026188488367106,
+            "reference_m": 0.24892,
+            "measured_m": 0.22865811511632894
+          },
+          {
+            "reference_id": "Y:B-C",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.006943245156428357,
+            "reference_m": 0.22352,
+            "measured_m": 0.23046324515642835
+          },
+          {
+            "reference_id": "Y:C-D",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.003789961934365843,
+            "reference_m": 0.2413,
+            "measured_m": 0.23751003806563414
+          },
+          {
+            "reference_id": "Y:D-E",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.016010543770138996,
+            "reference_m": 0.2032,
+            "measured_m": 0.219210543770139
+          },
+          {
+            "reference_id": "Y:E-F",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.011793393446624584,
+            "reference_m": 0.1397,
+            "measured_m": 0.1279066065533754
+          },
+          {
+            "reference_id": "Y:F-G",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.01022383863313095,
+            "reference_m": 0.1905,
+            "measured_m": 0.20072383863313095
+          },
+          {
+            "reference_id": "Y:G-H",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.022853914996198627,
+            "reference_m": 0.14604999999999999,
+            "measured_m": 0.1689039149961986
+          }
+        ]
+      },
+      "centreline_metrics": {
+        "reference_cells": 18,
+        "scored_cells": 18,
+        "verified_pairs": 18,
+        "status": "complete_verified",
+        "spacing_mae_m": 0.011929740871568078,
+        "spacing_max_abs_error_m": 0.025832216212149428
+      }
+    },
+    {
+      "seed": 456,
+      "scan_noise_m": 0.025,
+      "measurement_metric": "paired_profile",
+      "counts": [
+        {
+          "family": "X",
+          "detected": 12,
+          "expected": 12,
+          "matched": true,
+          "source_identities_matched": true
+        },
+        {
+          "family": "Y",
+          "detected": 8,
+          "expected": 8,
+          "matched": true,
+          "source_identities_matched": true
+        }
+      ],
+      "spacing_assessment": {
+        "reference_cells": 18,
+        "scored_cells": 18,
+        "verified_pairs": 18,
+        "status": "complete_verified",
+        "spacing_mae_m": 0.009928484118978958,
+        "spacing_max_abs_error_m": 0.029023618252039945,
+        "pairs": [
+          {
+            "reference_id": "X:1-2",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.014856072509479207,
+            "reference_m": 0.21589999999999998,
+            "measured_m": 0.2307560725094792
+          },
+          {
+            "reference_id": "X:2-3",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.002411958784054924,
+            "reference_m": 0.22352,
+            "measured_m": 0.22593195878405492
+          },
+          {
+            "reference_id": "X:3-4",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.009841696551388252,
+            "reference_m": 0.22352,
+            "measured_m": 0.21367830344861174
+          },
+          {
+            "reference_id": "X:4-5",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.0075698403547378446,
+            "reference_m": 0.2413,
+            "measured_m": 0.24886984035473783
+          },
+          {
+            "reference_id": "X:5-6",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.008107877894888565,
+            "reference_m": 0.23622,
+            "measured_m": 0.24432787789488858
+          },
+          {
+            "reference_id": "X:6-7",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.01109001184629077,
+            "reference_m": 0.22352,
+            "measured_m": 0.21242998815370923
+          },
+          {
+            "reference_id": "X:7-8",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.0024424531881794276,
+            "reference_m": 0.23622,
+            "measured_m": 0.23377754681182059
+          },
+          {
+            "reference_id": "X:8-9",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.0049094757529245525,
+            "reference_m": 0.22352,
+            "measured_m": 0.22842947575292455
+          },
+          {
+            "reference_id": "X:9-10",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.007491851319868098,
+            "reference_m": 0.21082,
+            "measured_m": 0.2183118513198681
+          },
+          {
+            "reference_id": "X:10-11",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.002905920281670582,
+            "reference_m": 0.1905,
+            "measured_m": 0.19340592028167058
+          },
+          {
+            "reference_id": "X:11-12",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.008625230037965809,
+            "reference_m": 0.21082,
+            "measured_m": 0.2021947699620342
+          },
+          {
+            "reference_id": "Y:A-B",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.02109844702486996,
+            "reference_m": 0.24892,
+            "measured_m": 0.22782155297513004
+          },
+          {
+            "reference_id": "Y:B-C",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.007220070208882462,
+            "reference_m": 0.22352,
+            "measured_m": 0.23074007020888246
+          },
+          {
+            "reference_id": "Y:C-D",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.004236031839505383,
+            "reference_m": 0.2413,
+            "measured_m": 0.2370639681604946
+          },
+          {
+            "reference_id": "Y:D-E",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.015459609896295246,
+            "reference_m": 0.2032,
+            "measured_m": 0.21865960989629524
+          },
+          {
+            "reference_id": "Y:E-F",
+            "verified": true,
+            "status": "scored",
+            "error_m": -0.011573617080634119,
+            "reference_m": 0.1397,
+            "measured_m": 0.12812638291936587
+          },
+          {
+            "reference_id": "Y:F-G",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.009848931317946091,
+            "reference_m": 0.1905,
+            "measured_m": 0.2003489313179461
+          },
+          {
+            "reference_id": "Y:G-H",
+            "verified": true,
+            "status": "scored",
+            "error_m": 0.029023618252039945,
+            "reference_m": 0.14604999999999999,
+            "measured_m": 0.17507361825203993
+          }
+        ]
+      },
+      "centreline_metrics": {
+        "reference_cells": 18,
+        "scored_cells": 18,
+        "verified_pairs": 18,
+        "status": "complete_verified",
+        "spacing_mae_m": 0.011496111567823738,
+        "spacing_max_abs_error_m": 0.02905086378998825
+      }
+    }
+  ],
+  "production_modified": false
+}

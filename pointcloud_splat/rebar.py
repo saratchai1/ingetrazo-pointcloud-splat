@@ -103,6 +103,10 @@ def inspect(dataset, minimum, maximum, direction, diameter_m=.016,
         from .duplicates import group_layer_duplicates
         bars, duplicates = group_layer_duplicates(bars, direction, layer['normal'], diameter_m)
     bars.sort(key=lambda bar: tuple(np.asarray(bar['start'])-np.dot(bar['start'], direction)*direction))
+    profile = {'enabled': False, 'pairs': []}
+    if scan_noise_m:
+        from .profile_spacing import paired_profile_spacing
+        profile = paired_profile_spacing(points, ids, bars, direction, layer['normal'], diameter_m, min_length)
     source_hash = None
     if dataset.filepath and Path(dataset.filepath).is_file():
         with open(dataset.filepath, 'rb') as stream:
@@ -111,13 +115,13 @@ def inspect(dataset, minimum, maximum, direction, diameter_m=.016,
     affine = np.eye(4)
     affine[:3, :3] = (basis[1:]-basis[0]).T
     affine[:3, 3] = basis[0]
-    return {'local_to_world_4x4': affine.tolist(), 'schema': 1, 'algorithm': 'parallel-layer-density-v5', 'seed': seed,
+    return {'local_to_world_4x4': affine.tolist(), 'schema': 1, 'algorithm': 'parallel-layer-density-v6', 'seed': seed,
             'source': dataset.filepath, 'source_sha256': source_hash,
             'coordinate_frame': deepcopy(dataset.coordinate_frame),
             'world_roi_m': np.asarray([minimum, maximum]).tolist(),
             'direction': direction.tolist(), 'parameters': {'diameter_m': diameter_m,
             'min_support': min_support, 'min_length_m': min_length, 'scan_noise_m': scan_noise_m},
-            'roi_points': roi_points, 'density_proposals': density, 'layer_filter': layer, 'duplicate_filter': duplicates,
+            'roi_points': roi_points, 'density_proposals': density, 'profile_spacing': profile, 'layer_filter': layer, 'duplicate_filter': duplicates,
             'background_filter': background, 'track_filter': track_filter, 'bars': bars, 'spacing': spacing(bars, direction),
             'limitations': 'One parallel family in one layer. Partial surfaces bias centres; diameter is design input. Confidence is heuristic. Review required.'}
 

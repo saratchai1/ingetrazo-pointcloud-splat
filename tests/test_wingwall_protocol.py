@@ -52,3 +52,24 @@ def test_missing_axial_overlap_does_not_create_measurement():
     assert result['spacing_assessment']['verified_pairs']==18
     assert result['spacing_assessment']['scored_cells']==7
     assert all(p['error_m'] is None for p in result['spacing_assessment']['pairs'] if p['reference_id'].startswith('X:'))
+
+
+def test_profile_metric_never_falls_back_to_straight_model_spacing():
+    runs,reference=fixture()
+    result=trial.assess(runs,reference,metric='paired_profile')
+    assert result['spacing_assessment']['scored_cells']==0
+    assert result['spacing_assessment']['spacing_mae_m'] is None
+
+
+def test_profile_metric_uses_only_explicit_paired_scan_measurements():
+    runs,reference=fixture()
+    for run in runs:
+        run['report']['profile_spacing']={'pairs':[
+            {'bars':s['bars'],'median_m':s['centreline_m']+.001}
+            for s in run['report']['spacing']]}
+    scan=trial.assess(runs,reference,metric='paired_profile')
+    model=trial.assess(runs,reference)
+    assert scan['measurement_metric']=='paired_profile'
+    assert scan['spacing_assessment']['scored_cells']==18
+    assert all(a['measured_m']-b['measured_m']==pytest.approx(.001)
+               for a,b in zip(scan['spacing_assessment']['pairs'],model['spacing_assessment']['pairs']))

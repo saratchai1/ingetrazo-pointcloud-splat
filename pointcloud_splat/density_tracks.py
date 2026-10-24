@@ -7,7 +7,7 @@ metres and recorded, not estimated by fitting the reference measurements.
 import numpy as np
 
 
-def density_proposals(points, direction, normal, diameter, noise_m, min_support):
+def _single_scale_proposals(points, direction, normal, diameter, noise_m, min_support):
     side = np.cross(normal, direction); side /= np.linalg.norm(side)
     radius = .8*diameter+2*noise_m
     sigma = np.hypot(noise_m, diameter/4)
@@ -17,8 +17,10 @@ def density_proposals(points, direction, normal, diameter, noise_m, min_support)
     if not len(points):
         return [], info
     values = points @ side
-    start = float(values.min())-cell
-    count = int(np.ceil((values.max()-start)/cell))+1
+    # Include the Gaussian tails: an edge bar must not lose prominence
+    # merely because the histogram stops at the first/last observed point.
+    start = float(values.min())-3*sigma-cell
+    count = int(np.ceil((values.max()+3*sigma-start)/cell))+1
     if count > 100000:
         raise ValueError('Narrow ROI before density analysis')
     hist, edges = np.histogram(values, bins=count, range=(start,start+count*cell))
@@ -52,3 +54,42 @@ def density_proposals(points, direction, normal, diameter, noise_m, min_support)
             clusters.append(ids)
             info['peaks'].append({'transverse_m':float(centres[i]),'prominence':prominence,'support':len(ids)})
     return clusters, info
+
+
+def density_proposals(points, direction, normal, diameter, noise_m, min_support):
+    """Require a peak in three of four diameter-based smoothing scales.
+
+    Proposal identity is independent of the requested support allowance. This
+    avoids accepting one-scale clutter or losing an edge bar solely because
+    the user widened its support envelope. No count/spacing prior is used.
+    """
+    scales = [.75, 1., 1.25, 1.5]
+    inventories = []
+    for scale in scales:
+        _, info = _single_scale_proposals(points, direction, normal, diameter,
+                                          scale*diameter, min_support)
+        inventories.append(info)
+    locations = [np.array([p['transverse_m'] for p in info['peaks']]) for info in inventories]
+    chosen = []
+    for values in locations:
+        for value in values:
+            matches = [a[np.argmin(abs(a-value))] for a in locations
+                       if len(a) and min(abs(a-value)) < 2*diameter]
+            if len(matches) < 3:
+                continue
+            centre = float(np.median(matches))
+            if all(abs(centre-p['transverse_m']) > 2*diameter for p in chosen):
+                chosen.append({'transverse_m': centre, 'scale_votes': len(matches)})
+    side = np.cross(normal, direction); side /= np.linalg.norm(side)
+    values = points @ side
+    radius = .8*diameter+2*noise_m
+    clusters, peaks = [], []
+    for peak in sorted(chosen, key=lambda p: p['transverse_m']):
+        ids = np.flatnonzero(abs(values-peak['transverse_m']) <= radius)
+        if len(ids) >= min_support:
+            clusters.append(ids)
+            peaks.append({**peak, 'support': len(ids)})
+    return clusters, {'enabled': True, 'method': 'diameter_scale_consensus',
+                      'noise_allowance_m': noise_m, 'support_radius_m': radius,
+                      'minimum_scale_votes': 3, 'matching_distance_m': 2*diameter,
+                      'scales_diameter': scales, 'scale_inventories': inventories, 'peaks': peaks}

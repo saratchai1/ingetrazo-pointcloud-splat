@@ -98,6 +98,9 @@ def test_native_undo_redo_and_persistence(tmp_path, use_layer, scan_noise):
     path=tmp_path/'test.igz'; igz.save_scene(scene, path)
     back=Scene(); igz.load_into(back,path)
     assert back.plugin_data==scene.plugin_data
+    if scan_noise:
+        assert report['profile_spacing']['enabled']
+        assert all(p['status']=='measured' for p in report['profile_spacing']['pairs'])
     assert [g.ext for g in back.groups]==[g.ext for g in scene.groups]
     hist.undo(); hist.redo(); assert len(scene.groups)==3
 
@@ -193,6 +196,8 @@ def test_review_dialog_end_to_end_offscreen(tmp_path):
     dialog.table.item(0,1).setText('0.05')
     reviewed=dialog.reviewed()
     assert reviewed['bars'][0]['review_adjusted']
+    assert reviewed['profile_spacing']==dialog.report['profile_spacing']
+    assert 'before endpoint edits' in dialog.evidence.text()
     dialog.create()
     assert len(scene.groups)==3
     history.undo(); assert not scene.groups

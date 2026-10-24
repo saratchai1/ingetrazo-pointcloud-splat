@@ -43,7 +43,9 @@ def detect(path, seed=123, noise=.02):
                  'source_to_analysis_4x4':matrix.tolist()}
 
 
-def assess(runs, reference):
+def assess(runs, reference, metric='centreline'):
+    if metric not in ('centreline', 'paired_profile'):
+        raise ValueError('Unknown spacing metric')
     measured={};truth={};matches=[];assignments=[];counts=[]
     for run,axis,key,labels in [(runs[0],0,'x_tape_inches',reference['x_bar_ids']),
                                 (runs[1],1,'y_tape_inches',reference['y_bar_ids'])]:
@@ -64,7 +66,10 @@ def assess(runs, reference):
             assignments.append({'family':family,'source_label':label,'candidate_index':original_index,
                                 'start':bar['start'],'end':bar['end'],
                                 'anchor_basis':reference['anchor_evidence']})
-        lookup={tuple(s['bars']):s['centreline_m'] for s in report['spacing']}
+        if metric == 'paired_profile':
+            lookup={tuple(s['bars']):s['median_m'] for s in report.get('profile_spacing',{}).get('pairs',[])}
+        else:
+            lookup={tuple(s['bars']):s['centreline_m'] for s in report['spacing']}
         for i,((ai,a),(bi,b)) in enumerate(zip(bars,bars[1:])):
             identifier=f'{family}:{labels[i]}-{labels[i+1]}'
             measured[identifier]=lookup.get(tuple(sorted([ai,bi])))
@@ -75,7 +80,7 @@ def assess(runs, reference):
         pair['reference_m']=truth[pair['reference_id']]
         pair['measured_m']=measured[pair['measurement_id']]
         pair['reference_display_increment_m']=.000254 if pair['reference_id']=='Y:G-H' else .00254
-    return {'counts':counts,'line_assignments':assignments,'spacing_assessment':result,
+    return {'measurement_metric':metric,'counts':counts,'line_assignments':assignments,'spacing_assessment':result,
             'crosswalk_basis':'Manually reviewed asymmetric shape and physically labeled photos; not a best-error permutation',
             'tolerance_verdict':'No field compliance decision. Published tape rounding and scanner error remain.'}
 
@@ -94,14 +99,16 @@ def main():
         if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest()!=item['sha256']:
             raise ValueError('Missing or modified source/anchor file: '+item['name'])
     runs,protocol=detect(args.data_dir/'small_rebar_4M.mat')
-    summary=assess(runs,reference)
-    result={'reference':reference,'protocol':protocol,**summary,'runs':runs,'production_modified':False,
+    summary=assess(runs,reference,metric='paired_profile')
+    result={'centreline_assessment':assess(runs,reference),'reference':reference,'protocol':protocol,**summary,'runs':runs,'production_modified':False,
             'reference_sha256':hashlib.sha256(ref_path.read_bytes()).hexdigest()}
     result['sensitivity']=[]
     if args.sensitivity:
-        for seed,noise in [(456,.02),(123,.015),(123,.025)]:
+        for seed,noise in [(s,n) for s in (123,456) for n in (.015,.0175,.02,.0225,.025)
+                           if (s,n)!=(123,.02)]:
             other,meta=detect(args.data_dir/'small_rebar_4M.mat',seed,noise)
-            result['sensitivity'].append({'seed':seed,'scan_noise_m':noise,**assess(other,reference)})
+            result['sensitivity'].append({'seed':seed,'scan_noise_m':noise,'centreline_assessment':assess(other,reference),
+                                          **assess(other,reference,metric='paired_profile')})
     args.output_dir.mkdir(parents=True,exist_ok=True)
     (args.output_dir/'trial.json').write_text(json.dumps(result,indent=2,allow_nan=False)+'\n')
     print('Counts:',summary['counts'])

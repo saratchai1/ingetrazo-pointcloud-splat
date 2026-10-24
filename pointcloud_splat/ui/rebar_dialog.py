@@ -123,6 +123,12 @@ class RebarDialog(QDialog):
         if grouped:
             layer_text += f' {grouped} weak overlapping proposals grouped; review dashed overlays and JSON evidence.'
         self.evidence.setText(f'Surface points excluded: {removed:,}.'+layer_text+' Centreline spacing: '+('; '.join(f"{s['bars'][0]+1}–{s['bars'][1]+1}: {s['centreline_m']*1000:.2f} mm" for s in report['spacing']) or 'No overlapping pairs'))
+        profile = report.get('profile_spacing', {})
+        if profile.get('enabled'):
+            values = '; '.join(f"{s['bars'][0]+1}–{s['bars'][1]+1}: {s['median_m']*1000:.2f} mm"
+                               for s in profile['pairs'] if s['median_m'] is not None)
+            self.evidence.setText(self.evidence.text()+'\nScan support spacing (paired sections, before endpoint edits): '+
+                                  (values or 'Insufficient shared scan support'))
 
     def create(self):
         try:
