@@ -43,10 +43,29 @@ def detect(path, seed=123, noise=.02):
                  'source_to_analysis_4x4':matrix.tolist()}
 
 
+def station_diagnostic(profile, tape):
+    """Could ANY observed section station explain the tape value? Diagnostic only.
+
+    The tape station is unpublished, so this never selects sections, changes the
+    median or enters MAE. A nonzero gap means even the most favourable observed
+    10-90% section spacing differs from the tape by at least that amount.
+    """
+    gaps={}
+    for key,(lo,hi) in [('q10_q90',profile['spatial_q10_q90_m']),
+                        ('section_range',profile['axial_trend']['section_spacing_range_m'])]:
+        gaps[key]=lo-tape if tape<lo else hi-tape if tape>hi else 0.
+    return {'basis':'diagnostic_only_unpublished_tape_station; never used for scoring or section selection',
+            'section_q10_q90_m':profile['spatial_q10_q90_m'],
+            'section_range_m':profile['axial_trend']['section_spacing_range_m'],
+            'fitted_change_along_shared_support_m':profile['axial_trend']['fitted_change_m'],
+            'nearest_q10_q90_error_m':gaps['q10_q90'],'nearest_section_error_m':gaps['section_range'],
+            'tape_within_q10_q90':gaps['q10_q90']==0,'tape_within_section_range':gaps['section_range']==0}
+
+
 def assess(runs, reference, metric='centreline'):
     if metric not in ('centreline', 'paired_profile'):
         raise ValueError('Unknown spacing metric')
-    measured={};truth={};matches=[];assignments=[];counts=[]
+    measured={};truth={};matches=[];assignments=[];counts=[];profiles={}
     for run,axis,key,labels in [(runs[0],0,'x_tape_inches',reference['x_bar_ids']),
                                 (runs[1],1,'y_tape_inches',reference['y_bar_ids'])]:
         family=run['family'];report=run['report']
@@ -67,12 +86,14 @@ def assess(runs, reference, metric='centreline'):
                                 'start':bar['start'],'end':bar['end'],
                                 'anchor_basis':reference['anchor_evidence']})
         if metric == 'paired_profile':
-            lookup={tuple(s['bars']):s['median_m'] for s in report.get('profile_spacing',{}).get('pairs',[])}
+            rows={tuple(s['bars']):s for s in report.get('profile_spacing',{}).get('pairs',[])}
+            lookup={key:s['median_m'] for key,s in rows.items()}
         else:
-            lookup={tuple(s['bars']):s['centreline_m'] for s in report['spacing']}
+            rows={};lookup={tuple(s['bars']):s['centreline_m'] for s in report['spacing']}
         for i,((ai,a),(bi,b)) in enumerate(zip(bars,bars[1:])):
             identifier=f'{family}:{labels[i]}-{labels[i+1]}'
             measured[identifier]=lookup.get(tuple(sorted([ai,bi])))
+            profiles[identifier]=rows.get(tuple(sorted([ai,bi])))
             matches.append({'reference_id':identifier,'measurement_id':identifier,'verified':True,
                             'anchor_evidence':'Manual asymmetric-outline registration to report Fig14, physical RB labels in source 1-5.png/A-C.png; hashes in reference manifest'})
     result=compare_cell_pairs(truth,measured,matches)
@@ -80,6 +101,9 @@ def assess(runs, reference, metric='centreline'):
         pair['reference_m']=truth[pair['reference_id']]
         pair['measured_m']=measured[pair['measurement_id']]
         pair['reference_display_increment_m']=.000254 if pair['reference_id']=='Y:G-H' else .00254
+        profile=profiles.get(pair['measurement_id'])
+        if pair['error_m'] is not None and profile and 'axial_trend' in profile:
+            pair['station_diagnostic']=station_diagnostic(profile,pair['reference_m'])
     return {'measurement_metric':metric,'counts':counts,'line_assignments':assignments,'spacing_assessment':result,
             'crosswalk_basis':'Manually reviewed asymmetric shape and physically labeled photos; not a best-error permutation',
             'tolerance_verdict':'No field compliance decision. Published tape rounding and scanner error remain.'}
@@ -125,6 +149,12 @@ def main():
     print('MAE mm:',value*1000 if value is not None else None)
     value=summary['spacing_assessment']['spacing_max_abs_error_m']
     print('Max error mm:',value*1000 if value is not None else None)
+    for pair in summary['spacing_assessment']['pairs']:
+        if 'station_diagnostic' in pair:
+            diagnostic=pair['station_diagnostic']
+            print('Station diagnostic only',pair['reference_id'],'error mm %+.2f'%(pair['error_m']*1000),
+                  'nearest q10-q90 mm %+.2f'%(diagnostic['nearest_q10_q90_error_m']*1000),
+                  'trend mm %+.1f'%(diagnostic['fitted_change_along_shared_support_m']*1000))
     for row in result['sensitivity']:
         print('Sensitivity',row['seed'],row['scan_noise_m'],row['counts'],row['spacing_assessment']['scored_cells'])
 

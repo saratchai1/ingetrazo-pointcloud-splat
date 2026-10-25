@@ -7,6 +7,38 @@ spatial variation of scanned support, not statistical measurement uncertainty.
 import numpy as np
 
 
+def theil_sen(x, y):
+    """Median pairwise slope: one cluttered section cannot steer the trend."""
+    x, y = np.asarray(x, dtype=float), np.asarray(y, dtype=float)
+    i, j = np.triu_indices(len(x), 1)
+    keep = x[j] != x[i]
+    if not keep.any() or not (np.isfinite(x).all() and np.isfinite(y).all()):
+        raise ValueError('Trend needs finite values at two distinct axial positions')
+    slope = float(np.median((y[j]-y[i])[keep]/(x[j]-x[i])[keep]))
+    return slope, float(np.median(y-slope*x))
+
+
+def axial_trend(sections, side):
+    """Describe how observed spacing changes along the shared support.
+
+    Non-parallel or bowed bars make one summary value station dependent. The
+    trend reports that dependence; it never changes or replaces the median.
+    """
+    axial = np.array([np.mean(s['axial_interval_m']) for s in sections])
+    values = np.array([s['spacing_m'] for s in sections])
+    slope, intercept = theil_sen(axial, values)
+    lateral = np.array([s['centres_transverse_m'] for s in sections])@side
+    drift = [float(np.degrees(np.arctan(theil_sen(axial, lateral[:, k])[0]))) for k in range(2)]
+    ends = [float(axial.min()), float(axial.max())]
+    return {'basis': 'theil_sen_section_spacing_vs_axial_position',
+            'slope_m_per_m': slope, 'section_axial_range_m': ends,
+            'fitted_spacing_at_range_ends_m': [intercept+slope*ends[0], intercept+slope*ends[1]],
+            'fitted_change_m': slope*(ends[1]-ends[0]),
+            'section_spacing_range_m': [float(values.min()), float(values.max())],
+            'lateral_drift_deg': drift, 'lateral_axis': side.tolist(),
+            'station_registered': False, 'is_uncertainty': False}
+
+
 def paired_profile_spacing(points, source_ids, bars, direction, normal, diameter,
                            min_length=.25):
     direction = np.asarray(direction, dtype=float)
@@ -54,5 +86,7 @@ def paired_profile_spacing(points, source_ids, bars, direction, normal, diameter
         values = [s['spacing_m'] for s in row['sections']]
         row.update(status='measured',median_m=float(np.median(values)),
                    spatial_q10_q90_m=np.quantile(values,[.1,.9]).tolist())
+        if len(values) > 1:  # One section has no observable trend.
+            row['axial_trend'] = axial_trend(row['sections'],side)
     return {'enabled':True, 'method':'paired_axial_section_medians',
             'variation_is_uncertainty':False, 'pairs':records}

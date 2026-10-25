@@ -126,6 +126,10 @@ class RebarDialog(QDialog):
         profile = report.get('profile_spacing', {})
         if profile.get('enabled'):
             values = '; '.join(f"{s['bars'][0]+1}–{s['bars'][1]+1}: {s['median_m']*1000:.2f} mm"
+                               + (f" (sections {s['axial_trend']['section_spacing_range_m'][0]*1000:.0f}–"
+                                  f"{s['axial_trend']['section_spacing_range_m'][1]*1000:.0f} mm, "
+                                  f"trend {s['axial_trend']['fitted_change_m']*1000:+.0f} mm along shared support)"
+                                  if 'axial_trend' in s else '')
                                for s in profile['pairs'] if s['median_m'] is not None)
             self.evidence.setText(self.evidence.text()+'\nScan support spacing (fixed measurement window, before endpoint edits): '+
                                   (values or 'No uniquely matched, sufficiently supported measurements'))

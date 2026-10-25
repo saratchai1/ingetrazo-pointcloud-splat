@@ -90,6 +90,9 @@ def fixed_support_spacing(points, source_ids, bars, direction, normal, diameter,
                 for section in row['sections']:
                     for field in ('centres_transverse_m','support_counts'):
                         section[field] = [section[field][i] for i in permutation]
+                if 'axial_trend' in row:
+                    drift = row['axial_trend']['lateral_drift_deg']
+                    row['axial_trend']['lateral_drift_deg'] = [drift[i] for i in permutation]
                 row.update(bars=native_pair,measurement_tracks=mapped,
                            basis='independent_measurement_support_before_manual_review')
             else:

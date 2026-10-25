@@ -198,6 +198,7 @@ def test_review_dialog_end_to_end_offscreen(tmp_path):
     assert reviewed['bars'][0]['review_adjusted']
     assert reviewed['profile_spacing']==dialog.report['profile_spacing']
     assert 'before endpoint edits' in dialog.evidence.text()
+    assert 'mm along shared support' in dialog.evidence.text()
     dialog.create()
     assert len(scene.groups)==3
     history.undo(); assert not scene.groups

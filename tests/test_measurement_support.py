@@ -89,3 +89,18 @@ def test_missing_measurement_support_never_falls_back_to_native_spacing():
     assert len(result['pairs'])==1
     assert result['pairs'][0]['median_m'] is None
     assert result['pairs'][0]['status']=='unavailable_scan_support'
+
+
+def test_native_reordering_keeps_per_bar_drift_with_its_bar():
+    rng=np.random.default_rng(91);x=np.linspace(0,1.5,2500)
+    # Middle bar tilts 1 degree; the outer bars stay on the guided axis.
+    steel=np.concatenate([cylinder(x,y)+np.outer(x*s,[0,1,0]) for y,s in [(0,0),(.15,np.tan(np.radians(1))),(.3,0)]])
+    ds=dataset(steel+rng.normal(0,.003,steel.shape));r=analyze(ds,.02)
+    bars=deepcopy(r['bars'])[::-1]
+    profile=fixed_support_spacing(ds.coords,np.arange(len(ds.coords)),bars,[1,0,0],[0,0,1],.016,
+                                  r['layer_filter']['selected_depth_m'])
+    middle=int(np.argmin([abs(np.mean([b['start'][1],b['end'][1]])-.15-.75*np.tan(np.radians(1))) for b in bars]))
+    for pair in profile['pairs']:
+        assert pair['status']=='measured'
+        for native,drift in zip(pair['bars'],pair['axial_trend']['lateral_drift_deg']):
+            assert drift==pytest.approx(1. if native==middle else 0.,abs=.3)

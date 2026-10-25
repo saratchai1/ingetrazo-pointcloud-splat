@@ -73,3 +73,36 @@ def test_profile_metric_uses_only_explicit_paired_scan_measurements():
     assert scan['spacing_assessment']['scored_cells']==18
     assert all(a['measured_m']-b['measured_m']==pytest.approx(.001)
                for a,b in zip(scan['spacing_assessment']['pairs'],model['spacing_assessment']['pairs']))
+
+
+def test_station_diagnostic_never_changes_scored_profile_error():
+    runs,reference=fixture()
+    for run in runs:
+        run['report']['profile_spacing']={'pairs':[
+            {'bars':s['bars'],'median_m':s['centreline_m']+.02,
+             'spatial_q10_q90_m':[s['centreline_m']+.005,s['centreline_m']+.03],
+             'axial_trend':{'section_spacing_range_m':[s['centreline_m']-.01,s['centreline_m']+.04],
+                            'fitted_change_m':.02}}
+            for s in run['report']['spacing']]}
+    result=trial.assess(runs,reference,metric='paired_profile')['spacing_assessment']
+    assert result['scored_cells']==18
+    for pair in result['pairs']:
+        assert pair['error_m']==pytest.approx(pair['measured_m']-pair['reference_m'])
+        diagnostic=pair['station_diagnostic'];centre=pair['measured_m']-.02;tape=pair['reference_m']
+        for key,lo,hi in [('nearest_q10_q90_error_m',centre+.005,centre+.03),
+                          ('nearest_section_error_m',centre-.01,centre+.04)]:
+            expected=lo-tape if tape<lo else hi-tape if tape>hi else 0
+            assert diagnostic[key]==pytest.approx(expected)
+        assert diagnostic['tape_within_section_range']==(centre-.01<=tape<=centre+.04)
+        assert 'never used for scoring' in diagnostic['basis']
+
+
+@pytest.mark.parametrize('tape,expected',[(.10,.02),(.13,0.),(.17,-.02),(.21,-.06)])
+def test_station_diagnostic_sign_matches_measured_minus_tape(tape,expected):
+    profile={'spatial_q10_q90_m':[.12,.15],'axial_trend':{'section_spacing_range_m':[.11,.16],'fitted_change_m':.01}}
+    diagnostic=trial.station_diagnostic(profile,tape)
+    assert diagnostic['nearest_q10_q90_error_m']==pytest.approx(expected)
+    assert diagnostic['tape_within_q10_q90']==(expected==0)
+    full=.11-tape if tape<.11 else .16-tape if tape>.16 else 0
+    assert diagnostic['nearest_section_error_m']==pytest.approx(full)
+    assert abs(diagnostic['nearest_section_error_m'])<=abs(diagnostic['nearest_q10_q90_error_m'])

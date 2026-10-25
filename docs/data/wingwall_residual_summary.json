@@ -1,0 +1,1509 @@
+{
+ "base_commit": "9e8ab4f89c3bc509b8c3918cfe2c1b2b11158673",
+ "reference_sha256": "a6d3ad037a08c7ecbb9b0c336f770e62e632ee727a5e07233fbadff039980201",
+ "scored_metric": "paired_profile median (unchanged v7)",
+ "baseline_reproduced": {
+  "123": {
+   "mae_mm": 8.0563,
+   "max_mm": 21.1625
+  },
+  "456": {
+   "mae_mm": 7.9773,
+   "max_mm": 18.1977
+  },
+  "789": {
+   "mae_mm": 7.793,
+   "max_mm": 18.7902
+  },
+  "native_centreline_mae_mm": 11.5566
+ },
+ "after_change": {
+  "differences_in_15_cases": 0,
+  "unique_evidence_fingerprints": 3,
+  "t8_differences": 0
+ },
+ "adopted_variant": null,
+ "note": "Measurement support is allowance independent within a seed (0 drift verified over 15 cases), so ablations use allowance 20 mm for each sampling seed. No variant was adopted: none reduced error without losing scored intervals or trading one interval against another.",
+ "variants": {
+  "v7_baseline": {
+   "description": "Committed v7: median of measurement-track support inside fixed straight 3d window",
+   "seeds": {
+    "123": {
+     "scored": 18,
+     "mae_mm": 8.056301405129483,
+     "max_mm": 21.16253342841125,
+     "errors_mm": {
+      "X:1-2": 11.91,
+      "X:2-3": 2.55,
+      "X:3-4": -8.35,
+      "X:4-5": 5.46,
+      "X:5-6": -0.37,
+      "X:6-7": 1.21,
+      "X:7-8": -1.87,
+      "X:8-9": 4.98,
+      "X:9-10": 7.45,
+      "X:10-11": 3.78,
+      "X:11-12": -9.82,
+      "Y:A-B": -17.72,
+      "Y:B-C": 6.01,
+      "Y:C-D": -4.17,
+      "Y:D-E": 15.81,
+      "Y:E-F": -11.51,
+      "Y:F-G": 10.87,
+      "Y:G-H": 21.16
+     }
+    },
+    "456": {
+     "scored": 18,
+     "mae_mm": 7.977347997403972,
+     "max_mm": 18.19770267837299,
+     "errors_mm": {
+      "X:1-2": 11.8,
+      "X:2-3": 1.34,
+      "X:3-4": -9.35,
+      "X:4-5": 7.33,
+      "X:5-6": -1.66,
+      "X:6-7": 0.91,
+      "X:7-8": -1.9,
+      "X:8-9": 5.13,
+      "X:9-10": 7.58,
+      "X:10-11": 3.81,
+      "X:11-12": -8.33,
+      "Y:A-B": -17.2,
+      "Y:B-C": 6.58,
+      "Y:C-D": -4.54,
+      "Y:D-E": 15.46,
+      "Y:E-F": -12.1,
+      "Y:F-G": 10.38,
+      "Y:G-H": 18.2
+     }
+    },
+    "789": {
+     "scored": 18,
+     "mae_mm": 7.793025211898757,
+     "max_mm": 18.790193198277336,
+     "errors_mm": {
+      "X:1-2": 12.65,
+      "X:2-3": 0.24,
+      "X:3-4": -8.02,
+      "X:4-5": 5.95,
+      "X:5-6": -1.3,
+      "X:6-7": 0.84,
+      "X:7-8": -1.86,
+      "X:8-9": 5.08,
+      "X:9-10": 7.78,
+      "X:10-11": 2.75,
+      "X:11-12": -9.42,
+      "Y:A-B": -18.67,
+      "Y:B-C": 7.04,
+      "Y:C-D": -4.43,
+      "Y:D-E": 15.55,
+      "Y:E-F": -10.37,
+      "Y:F-G": 9.53,
+      "Y:G-H": 18.79
+     }
+    }
+   }
+  },
+  "median_straight_all_points": {
+   "description": "Median of all band points in the same straight 3d window (not only track cluster)",
+   "seeds": {
+    "123": {
+     "scored": 18,
+     "mae_mm": 8.30216292464636,
+     "max_mm": 21.3038813427747,
+     "errors_mm": {
+      "X:1-2": 12.08,
+      "X:2-3": 2.44,
+      "X:3-4": -8.31,
+      "X:4-5": 5.46,
+      "X:5-6": -0.71,
+      "X:6-7": 1.09,
+      "X:7-8": -1.91,
+      "X:8-9": 4.98,
+      "X:9-10": 7.45,
+      "X:10-11": 3.78,
+      "X:11-12": -9.82,
+      "Y:A-B": -20.11,
+      "Y:B-C": 6.29,
+      "Y:C-D": -4.17,
+      "Y:D-E": 16.05,
+      "Y:E-F": -12.12,
+      "Y:F-G": 11.34,
+      "Y:G-H": 21.3
+     }
+    },
+    "456": {
+     "scored": 18,
+     "mae_mm": 8.115315846370674,
+     "max_mm": 19.76136662888993,
+     "errors_mm": {
+      "X:1-2": 11.97,
+      "X:2-3": 1.39,
+      "X:3-4": -9.35,
+      "X:4-5": 7.52,
+      "X:5-6": -2.13,
+      "X:6-7": 1.4,
+      "X:7-8": -1.9,
+      "X:8-9": 5.04,
+      "X:9-10": 7.58,
+      "X:10-11": 3.81,
+      "X:11-12": -8.1,
+      "Y:A-B": -19.76,
+      "Y:B-C": 6.45,
+      "Y:C-D": -3.51,
+      "Y:D-E": 15.46,
+      "Y:E-F": -12.1,
+      "Y:F-G": 10.88,
+      "Y:G-H": 17.73
+     }
+    },
+    "789": {
+     "scored": 18,
+     "mae_mm": 7.972864073152004,
+     "max_mm": 20.72619336919138,
+     "errors_mm": {
+      "X:1-2": 12.67,
+      "X:2-3": 0.24,
+      "X:3-4": -7.52,
+      "X:4-5": 5.91,
+      "X:5-6": -2.0,
+      "X:6-7": 1.04,
+      "X:7-8": -1.86,
+      "X:8-9": 4.93,
+      "X:9-10": 7.9,
+      "X:10-11": 2.71,
+      "X:11-12": -9.31,
+      "Y:A-B": -20.73,
+      "Y:B-C": 7.16,
+      "Y:C-D": -4.14,
+      "Y:D-E": 15.53,
+      "Y:E-F": -10.54,
+      "Y:F-G": 10.35,
+      "Y:G-H": 18.96
+     }
+    }
+   }
+  },
+  "median_local_window": {
+   "description": "Iterated median, window re-centred on the local bar position (follows bow/tilt)",
+   "seeds": {
+    "123": {
+     "scored": 18,
+     "mae_mm": 8.50192594449031,
+     "max_mm": 24.103963608966723,
+     "errors_mm": {
+      "X:1-2": 12.12,
+      "X:2-3": 2.63,
+      "X:3-4": -6.89,
+      "X:4-5": 6.62,
+      "X:5-6": 0.45,
+      "X:6-7": 1.91,
+      "X:7-8": -1.72,
+      "X:8-9": 5.68,
+      "X:9-10": 7.45,
+      "X:10-11": 3.95,
+      "X:11-12": -10.52,
+      "Y:A-B": -21.33,
+      "Y:B-C": 6.55,
+      "Y:C-D": -6.04,
+      "Y:D-E": 14.38,
+      "Y:E-F": -11.07,
+      "Y:F-G": 9.62,
+      "Y:G-H": 24.1
+     }
+    },
+    "456": {
+     "scored": 18,
+     "mae_mm": 8.306225413711763,
+     "max_mm": 20.39791272289267,
+     "errors_mm": {
+      "X:1-2": 11.43,
+      "X:2-3": 2.15,
+      "X:3-4": -7.9,
+      "X:4-5": 7.62,
+      "X:5-6": -0.98,
+      "X:6-7": 3.25,
+      "X:7-8": -2.41,
+      "X:8-9": 5.23,
+      "X:9-10": 7.8,
+      "X:10-11": 3.84,
+      "X:11-12": -8.44,
+      "Y:A-B": -20.4,
+      "Y:B-C": 6.94,
+      "Y:C-D": -5.8,
+      "Y:D-E": 14.63,
+      "Y:E-F": -11.11,
+      "Y:F-G": 9.35,
+      "Y:G-H": 20.22
+     }
+    },
+    "789": {
+     "scored": 18,
+     "mae_mm": 8.147228084658725,
+     "max_mm": 22.01816628786625,
+     "errors_mm": {
+      "X:1-2": 12.36,
+      "X:2-3": 1.38,
+      "X:3-4": -6.95,
+      "X:4-5": 5.3,
+      "X:5-6": -1.17,
+      "X:6-7": 2.89,
+      "X:7-8": -2.25,
+      "X:8-9": 6.08,
+      "X:9-10": 7.64,
+      "X:10-11": 2.42,
+      "X:11-12": -8.77,
+      "Y:A-B": -20.42,
+      "Y:B-C": 7.38,
+      "Y:C-D": -6.08,
+      "Y:D-E": 14.95,
+      "Y:E-F": -10.22,
+      "Y:F-G": 8.38,
+      "Y:G-H": 22.02
+     }
+    }
+   }
+  },
+  "meanshift_sigma_0.5d": {
+   "description": "2D Gaussian mean-shift mode, sigma 0.5d, radius 3d",
+   "seeds": {
+    "123": {
+     "scored": 18,
+     "mae_mm": 8.247255738553894,
+     "max_mm": 20.369517820746324,
+     "errors_mm": {
+      "X:1-2": 11.21,
+      "X:2-3": 2.34,
+      "X:3-4": -8.32,
+      "X:4-5": 3.51,
+      "X:5-6": -3.92,
+      "X:6-7": 2.04,
+      "X:7-8": -2.05,
+      "X:8-9": 6.2,
+      "X:9-10": 7.83,
+      "X:10-11": 3.53,
+      "X:11-12": -9.13,
+      "Y:A-B": -20.37,
+      "Y:B-C": 7.02,
+      "Y:C-D": -5.38,
+      "Y:D-E": 15.3,
+      "Y:E-F": -11.54,
+      "Y:F-G": 11.68,
+      "Y:G-H": 17.1
+     }
+    },
+    "456": {
+     "scored": 18,
+     "mae_mm": 8.325189774822764,
+     "max_mm": 19.55514269183604,
+     "errors_mm": {
+      "X:1-2": 11.72,
+      "X:2-3": 1.38,
+      "X:3-4": -8.24,
+      "X:4-5": 6.98,
+      "X:5-6": -5.07,
+      "X:6-7": 4.12,
+      "X:7-8": -2.17,
+      "X:8-9": 6.35,
+      "X:9-10": 7.79,
+      "X:10-11": 3.53,
+      "X:11-12": -8.71,
+      "Y:A-B": -19.56,
+      "Y:B-C": 6.74,
+      "Y:C-D": -5.5,
+      "Y:D-E": 15.12,
+      "Y:E-F": -11.14,
+      "Y:F-G": 10.6,
+      "Y:G-H": 15.14
+     }
+    },
+    "789": {
+     "scored": 18,
+     "mae_mm": 8.18184105917765,
+     "max_mm": 22.280332556435894,
+     "errors_mm": {
+      "X:1-2": 13.75,
+      "X:2-3": -0.27,
+      "X:3-4": -8.32,
+      "X:4-5": 5.34,
+      "X:5-6": -3.37,
+      "X:6-7": 3.95,
+      "X:7-8": -1.49,
+      "X:8-9": 5.55,
+      "X:9-10": 7.91,
+      "X:10-11": 3.38,
+      "X:11-12": -8.62,
+      "Y:A-B": -22.28,
+      "Y:B-C": 7.33,
+      "Y:C-D": -5.53,
+      "Y:D-E": 15.46,
+      "Y:E-F": -10.47,
+      "Y:F-G": 10.49,
+      "Y:G-H": 13.74
+     }
+    }
+   }
+  },
+  "meanshift_sigma_1d": {
+   "description": "2D Gaussian mean-shift mode, sigma 1d, radius 3d",
+   "seeds": {
+    "123": {
+     "scored": 18,
+     "mae_mm": 8.014346336634075,
+     "max_mm": 21.171853136832937,
+     "errors_mm": {
+      "X:1-2": 10.05,
+      "X:2-3": 2.09,
+      "X:3-4": -7.33,
+      "X:4-5": 5.16,
+      "X:5-6": 0.54,
+      "X:6-7": 2.0,
+      "X:7-8": -1.97,
+      "X:8-9": 5.97,
+      "X:9-10": 7.32,
+      "X:10-11": 3.51,
+      "X:11-12": -9.17,
+      "Y:A-B": -21.17,
+      "Y:B-C": 6.71,
+      "Y:C-D": -5.15,
+      "Y:D-E": 15.12,
+      "Y:E-F": -10.46,
+      "Y:F-G": 10.76,
+      "Y:G-H": 19.75
+     }
+    },
+    "456": {
+     "scored": 18,
+     "mae_mm": 7.941654156954235,
+     "max_mm": 20.285781522718622,
+     "errors_mm": {
+      "X:1-2": 10.21,
+      "X:2-3": 2.61,
+      "X:3-4": -8.23,
+      "X:4-5": 7.02,
+      "X:5-6": -0.56,
+      "X:6-7": 1.29,
+      "X:7-8": -2.45,
+      "X:8-9": 6.16,
+      "X:9-10": 8.04,
+      "X:10-11": 2.38,
+      "X:11-12": -8.93,
+      "Y:A-B": -20.29,
+      "Y:B-C": 7.0,
+      "Y:C-D": -5.51,
+      "Y:D-E": 14.87,
+      "Y:E-F": -11.06,
+      "Y:F-G": 9.43,
+      "Y:G-H": 16.9
+     }
+    },
+    "789": {
+     "scored": 18,
+     "mae_mm": 8.110007441875362,
+     "max_mm": 20.632107743843676,
+     "errors_mm": {
+      "X:1-2": 10.68,
+      "X:2-3": 2.05,
+      "X:3-4": -8.43,
+      "X:4-5": 5.88,
+      "X:5-6": -1.36,
+      "X:6-7": 2.2,
+      "X:7-8": -1.88,
+      "X:8-9": 5.64,
+      "X:9-10": 8.04,
+      "X:10-11": 2.81,
+      "X:11-12": -9.94,
+      "Y:A-B": -20.63,
+      "Y:B-C": 7.63,
+      "Y:C-D": -6.37,
+      "Y:D-E": 15.75,
+      "Y:E-F": -10.31,
+      "Y:F-G": 8.99,
+      "Y:G-H": 17.39
+     }
+    }
+   }
+  },
+  "relative_support_0.1": {
+   "description": "Drop sections where either bar has < 0.1 x its median section support",
+   "seeds": {
+    "123": {
+     "scored": 18,
+     "mae_mm": 8.076332790461684,
+     "max_mm": 21.16253342841125,
+     "errors_mm": {
+      "X:1-2": 12.08,
+      "X:2-3": 2.85,
+      "X:3-4": -7.91,
+      "X:4-5": 5.8,
+      "X:5-6": 0.12,
+      "X:6-7": 1.21,
+      "X:7-8": -1.87,
+      "X:8-9": 4.98,
+      "X:9-10": 7.45,
+      "X:10-11": 3.78,
+      "X:11-12": -9.82,
+      "Y:A-B": -17.03,
+      "Y:B-C": 5.98,
+      "Y:C-D": -5.54,
+      "Y:D-E": 15.44,
+      "Y:E-F": -11.47,
+      "Y:F-G": 10.87,
+      "Y:G-H": 21.16
+     }
+    },
+    "456": {
+     "scored": 18,
+     "mae_mm": 7.961888314826497,
+     "max_mm": 18.19770267837299,
+     "errors_mm": {
+      "X:1-2": 12.16,
+      "X:2-3": 2.15,
+      "X:3-4": -8.23,
+      "X:4-5": 7.33,
+      "X:5-6": -1.19,
+      "X:6-7": 0.91,
+      "X:7-8": -1.9,
+      "X:8-9": 5.13,
+      "X:9-10": 7.58,
+      "X:10-11": 3.81,
+      "X:11-12": -8.33,
+      "Y:A-B": -16.9,
+      "Y:B-C": 6.53,
+      "Y:C-D": -5.13,
+      "Y:D-E": 15.36,
+      "Y:E-F": -12.1,
+      "Y:F-G": 10.38,
+      "Y:G-H": 18.2
+     }
+    },
+    "789": {
+     "scored": 18,
+     "mae_mm": 7.694222481092205,
+     "max_mm": 18.790193198277336,
+     "errors_mm": {
+      "X:1-2": 12.65,
+      "X:2-3": 0.49,
+      "X:3-4": -6.95,
+      "X:4-5": 5.89,
+      "X:5-6": -1.28,
+      "X:6-7": 0.84,
+      "X:7-8": -1.86,
+      "X:8-9": 5.08,
+      "X:9-10": 7.78,
+      "X:10-11": 2.75,
+      "X:11-12": -9.42,
+      "Y:A-B": -18.18,
+      "Y:B-C": 6.89,
+      "Y:C-D": -4.58,
+      "Y:D-E": 15.3,
+      "Y:E-F": -10.25,
+      "Y:F-G": 9.53,
+      "Y:G-H": 18.79
+     }
+    }
+   }
+  },
+  "relative_support_0.25": {
+   "description": "Drop sections where either bar has < 0.25 x its median section support",
+   "seeds": {
+    "123": {
+     "scored": 16,
+     "mae_mm": 8.813808885148116,
+     "max_mm": 21.16253342841125,
+     "errors_mm": {
+      "X:1-2": 11.99,
+      "X:2-3": null,
+      "X:3-4": -7.47,
+      "X:4-5": 6.22,
+      "X:5-6": null,
+      "X:6-7": 0.59,
+      "X:7-8": -1.87,
+      "X:8-9": 4.98,
+      "X:9-10": 7.45,
+      "X:10-11": 3.78,
+      "X:11-12": -9.82,
+      "Y:A-B": -16.11,
+      "Y:B-C": 6.03,
+      "Y:C-D": -6.0,
+      "Y:D-E": 15.15,
+      "Y:E-F": -11.51,
+      "Y:F-G": 10.87,
+      "Y:G-H": 21.16
+     }
+    },
+    "456": {
+     "scored": 16,
+     "mae_mm": 8.795506039826849,
+     "max_mm": 18.19770267837299,
+     "errors_mm": {
+      "X:1-2": 11.8,
+      "X:2-3": null,
+      "X:3-4": -8.18,
+      "X:4-5": 7.68,
+      "X:5-6": null,
+      "X:6-7": 0.74,
+      "X:7-8": -1.9,
+      "X:8-9": 5.13,
+      "X:9-10": 7.58,
+      "X:10-11": 3.81,
+      "X:11-12": -8.33,
+      "Y:A-B": -16.65,
+      "Y:B-C": 6.61,
+      "Y:C-D": -6.24,
+      "Y:D-E": 15.27,
+      "Y:E-F": -12.23,
+      "Y:F-G": 10.38,
+      "Y:G-H": 18.2
+     }
+    },
+    "789": {
+     "scored": 17,
+     "mae_mm": 8.120298829367083,
+     "max_mm": 18.790193198277336,
+     "errors_mm": {
+      "X:1-2": 12.31,
+      "X:2-3": 0.53,
+      "X:3-4": -6.95,
+      "X:4-5": 6.23,
+      "X:5-6": null,
+      "X:6-7": 0.45,
+      "X:7-8": -1.86,
+      "X:8-9": 5.08,
+      "X:9-10": 7.78,
+      "X:10-11": 2.75,
+      "X:11-12": -9.42,
+      "Y:A-B": -17.92,
+      "Y:B-C": 7.08,
+      "Y:C-D": -5.99,
+      "Y:D-E": 15.11,
+      "Y:E-F": -10.25,
+      "Y:F-G": 9.53,
+      "Y:G-H": 18.79
+     }
+    }
+   }
+  },
+  "relative_support_0.5": {
+   "description": "Drop sections where either bar has < 0.5 x its median section support",
+   "seeds": {
+    "123": {
+     "scored": 15,
+     "mae_mm": 9.055823883822313,
+     "max_mm": 20.800367095790534,
+     "errors_mm": {
+      "X:1-2": 11.32,
+      "X:2-3": null,
+      "X:3-4": -7.91,
+      "X:4-5": 6.65,
+      "X:5-6": null,
+      "X:6-7": 0.59,
+      "X:7-8": -1.72,
+      "X:8-9": 4.88,
+      "X:9-10": 7.52,
+      "X:10-11": 3.81,
+      "X:11-12": -10.67,
+      "Y:A-B": -15.77,
+      "Y:B-C": 6.05,
+      "Y:C-D": null,
+      "Y:D-E": 15.15,
+      "Y:E-F": -12.3,
+      "Y:F-G": 10.71,
+      "Y:G-H": 20.8
+     }
+    },
+    "456": {
+     "scored": 15,
+     "mae_mm": 8.866678240276997,
+     "max_mm": 17.679515930671528,
+     "errors_mm": {
+      "X:1-2": 11.8,
+      "X:2-3": null,
+      "X:3-4": -8.13,
+      "X:4-5": 7.68,
+      "X:5-6": null,
+      "X:6-7": 0.65,
+      "X:7-8": -1.99,
+      "X:8-9": 5.03,
+      "X:9-10": 7.59,
+      "X:10-11": 3.72,
+      "X:11-12": -8.44,
+      "Y:A-B": -15.66,
+      "Y:B-C": 6.56,
+      "Y:C-D": null,
+      "Y:D-E": 15.36,
+      "Y:E-F": -12.35,
+      "Y:F-G": 10.38,
+      "Y:G-H": 17.68
+     }
+    },
+    "789": {
+     "scored": 14,
+     "mae_mm": 8.462988377055968,
+     "max_mm": 18.228315671910906,
+     "errors_mm": {
+      "X:1-2": null,
+      "X:2-3": null,
+      "X:3-4": -7.49,
+      "X:4-5": 6.23,
+      "X:5-6": null,
+      "X:6-7": 0.22,
+      "X:7-8": -1.85,
+      "X:8-9": 5.03,
+      "X:9-10": 7.9,
+      "X:10-11": 2.75,
+      "X:11-12": -9.49,
+      "Y:A-B": -16.72,
+      "Y:B-C": 7.06,
+      "Y:C-D": null,
+      "Y:D-E": 15.13,
+      "Y:E-F": -10.84,
+      "Y:F-G": 9.53,
+      "Y:G-H": 18.23
+     }
+    }
+   }
+  },
+  "relative_support_0.75": {
+   "description": "Drop sections where either bar has < 0.75 x its median section support",
+   "seeds": {
+    "123": {
+     "scored": 4,
+     "mae_mm": 10.239593987188023,
+     "max_mm": 19.92460705299473,
+     "errors_mm": {
+      "X:1-2": null,
+      "X:2-3": null,
+      "X:3-4": null,
+      "X:4-5": null,
+      "X:5-6": null,
+      "X:6-7": null,
+      "X:7-8": -1.91,
+      "X:8-9": null,
+      "X:9-10": 8.25,
+      "X:10-11": null,
+      "X:11-12": null,
+      "Y:A-B": null,
+      "Y:B-C": null,
+      "Y:C-D": null,
+      "Y:D-E": null,
+      "Y:E-F": null,
+      "Y:F-G": 10.87,
+      "Y:G-H": 19.92
+     }
+    },
+    "456": {
+     "scored": 3,
+     "mae_mm": 5.5061189418191345,
+     "max_mm": 11.13098017721677,
+     "errors_mm": {
+      "X:1-2": null,
+      "X:2-3": null,
+      "X:3-4": null,
+      "X:4-5": null,
+      "X:5-6": null,
+      "X:6-7": null,
+      "X:7-8": -1.84,
+      "X:8-9": null,
+      "X:9-10": null,
+      "X:10-11": 3.55,
+      "X:11-12": null,
+      "Y:A-B": null,
+      "Y:B-C": null,
+      "Y:C-D": null,
+      "Y:D-E": null,
+      "Y:E-F": null,
+      "Y:F-G": 11.13,
+      "Y:G-H": null
+     }
+    },
+    "789": {
+     "scored": 4,
+     "mae_mm": 8.187740020065732,
+     "max_mm": 18.777713427369633,
+     "errors_mm": {
+      "X:1-2": null,
+      "X:2-3": null,
+      "X:3-4": null,
+      "X:4-5": null,
+      "X:5-6": null,
+      "X:6-7": null,
+      "X:7-8": -1.85,
+      "X:8-9": null,
+      "X:9-10": null,
+      "X:10-11": 2.43,
+      "X:11-12": -9.69,
+      "Y:A-B": null,
+      "Y:B-C": null,
+      "Y:C-D": null,
+      "Y:D-E": null,
+      "Y:E-F": null,
+      "Y:F-G": null,
+      "Y:G-H": 18.78
+     }
+    }
+   }
+  },
+  "neighbour_filter_median_0.5d": {
+   "description": "Drop sections whose lateral centre (median) departs > 0.5d from the median of +-2 neighbouring sections",
+   "seeds": {
+    "123": {
+     "scored": 15,
+     "mae_mm": 8.501566016360222,
+     "max_mm": 19.92460705299473,
+     "errors_mm": {
+      "X:1-2": null,
+      "X:2-3": 2.85,
+      "X:3-4": -7.47,
+      "X:4-5": 5.8,
+      "X:5-6": null,
+      "X:6-7": null,
+      "X:7-8": -1.87,
+      "X:8-9": 4.98,
+      "X:9-10": 7.45,
+      "X:10-11": 3.78,
+      "X:11-12": -8.05,
+      "Y:A-B": -17.03,
+      "Y:B-C": 6.05,
+      "Y:C-D": -4.57,
+      "Y:D-E": 15.15,
+      "Y:E-F": -11.51,
+      "Y:F-G": 11.02,
+      "Y:G-H": 19.92
+     }
+    },
+    "456": {
+     "scored": 13,
+     "mae_mm": 9.125506037720312,
+     "max_mm": 18.19770267837299,
+     "errors_mm": {
+      "X:1-2": null,
+      "X:2-3": null,
+      "X:3-4": null,
+      "X:4-5": 8.06,
+      "X:5-6": null,
+      "X:6-7": null,
+      "X:7-8": -1.9,
+      "X:8-9": 5.08,
+      "X:9-10": 7.58,
+      "X:10-11": 3.81,
+      "X:11-12": -8.26,
+      "Y:A-B": -16.9,
+      "Y:B-C": 6.58,
+      "Y:C-D": -5.13,
+      "Y:D-E": 15.36,
+      "Y:E-F": -11.79,
+      "Y:F-G": 9.97,
+      "Y:G-H": 18.2
+     }
+    },
+    "789": {
+     "scored": 13,
+     "mae_mm": 8.967252166647533,
+     "max_mm": 18.790193198277336,
+     "errors_mm": {
+      "X:1-2": null,
+      "X:2-3": null,
+      "X:3-4": null,
+      "X:4-5": 6.23,
+      "X:5-6": null,
+      "X:6-7": null,
+      "X:7-8": -1.86,
+      "X:8-9": 5.08,
+      "X:9-10": 7.78,
+      "X:10-11": 2.75,
+      "X:11-12": -8.7,
+      "Y:A-B": -18.09,
+      "Y:B-C": 6.99,
+      "Y:C-D": -4.58,
+      "Y:D-E": 15.38,
+      "Y:E-F": -10.84,
+      "Y:F-G": 9.51,
+      "Y:G-H": 18.79
+     }
+    }
+   }
+  },
+  "neighbour_filter_median_1.0d": {
+   "description": "Drop sections whose lateral centre (median) departs > 1.0d from the median of +-2 neighbouring sections",
+   "seeds": {
+    "123": {
+     "scored": 17,
+     "mae_mm": 8.449302814594443,
+     "max_mm": 21.16253342841125,
+     "errors_mm": {
+      "X:1-2": 11.24,
+      "X:2-3": 2.55,
+      "X:3-4": -8.35,
+      "X:4-5": 6.22,
+      "X:5-6": -0.67,
+      "X:6-7": null,
+      "X:7-8": -1.87,
+      "X:8-9": 4.98,
+      "X:9-10": 7.45,
+      "X:10-11": 3.78,
+      "X:11-12": -8.99,
+      "Y:A-B": -18.37,
+      "Y:B-C": 6.05,
+      "Y:C-D": -4.17,
+      "Y:D-E": 15.44,
+      "Y:E-F": -11.47,
+      "Y:F-G": 10.87,
+      "Y:G-H": 21.16
+     }
+    },
+    "456": {
+     "scored": 18,
+     "mae_mm": 8.01381191836967,
+     "max_mm": 18.19770267837299,
+     "errors_mm": {
+      "X:1-2": 11.8,
+      "X:2-3": 1.34,
+      "X:3-4": -9.35,
+      "X:4-5": 7.32,
+      "X:5-6": -1.89,
+      "X:6-7": 1.34,
+      "X:7-8": -1.9,
+      "X:8-9": 5.13,
+      "X:9-10": 7.58,
+      "X:10-11": 3.81,
+      "X:11-12": -8.33,
+      "Y:A-B": -17.2,
+      "Y:B-C": 6.6,
+      "Y:C-D": -4.95,
+      "Y:D-E": 15.46,
+      "Y:E-F": -11.68,
+      "Y:F-G": 10.38,
+      "Y:G-H": 18.2
+     }
+    },
+    "789": {
+     "scored": 18,
+     "mae_mm": 7.913280291181546,
+     "max_mm": 18.790193198277336,
+     "errors_mm": {
+      "X:1-2": 12.65,
+      "X:2-3": 0.37,
+      "X:3-4": -8.02,
+      "X:4-5": 6.21,
+      "X:5-6": -2.55,
+      "X:6-7": 1.69,
+      "X:7-8": -1.86,
+      "X:8-9": 5.08,
+      "X:9-10": 7.78,
+      "X:10-11": 2.75,
+      "X:11-12": -9.42,
+      "Y:A-B": -18.67,
+      "Y:B-C": 7.06,
+      "Y:C-D": -4.51,
+      "Y:D-E": 15.38,
+      "Y:E-F": -10.12,
+      "Y:F-G": 9.53,
+      "Y:G-H": 18.79
+     }
+    }
+   }
+  },
+  "neighbour_filter_meanshift_0.5d": {
+   "description": "Drop sections whose lateral centre (meanshift) departs > 0.5d from the median of +-2 neighbouring sections",
+   "seeds": {
+    "123": {
+     "scored": 13,
+     "mae_mm": 9.461090612835758,
+     "max_mm": 19.705028811743546,
+     "errors_mm": {
+      "X:1-2": null,
+      "X:2-3": null,
+      "X:3-4": -7.4,
+      "X:4-5": null,
+      "X:5-6": null,
+      "X:6-7": null,
+      "X:7-8": -2.14,
+      "X:8-9": 5.83,
+      "X:9-10": 8.05,
+      "X:10-11": 3.53,
+      "X:11-12": -8.96,
+      "Y:A-B": -19.71,
+      "Y:B-C": 7.01,
+      "Y:C-D": -5.49,
+      "Y:D-E": 14.88,
+      "Y:E-F": -11.88,
+      "Y:F-G": 11.68,
+      "Y:G-H": 16.43
+     }
+    },
+    "456": {
+     "scored": 14,
+     "mae_mm": 9.293232426849533,
+     "max_mm": 19.410309627298375,
+     "errors_mm": {
+      "X:1-2": null,
+      "X:2-3": null,
+      "X:3-4": -8.09,
+      "X:4-5": 8.28,
+      "X:5-6": null,
+      "X:6-7": null,
+      "X:7-8": -2.05,
+      "X:8-9": 6.16,
+      "X:9-10": 7.8,
+      "X:10-11": 3.53,
+      "X:11-12": -8.71,
+      "Y:A-B": -19.41,
+      "Y:B-C": 6.62,
+      "Y:C-D": -7.51,
+      "Y:D-E": 15.04,
+      "Y:E-F": -11.4,
+      "Y:F-G": 10.6,
+      "Y:G-H": 14.93
+     }
+    },
+    "789": {
+     "scored": 14,
+     "mae_mm": 8.858367369887786,
+     "max_mm": 20.204610631344536,
+     "errors_mm": {
+      "X:1-2": null,
+      "X:2-3": null,
+      "X:3-4": -8.32,
+      "X:4-5": 5.34,
+      "X:5-6": null,
+      "X:6-7": null,
+      "X:7-8": -1.17,
+      "X:8-9": 5.27,
+      "X:9-10": 8.18,
+      "X:10-11": 3.44,
+      "X:11-12": -8.58,
+      "Y:A-B": -20.2,
+      "Y:B-C": 7.31,
+      "Y:C-D": -6.72,
+      "Y:D-E": 15.03,
+      "Y:E-F": -10.48,
+      "Y:F-G": 10.28,
+      "Y:G-H": 13.69
+     }
+    }
+   }
+  },
+  "neighbour_filter_meanshift_1.0d": {
+   "description": "Drop sections whose lateral centre (meanshift) departs > 1.0d from the median of +-2 neighbouring sections",
+   "seeds": {
+    "123": {
+     "scored": 18,
+     "mae_mm": 8.035712030504598,
+     "max_mm": 19.93706373113511,
+     "errors_mm": {
+      "X:1-2": 10.07,
+      "X:2-3": 2.34,
+      "X:3-4": -8.31,
+      "X:4-5": 4.33,
+      "X:5-6": -0.95,
+      "X:6-7": 2.65,
+      "X:7-8": -2.05,
+      "X:8-9": 6.2,
+      "X:9-10": 7.83,
+      "X:10-11": 3.53,
+      "X:11-12": -9.13,
+      "Y:A-B": -19.94,
+      "Y:B-C": 6.91,
+      "Y:C-D": -5.47,
+      "Y:D-E": 15.3,
+      "Y:E-F": -11.54,
+      "Y:F-G": 11.68,
+      "Y:G-H": 16.43
+     }
+    },
+    "456": {
+     "scored": 18,
+     "mae_mm": 8.430894076791141,
+     "max_mm": 19.472303671942683,
+     "errors_mm": {
+      "X:1-2": 10.31,
+      "X:2-3": 1.08,
+      "X:3-4": -8.32,
+      "X:4-5": 7.36,
+      "X:5-6": -5.79,
+      "X:6-7": 5.07,
+      "X:7-8": -2.17,
+      "X:8-9": 6.35,
+      "X:9-10": 7.79,
+      "X:10-11": 3.53,
+      "X:11-12": -8.71,
+      "Y:A-B": -19.47,
+      "Y:B-C": 6.62,
+      "Y:C-D": -7.27,
+      "Y:D-E": 15.11,
+      "Y:E-F": -11.14,
+      "Y:F-G": 10.6,
+      "Y:G-H": 15.08
+     }
+    },
+    "789": {
+     "scored": 18,
+     "mae_mm": 8.223835675102682,
+     "max_mm": 21.408745977861912,
+     "errors_mm": {
+      "X:1-2": 13.75,
+      "X:2-3": 0.47,
+      "X:3-4": -8.32,
+      "X:4-5": 5.34,
+      "X:5-6": -3.64,
+      "X:6-7": 4.37,
+      "X:7-8": -1.49,
+      "X:8-9": 5.27,
+      "X:9-10": 8.05,
+      "X:10-11": 3.38,
+      "X:11-12": -8.62,
+      "Y:A-B": -21.41,
+      "Y:B-C": 7.29,
+      "Y:C-D": -6.6,
+      "Y:D-E": 15.38,
+      "Y:E-F": -10.47,
+      "Y:F-G": 10.49,
+      "Y:G-H": 13.69
+     }
+    }
+   }
+  }
+ },
+ "station_diagnostic_v8_mm": {
+  "123": {
+   "X:1-2": {
+    "error_mm": 11.91,
+    "nearest_q10_q90_error_mm": 5.16,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": 7.12,
+    "tape_within_q10_q90": false,
+    "tape_within_section_range": true
+   },
+   "X:2-3": {
+    "error_mm": 2.55,
+    "nearest_q10_q90_error_mm": 0.0,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": 3.69,
+    "tape_within_q10_q90": true,
+    "tape_within_section_range": true
+   },
+   "X:3-4": {
+    "error_mm": -8.35,
+    "nearest_q10_q90_error_mm": -3.54,
+    "nearest_section_range_error_mm": -1.32,
+    "fitted_change_along_shared_support_mm": -9.85,
+    "tape_within_q10_q90": false,
+    "tape_within_section_range": false
+   },
+   "X:4-5": {
+    "error_mm": 5.46,
+    "nearest_q10_q90_error_mm": 0.0,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": 4.33,
+    "tape_within_q10_q90": true,
+    "tape_within_section_range": true
+   },
+   "X:5-6": {
+    "error_mm": -0.37,
+    "nearest_q10_q90_error_mm": 0.0,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": -22.51,
+    "tape_within_q10_q90": true,
+    "tape_within_section_range": true
+   },
+   "X:6-7": {
+    "error_mm": 1.21,
+    "nearest_q10_q90_error_mm": 0.0,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": 9.43,
+    "tape_within_q10_q90": true,
+    "tape_within_section_range": true
+   },
+   "X:7-8": {
+    "error_mm": -1.87,
+    "nearest_q10_q90_error_mm": 0.0,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": -1.87,
+    "tape_within_q10_q90": true,
+    "tape_within_section_range": true
+   },
+   "X:8-9": {
+    "error_mm": 4.98,
+    "nearest_q10_q90_error_mm": 1.43,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": 7.29,
+    "tape_within_q10_q90": false,
+    "tape_within_section_range": true
+   },
+   "X:9-10": {
+    "error_mm": 7.45,
+    "nearest_q10_q90_error_mm": 2.71,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": 2.49,
+    "tape_within_q10_q90": false,
+    "tape_within_section_range": true
+   },
+   "X:10-11": {
+    "error_mm": 3.78,
+    "nearest_q10_q90_error_mm": 0.0,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": 5.26,
+    "tape_within_q10_q90": true,
+    "tape_within_section_range": true
+   },
+   "X:11-12": {
+    "error_mm": -9.82,
+    "nearest_q10_q90_error_mm": -0.02,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": -13.16,
+    "tape_within_q10_q90": false,
+    "tape_within_section_range": true
+   },
+   "Y:A-B": {
+    "error_mm": -17.72,
+    "nearest_q10_q90_error_mm": -5.88,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": 24.47,
+    "tape_within_q10_q90": false,
+    "tape_within_section_range": true
+   },
+   "Y:B-C": {
+    "error_mm": 6.01,
+    "nearest_q10_q90_error_mm": 2.22,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": -1.67,
+    "tape_within_q10_q90": false,
+    "tape_within_section_range": true
+   },
+   "Y:C-D": {
+    "error_mm": -4.17,
+    "nearest_q10_q90_error_mm": 0.0,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": 14.24,
+    "tape_within_q10_q90": true,
+    "tape_within_section_range": true
+   },
+   "Y:D-E": {
+    "error_mm": 15.81,
+    "nearest_q10_q90_error_mm": 10.62,
+    "nearest_section_range_error_mm": 6.15,
+    "fitted_change_along_shared_support_mm": -17.99,
+    "tape_within_q10_q90": false,
+    "tape_within_section_range": false
+   },
+   "Y:E-F": {
+    "error_mm": -11.51,
+    "nearest_q10_q90_error_mm": -6.68,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": 8.05,
+    "tape_within_q10_q90": false,
+    "tape_within_section_range": true
+   },
+   "Y:F-G": {
+    "error_mm": 10.87,
+    "nearest_q10_q90_error_mm": 3.97,
+    "nearest_section_range_error_mm": 0.27,
+    "fitted_change_along_shared_support_mm": -14.76,
+    "tape_within_q10_q90": false,
+    "tape_within_section_range": false
+   },
+   "Y:G-H": {
+    "error_mm": 21.16,
+    "nearest_q10_q90_error_mm": 12.44,
+    "nearest_section_range_error_mm": 9.78,
+    "fitted_change_along_shared_support_mm": -24.77,
+    "tape_within_q10_q90": false,
+    "tape_within_section_range": false
+   }
+  },
+  "456": {
+   "X:1-2": {
+    "error_mm": 11.8,
+    "nearest_q10_q90_error_mm": 6.8,
+    "nearest_section_range_error_mm": 4.43,
+    "fitted_change_along_shared_support_mm": 5.95,
+    "tape_within_q10_q90": false,
+    "tape_within_section_range": false
+   },
+   "X:2-3": {
+    "error_mm": 1.34,
+    "nearest_q10_q90_error_mm": 0.0,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": -7.39,
+    "tape_within_q10_q90": true,
+    "tape_within_section_range": true
+   },
+   "X:3-4": {
+    "error_mm": -9.35,
+    "nearest_q10_q90_error_mm": -3.93,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": -7.53,
+    "tape_within_q10_q90": false,
+    "tape_within_section_range": true
+   },
+   "X:4-5": {
+    "error_mm": 7.33,
+    "nearest_q10_q90_error_mm": 0.0,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": 4.57,
+    "tape_within_q10_q90": true,
+    "tape_within_section_range": true
+   },
+   "X:5-6": {
+    "error_mm": -1.66,
+    "nearest_q10_q90_error_mm": 0.0,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": -13.1,
+    "tape_within_q10_q90": true,
+    "tape_within_section_range": true
+   },
+   "X:6-7": {
+    "error_mm": 0.91,
+    "nearest_q10_q90_error_mm": 0.0,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": 3.76,
+    "tape_within_q10_q90": true,
+    "tape_within_section_range": true
+   },
+   "X:7-8": {
+    "error_mm": -1.9,
+    "nearest_q10_q90_error_mm": 0.0,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": 1.8,
+    "tape_within_q10_q90": true,
+    "tape_within_section_range": true
+   },
+   "X:8-9": {
+    "error_mm": 5.13,
+    "nearest_q10_q90_error_mm": 1.58,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": 6.26,
+    "tape_within_q10_q90": false,
+    "tape_within_section_range": true
+   },
+   "X:9-10": {
+    "error_mm": 7.58,
+    "nearest_q10_q90_error_mm": 0.92,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": 2.03,
+    "tape_within_q10_q90": false,
+    "tape_within_section_range": true
+   },
+   "X:10-11": {
+    "error_mm": 3.81,
+    "nearest_q10_q90_error_mm": 0.0,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": 6.15,
+    "tape_within_q10_q90": true,
+    "tape_within_section_range": true
+   },
+   "X:11-12": {
+    "error_mm": -8.33,
+    "nearest_q10_q90_error_mm": 0.0,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": -12.96,
+    "tape_within_q10_q90": true,
+    "tape_within_section_range": true
+   },
+   "Y:A-B": {
+    "error_mm": -17.2,
+    "nearest_q10_q90_error_mm": -6.89,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": 22.61,
+    "tape_within_q10_q90": false,
+    "tape_within_section_range": true
+   },
+   "Y:B-C": {
+    "error_mm": 6.58,
+    "nearest_q10_q90_error_mm": 3.08,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": -2.92,
+    "tape_within_q10_q90": false,
+    "tape_within_section_range": true
+   },
+   "Y:C-D": {
+    "error_mm": -4.54,
+    "nearest_q10_q90_error_mm": 0.0,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": 14.86,
+    "tape_within_q10_q90": true,
+    "tape_within_section_range": true
+   },
+   "Y:D-E": {
+    "error_mm": 15.46,
+    "nearest_q10_q90_error_mm": 10.72,
+    "nearest_section_range_error_mm": 4.5,
+    "fitted_change_along_shared_support_mm": -19.77,
+    "tape_within_q10_q90": false,
+    "tape_within_section_range": false
+   },
+   "Y:E-F": {
+    "error_mm": -12.1,
+    "nearest_q10_q90_error_mm": -4.75,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": 8.37,
+    "tape_within_q10_q90": false,
+    "tape_within_section_range": true
+   },
+   "Y:F-G": {
+    "error_mm": 10.38,
+    "nearest_q10_q90_error_mm": 3.32,
+    "nearest_section_range_error_mm": 0.6,
+    "fitted_change_along_shared_support_mm": -14.8,
+    "tape_within_q10_q90": false,
+    "tape_within_section_range": false
+   },
+   "Y:G-H": {
+    "error_mm": 18.2,
+    "nearest_q10_q90_error_mm": 12.24,
+    "nearest_section_range_error_mm": 6.6,
+    "fitted_change_along_shared_support_mm": -23.37,
+    "tape_within_q10_q90": false,
+    "tape_within_section_range": false
+   }
+  },
+  "789": {
+   "X:1-2": {
+    "error_mm": 12.65,
+    "nearest_q10_q90_error_mm": 5.28,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": 7.92,
+    "tape_within_q10_q90": false,
+    "tape_within_section_range": true
+   },
+   "X:2-3": {
+    "error_mm": 0.24,
+    "nearest_q10_q90_error_mm": 0.0,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": -6.46,
+    "tape_within_q10_q90": true,
+    "tape_within_section_range": true
+   },
+   "X:3-4": {
+    "error_mm": -8.02,
+    "nearest_q10_q90_error_mm": -2.71,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": -9.51,
+    "tape_within_q10_q90": false,
+    "tape_within_section_range": true
+   },
+   "X:4-5": {
+    "error_mm": 5.95,
+    "nearest_q10_q90_error_mm": 0.0,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": 5.22,
+    "tape_within_q10_q90": true,
+    "tape_within_section_range": true
+   },
+   "X:5-6": {
+    "error_mm": -1.3,
+    "nearest_q10_q90_error_mm": 0.0,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": -17.18,
+    "tape_within_q10_q90": true,
+    "tape_within_section_range": true
+   },
+   "X:6-7": {
+    "error_mm": 0.84,
+    "nearest_q10_q90_error_mm": 0.0,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": 7.54,
+    "tape_within_q10_q90": true,
+    "tape_within_section_range": true
+   },
+   "X:7-8": {
+    "error_mm": -1.86,
+    "nearest_q10_q90_error_mm": 0.0,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": -0.6,
+    "tape_within_q10_q90": true,
+    "tape_within_section_range": true
+   },
+   "X:8-9": {
+    "error_mm": 5.08,
+    "nearest_q10_q90_error_mm": 1.55,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": 5.32,
+    "tape_within_q10_q90": false,
+    "tape_within_section_range": true
+   },
+   "X:9-10": {
+    "error_mm": 7.78,
+    "nearest_q10_q90_error_mm": 1.98,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": 3.47,
+    "tape_within_q10_q90": false,
+    "tape_within_section_range": true
+   },
+   "X:10-11": {
+    "error_mm": 2.75,
+    "nearest_q10_q90_error_mm": 0.0,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": 5.01,
+    "tape_within_q10_q90": true,
+    "tape_within_section_range": true
+   },
+   "X:11-12": {
+    "error_mm": -9.42,
+    "nearest_q10_q90_error_mm": -0.78,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": -10.71,
+    "tape_within_q10_q90": false,
+    "tape_within_section_range": true
+   },
+   "Y:A-B": {
+    "error_mm": -18.67,
+    "nearest_q10_q90_error_mm": -8.95,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": 22.17,
+    "tape_within_q10_q90": false,
+    "tape_within_section_range": true
+   },
+   "Y:B-C": {
+    "error_mm": 7.04,
+    "nearest_q10_q90_error_mm": 3.66,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": -1.58,
+    "tape_within_q10_q90": false,
+    "tape_within_section_range": true
+   },
+   "Y:C-D": {
+    "error_mm": -4.43,
+    "nearest_q10_q90_error_mm": 0.0,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": 14.62,
+    "tape_within_q10_q90": true,
+    "tape_within_section_range": true
+   },
+   "Y:D-E": {
+    "error_mm": 15.55,
+    "nearest_q10_q90_error_mm": 9.13,
+    "nearest_section_range_error_mm": 2.53,
+    "fitted_change_along_shared_support_mm": -18.96,
+    "tape_within_q10_q90": false,
+    "tape_within_section_range": false
+   },
+   "Y:E-F": {
+    "error_mm": -10.37,
+    "nearest_q10_q90_error_mm": -5.7,
+    "nearest_section_range_error_mm": 0.0,
+    "fitted_change_along_shared_support_mm": 7.87,
+    "tape_within_q10_q90": false,
+    "tape_within_section_range": true
+   },
+   "Y:F-G": {
+    "error_mm": 9.53,
+    "nearest_q10_q90_error_mm": 3.37,
+    "nearest_section_range_error_mm": 2.23,
+    "fitted_change_along_shared_support_mm": -13.97,
+    "tape_within_q10_q90": false,
+    "tape_within_section_range": false
+   },
+   "Y:G-H": {
+    "error_mm": 18.79,
+    "nearest_q10_q90_error_mm": 13.4,
+    "nearest_section_range_error_mm": 11.02,
+    "fitted_change_along_shared_support_mm": -21.64,
+    "tape_within_q10_q90": false,
+    "tape_within_section_range": false
+   }
+  }
+ }
+}

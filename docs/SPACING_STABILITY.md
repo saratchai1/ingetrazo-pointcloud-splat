@@ -78,3 +78,7 @@ The original real Rohbau floor patch and rotated wall still yield zero bars in d
 Reproduce with the existing `tools/fetch_wingwall_data.py` and `tools/run_wingwall_trial.py --data-dir ... --output-dir ... --sensitivity` in disposable checkouts using the documented PYTHONPATH/offscreen setup. This still uses an assisted crop/direction/layer and a point-count cap; it is not automatic full-scan processing. Two support fits add synchronous analysis work; background cancellation remains future work.
 
 All source/reference attribution and discrepancies remain in [WINGWALL_TRIAL.md](WINGWALL_TRIAL.md). No operational checkout, plugin installation, live CAD document or production file was modified. PR remains draft. Survey calibration/uncertainty, additional independent acquisitions, curved native geometry, live OpenGL validation and automatic cloud-array reload remain incomplete.
+
+## Subsequent residual analysis
+
+This page preserves the v7 results. [SPACING_RESIDUALS.md](SPACING_RESIDUALS.md) reproduces them exactly and tests 12 further section estimators and filters on all three seeds; none was adopted. It also explains G–H, D–E and A–B with along-support spacing trends and a diagnostic-only station bound. The scored metric and all 15-case values are unchanged.
